@@ -192,7 +192,6 @@ label caring:
                     "You suppose...he isn't going to answer that."
                     "Wouldn't that be something he'd want to answer?"
                     "Guess there is much you don't understand."
-                    ## jump to bad ending here maybe? idunno
 
         "Do you know where we are?":
             show cadmus shock with dis
@@ -226,7 +225,6 @@ label caring:
 
                     "He's resolute with his words, and doesn't say anything else."
                     "What exactly is he even protecting you from?"
-                    ## jump to good ending from here maybe? or something?
     
     hide cadmus with dis
     "Cadmus stands from his seat, walking just out of your view."
@@ -235,7 +233,7 @@ label caring:
 
     menu:
         "Where are you going?":
-            ## add headpat effect perhaps?
+            ## TODO: add headpat effect perhaps?
             "He laughs, placing his hand on your head."
             cadmus "I'm just stretching my legs, no need to panic."
             cadmus "Just going to walk the room. I'll be quick."
@@ -461,9 +459,9 @@ label CareGoodBranchA:
 
     "He seems genuinely upset about lacking answers."
     camera at nodHead
-    "You nod at him, "
+    "You nod at him"
     show cadmus at sit
-    extend "and he leans back in his seat."
+    extend ", and he leans back in his seat."
 
     $ _history = False
     show cadmus eyesSld with dis
@@ -472,18 +470,15 @@ label CareGoodBranchA:
     cadmus "I don't know what I can and can't say."
     "You're immediately confused when he says that."
     "Before you get the chance to respond-"
-    ##weird screen effect here
     camera at continuousShake
     centered "{cps=10}{sc=3}...{/sc}"
     centered "{cps=10}{sc=3}Your head...{/sc}"
     centered "{cps=10}{sc=3}Why does it hurt so bad?{/sc}"
     centered "{cps=10}{sc=3}What the hell?{/sc}"
-    ##weird screen effect again
     $ _history = True
     camera at cameraReset
     camera:
         blur 0
-    ## might not be busted anymore
     show black zorder 10 at shortBlink
 
     cadmus "I'll make sure you stay safe."
@@ -651,37 +646,53 @@ label CareGoodBranchA:
 
     "You have no reason to doubt him on that."
     "All you both can really do...is trust he can."
+    show black zorder 5 at closeEyes
+    pause (1)
+    jump CareGoodEnding
 
 label CareGoodEnding:
     # TODO: include some kind of "flash forward" effect here perhaps? Imply passage of time since
+    show blank zorder 5 at blink
+
     show cadmus normalSmile with dis
-    "You and Cadmus spend your time in relative comfort."
+    "You and Cadmus spent your time in relative comfort."
     cadmus "I'm glad we can just...be."
     cadmus "It's something I've missed. Just existing for the sake of it."
     "You" "Can you normally not?"
     cadmus "That's hard to explain..."
+
     "There's a hesitancy, one you've become quite familiar with."
     "Topics that tend to be avoided, words that don't linger."
     "A taste of something different."
+
     cadmus "I can teach you something, that's what we can do today."
+
     "He holds his hand near your right, using his other hand to slide the ropes a bit."
     "You have a bit more room to move it."
     "Cadmus taps on your hand with his finger twice. Distinctly separated taps."
+
     "You" "...what are you doing?"
     cadmus "Teaching you, of course."
     cadmus "You know what morse code is?"
     "You" "You're not teaching me that are you? Isn't that complicated?"
+
     "He laughs, shaking his head."
     "He taps on your hand once."
+
     cadmus "Much simpler. Though I suppose that makes it harder, doesn't it?"
     "You" "It limits communication?"
+
     "He nods, tapping your hand twice."
     "Oh."
     "Twice is yes, once is no."
     "He's teaching you without speaking."
+
     cadmus "What a smart cookie~"
+
     "His eyes twinkle, staring at you with the utmost affection."
+
     cadmus "We'll make others I'm sure, do you have one?"
+
     "As you ponder, he places your finger ontop of his palm."
 
     menu:
@@ -698,8 +709,10 @@ label CareGoodEnding:
 
     "You both fall into a rhythm of idle chatter."
     "It's hard to imagine you used to feel uncomfortable because of him."
+
     cadmus "I'm going to get a drink, I'll be right back."
     hide cadmus with dis
+
     "He ends up getting up and walking around every so often."
     "You don't get those weird head pains much anymore."
     "Like you both aren't tethered, with clouded minds."
@@ -707,9 +720,9 @@ label CareGoodEnding:
     "It's hard to remember how long you've both been in this comfort."
     "As if it were a dream."
     "You hope to never wake from it."
-    show cadmus at default with dis
 
     ## TODO: continue rewrite from here
+    show cadmus at default with dis
     "Despite his concerns, he frees one of your hands from the ropes."
     "When he holds it, it brings you immense comfort."
     "You love every second of it."
