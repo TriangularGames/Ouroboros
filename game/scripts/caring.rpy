@@ -653,16 +653,63 @@ label CareGoodBranchA:
     "All you both can really do...is trust he can."
 
 label CareGoodEnding:
-    # TODO: possibly rewrite this to include actual dialogue
+    # TODO: include some kind of "flash forward" effect here perhaps? Imply passage of time since
     show cadmus normalSmile with dis
     "You and Cadmus spend your time in relative comfort."
-    "Though, there are still topics you both have to avoid lingering on."
-    "You developed a bit of a tap code for each other in those instances."
-    "You never feel uncomfortable with him around."
+    cadmus "I'm glad we can just...be."
+    cadmus "It's something I've missed. Just existing for the sake of it."
+    "You" "Can you normally not?"
+    cadmus "That's hard to explain..."
+    "There's a hesitancy, one you've become quite familiar with."
+    "Topics that tend to be avoided, words that don't linger."
+    "A taste of something different."
+    cadmus "I can teach you something, that's what we can do today."
+    "He holds his hand near your right, using his other hand to slide the ropes a bit."
+    "You have a bit more room to move it."
+    "Cadmus taps on your hand with his finger twice. Distinctly separated taps."
+    "You" "...what are you doing?"
+    cadmus "Teaching you, of course."
+    cadmus "You know what morse code is?"
+    "You" "You're not teaching me that are you? Isn't that complicated?"
+    "He laughs, shaking his head."
+    "He taps on your hand once."
+    cadmus "Much simpler. Though I suppose that makes it harder, doesn't it?"
+    "You" "It limits communication?"
+    "He nods, tapping your hand twice."
+    "Oh."
+    "Twice is yes, once is no."
+    "He's teaching you without speaking."
+    cadmus "What a smart cookie~"
+    "His eyes twinkle, staring at you with the utmost affection."
+    cadmus "We'll make others I'm sure, do you have one?"
+    "As you ponder, he places your finger ontop of his palm."
+
+    menu:
+        "Slide your finger on his palm":
+            "Cadmus twitches a bit and he laughs."
+            "Is he ticklish?"
+            cadmus "What will that be?"
+            ## TODO: make what this means
+
+        "Tap twice with two fingers":
+            "He smiles as he watches you."
+            cadmus "What will that be?"
+            ## TODO: make what this means
+
+    "You both fall into a rhythm of idle chatter."
+    "It's hard to imagine you used to feel uncomfortable because of him."
+    cadmus "I'm going to get a drink, I'll be right back."
     hide cadmus with dis
-    "Whenever he goes for his walks around the room, he always returns quickly."
-    "All your time together is pure joy."
+    "He ends up getting up and walking around every so often."
+    "You don't get those weird head pains much anymore."
+    "Like you both aren't tethered, with clouded minds."
+    "Sometimes it gets you wondering...when it will all go back to how it was."
+    "It's hard to remember how long you've both been in this comfort."
+    "As if it were a dream."
+    "You hope to never wake from it."
     show cadmus at default with dis
+
+    ## TODO: continue rewrite from here
     "Despite his concerns, he frees one of your hands from the ropes."
     "When he holds it, it brings you immense comfort."
     "You love every second of it."
@@ -683,7 +730,7 @@ label CareGoodEnding:
     "Your head is pounding."
     "Why does it hurt so much?"
     show cadmus concern with dis
-    "You're trying to listen to him talk as usual…"
+    "You're trying to listen to him talk as usual..."
     stop music channel "music_CH1" fadeout 1.0
     stop music channel "music_CH2"
     "His words fail to reach your ears."
@@ -1040,7 +1087,7 @@ label CareBadEndSpecial:
     "Suddenly you feel the ropes slip off you-"
     ## TODO: get knife falling noise here
     "The sound of the knife clattering to the floor."
-    ## camera lift up here
+    ## TODO: camera lift up here
     "Cadmus forces your head up as he lunges at you."
     show black zorder 5 at closeEyes
     "You scream as his teeth dig into the back of your neck."
