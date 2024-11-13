@@ -1,0 +1,70 @@
+transform cameraReset:
+    subpixel True
+    xoffset 0
+    yoffset 0
+    xpos 0
+    ypos 0
+    xzoom 1.0
+    zoom 1.0
+    blur 0.0
+    matrixcolor InvertMatrix(0.0)*ContrastMatrix(1.0)*SaturationMatrix(1.0)*BrightnessMatrix(0.0)*HueMatrix(0.0)
+
+transform shakeHead:
+    subpixel True
+    xpos -50*(not renpy.is_skipping())
+    ease2 0.21*(not renpy.is_skipping()) xpos 50
+    ease2 0.22*(not renpy.is_skipping()) xpos -50
+    ease2 0.22*(not renpy.is_skipping()) xpos 50 
+    ease2 0.20*(not renpy.is_skipping()) xpos 0
+
+transform nodHead:
+    subpixel True
+    ypos -30.0 *(not renpy.is_skipping())
+    ease2 0.21*(not renpy.is_skipping()) ypos -10
+    ease2 0.22*(not renpy.is_skipping()) ypos -30
+    ease2 0.22*(not renpy.is_skipping()) ypos -10
+    ease2 0.22*(not renpy.is_skipping()) ypos -30
+    ease2 0.20*(not renpy.is_skipping()) ypos 0
+
+transform continuousShake:
+    subpixel True
+    blur 8
+    matrixcolor InvertMatrix(0.0)*ContrastMatrix(1.0)*SaturationMatrix(1.0)*BrightnessMatrix(-0.15)*HueMatrix(0.0) 
+    linear 0.1*(not renpy.is_skipping()) xoffset -2 yoffset 2 
+    linear 0.1*(not renpy.is_skipping()) xoffset 3 yoffset -3 
+    linear 0.1*(not renpy.is_skipping()) xoffset 2 yoffset -2
+    linear 0.1*(not renpy.is_skipping()) xoffset -3 yoffset 3
+    linear 0.1*(not renpy.is_skipping()) xoffset 0 yoffset 0
+    .1
+    repeat
+
+transform shakeOnceDim:
+    subpixel True
+    blur 8
+    matrixcolor InvertMatrix(0.0)*ContrastMatrix(1.0)*SaturationMatrix(1.0)*BrightnessMatrix(-0.15)*HueMatrix(0.0) 
+    linear 0.1*(not renpy.is_skipping()) xoffset -2 yoffset 2 
+    linear 0.1*(not renpy.is_skipping()) xoffset 3 yoffset -3 
+    linear 0.1*(not renpy.is_skipping()) xoffset 2 yoffset -2
+    linear 0.1*(not renpy.is_skipping()) xoffset -3 yoffset 3
+    linear 0.1*(not renpy.is_skipping()) xoffset 0 yoffset 0
+
+transform shakeOnce:
+    subpixel True
+    blur 8
+    linear 0.1*(not renpy.is_skipping()) xoffset -2 yoffset 2 
+    linear 0.1*(not renpy.is_skipping()) xoffset 3 yoffset -3 
+    linear 0.1*(not renpy.is_skipping()) xoffset 2 yoffset -2
+    linear 0.1*(not renpy.is_skipping()) xoffset -3 yoffset 3
+    linear 0.1*(not renpy.is_skipping()) xoffset 0 yoffset 0
+    blur 0
+
+transform shakeOnceNoBlur:
+    subpixel True
+    linear 0.1*(not renpy.is_skipping()) xoffset -2 yoffset 2 
+    linear 0.1*(not renpy.is_skipping()) xoffset 3 yoffset -3 
+    linear 0.1*(not renpy.is_skipping()) xoffset 2 yoffset -2
+    linear 0.1*(not renpy.is_skipping()) xoffset -3 yoffset 3
+    linear 0.1*(not renpy.is_skipping()) xoffset 0 yoffset 0
+        
+
+

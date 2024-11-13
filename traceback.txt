@@ -1,0 +1,58 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/scripts/script.rpy", line 196, in script
+    "Their green eyes feel like they're piercing your soul, the smirk on their face devilish- menacing."
+  File "renpy/common/00action_other.rpy", line 582, in __call__
+    rv = self.callable(*self.args, **self.kwargs)
+  File "game/scripts/Effects/entity.rpy", line 55, in hideEntity
+    wait(3)
+NameError: name 'wait' is not defined
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/scripts/script.rpy", line 196, in script
+    "Their green eyes feel like they're piercing your soul, the smirk on their face devilish- menacing."
+  File "N:\Folder of Folders\Ren'py\renpy\ast.py", line 2573, in execute
+    Say.execute(self)
+  File "N:\Folder of Folders\Ren'py\renpy\ast.py", line 615, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "N:\Folder of Folders\Ren'py\renpy\exports\sayexports.py", line 132, in say
+    who(what, *args, **kwargs)
+  File "N:\Folder of Folders\Ren'py\renpy\character.py", line 1455, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
+  File "N:\Folder of Folders\Ren'py\renpy\character.py", line 1106, in do_display
+    display_say(who,
+  File "N:\Folder of Folders\Ren'py\renpy\character.py", line 803, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "N:\Folder of Folders\Ren'py\renpy\ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "N:\Folder of Folders\Ren'py\renpy\display\core.py", line 2215, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "N:\Folder of Folders\Ren'py\renpy\display\core.py", line 3278, in interact_core
+    rv = root_widget.event(ev, x, y, 0)
+  File "N:\Folder of Folders\Ren'py\renpy\display\layout.py", line 1294, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "N:\Folder of Folders\Ren'py\renpy\display\layout.py", line 1294, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "N:\Folder of Folders\Ren'py\renpy\display\layout.py", line 1294, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "N:\Folder of Folders\Ren'py\renpy\display\screen.py", line 793, in event
+    rv = self.child.event(ev, x, y, st)
+  File "N:\Folder of Folders\Ren'py\renpy\display\layout.py", line 1294, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "N:\Folder of Folders\Ren'py\renpy\display\behavior.py", line 2704, in event
+    return run(self.function, *self.args, **self.kwargs)
+  File "N:\Folder of Folders\Ren'py\renpy\display\behavior.py", line 401, in run
+    return action(*args, **kwargs)
+  File "renpy/common/00action_other.rpy", line 582, in __call__
+    rv = self.callable(*self.args, **self.kwargs)
+  File "game/scripts/Effects/entity.rpy", line 55, in hideEntity
+    wait(3)
+NameError: name 'wait' is not defined
+
+Windows-10-10.0.19045 AMD64
+Ren'Py 8.3.2.24090902
+Ouroboros: Constricting Devotion 0.5
+Mon Nov 11 17:56:51 2024
