@@ -259,7 +259,31 @@ label start:
         "I remember you, you lie.":
             # TODO: add the previous route comments here as well, though...will have to figure out how best to work it in :/ or maybe leave this as is?...idk
             show cadmus smileopenNU with dis
-            cadmus "You do?"
+            if persistent.lastRoute == "FG":
+                cadmus "You didn't forget me after abandoning me?"
+
+            elif persistent.lastRoute == "FB":
+                cadmus "Oh joy, you do, little mouse? Even after what I did?"
+
+            elif persistent.lastRoute == "CG":
+                cadmus "You remember me?"
+
+            elif persistent.lastRoute == "CB":
+                cadmus "And that's all you remember?"
+
+            elif persistent.lastRoute == "CS":
+                ## TODO: think of something to put here
+                cadmus ""
+
+            elif persistent.lastRoute == "AG":
+                cadmus "My suffering was worth it then?"
+
+            elif persistent.lastRoute == "AB":
+                cadmus "Certainly you'll let me succeed this time, right?"
+
+            else:
+                ## This happens on first run
+                cadmus "You do?"
 
             $ _history = False
             show cadmus creepy at cadCreepy
