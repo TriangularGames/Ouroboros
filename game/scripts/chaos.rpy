@@ -70,7 +70,7 @@ label chaos:
 
     menu:
         "Bite his fingers":
-            ## add screen shake?
+            camera at shakeOnceNoBlur
             "You tilt your head slightly and chomp on one of his fingers."
             show cadmus angie with dis
             $ _history = False
@@ -80,10 +80,10 @@ label chaos:
             cadmus "OW!"
 
         "Move your head away":
-            ## camera move here
+            ## TODO: camera move here
             "You tilt your head away from his hand."
             $ _history = False
-            ## camera recenter here
+            camera at cameraReset
             "He grabs your hair and moves it back."
             show cadmus angie with dis
             cadmus "Ungrateful. After all this and you STILL SQUIRM?{nw}"
@@ -94,9 +94,9 @@ label chaos:
             show cadmus armsD -hand at sit
 
         "Kiss his palm":
-            "You tilt your head towards his hand, kissing his palm "
+            "You tilt your head towards his hand, kissing his palm"
             show cadmus armsD -hand at sit
-            extend "as he moves his hand away."
+            extend " as he moves his hand away."
             cadmus "How sweet...sickening and sweet."
             show cadmus smirking with dis
             cadmus "You are {i}such{/i} a damned fool."
@@ -308,7 +308,7 @@ label ChaosGoodBranchA:
     "His eyes search your face, hoping for something."
 
     "It takes you a moment, sitting and really thinking about what he said."
-    ## insert photos here in the end
+    ## TODO: insert photos here in the end
     "The sensations of memories that don't feel like yours come back to you."
     "{i}He's telling the truth.{/i}"
 
@@ -387,7 +387,7 @@ label ChaosGoodBranchB:
             "You feel even more lost than you were before."
 
         "You're toying with me.":
-            ##do a surprised face here
+            show cadmus shock with dis
             cadmus "Oh? Toying, that's a new one."
             show cadmus confused with dis
             cadmus "What makes you so sure?"
@@ -420,7 +420,7 @@ label ChaosGoodBranchB:
     "Your head feels weird, the room seeming to darken."
     "You aren't entirely sure what the sensation is."
     "A thought pops into your head."
-    ## add the pictures here too pls!!
+    ## TODO: add the pictures here too pls!!
 
     if persistent.lastRoute == "FG":
         centered "You barely managed to escape, but you were running through a seemingly endless field."
@@ -645,12 +645,13 @@ label ChaosGoodConverged:
     "Why won't he tell you what {font=HelpMe.ttf}{b}it{/b}{/font} is?"
     "Is {font=HelpMe.ttf}{b}it{/b}{/font} that...scary?"
 
-    ## change to shock or something later
-    show cadmus eyesS with dis
+    show cadmus shock with dis
     camera at shakeOnce
     cadmus "Stop!"
     "He suddenly grasps your shoulders."
     camera at cameraReset
+    ## TODO: maybe adjust this
+    show cadmus angie with dis
     cadmus "Stop it! Clear your mind, please."
 
     "You" "Huh- what-"
