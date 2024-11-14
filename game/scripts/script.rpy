@@ -27,6 +27,7 @@ default persistent.CareGoodEnd = False
 default persistent.CareSpecialEnd = False
 default persistent.AmnesiaBadEnd = False
 default persistent.AmnesiaGoodEnd = False
+default persistent.ChaosEnding = False
 default persistent.lastRoute = ""
 
 ## From caring ending
