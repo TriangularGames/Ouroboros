@@ -1034,7 +1034,7 @@ label CareBadEnd:
     "You" "Of course!"
 
     hide cadmus with dis
-    play sound footSteps with fadeout 2.0
+    play sound footSteps fadeout 2.0
     "You hear his footsteps fade away."
     play sound doorOpen
     "You can hear the door from the other side of the room"
