@@ -27,9 +27,10 @@ default persistent.CareGoodEnd = False
 default persistent.CareSpecialEnd = False
 default persistent.AmnesiaBadEnd = False
 default persistent.AmnesiaGoodEnd = False
-default persistent.ChaosEnding = False
-default persistent.TrueEnding = False
 default persistent.lastRoute = ""
+
+## From caring ending
+default persistent.code = ""
 
 ## if you say you remember him or not
 define remember = False
@@ -175,7 +176,7 @@ label start:
             cadmus "My poor, poor baby..."
             $ fearing += 1
 
-        "{glitch=15.5}Again?{/glitch}" if (persistent.onReplay and persistent.runNumber > 3):
+        "{glitch=15.5}Again?{/glitch}" if (persistent.onReplay and persistent.runNumber >= 3):
             show cadmus smileopenNU with dis
             "He just laughs."
             $ chaos += 1
@@ -257,7 +258,6 @@ label start:
             $ fearing += 1
 
         "I remember you, you lie.":
-            # TODO: add the previous route comments here as well, though...will have to figure out how best to work it in :/ or maybe leave this as is?...idk
             show cadmus smileopenNU with dis
             if persistent.lastRoute == "FG":
                 cadmus "You didn't forget me after abandoning me?"
@@ -272,8 +272,7 @@ label start:
                 cadmus "And that's all you remember?"
 
             elif persistent.lastRoute == "CS":
-                ## TODO: think of something to put here
-                cadmus ""
+                cadmus "And you don't remember denying me?"
 
             elif persistent.lastRoute == "AG":
                 cadmus "My suffering was worth it then?"
@@ -302,7 +301,7 @@ label start:
             $ remember = True
             $ caring += 1
 
-        "{glitch=15.5}I remember you.{/glitch}" if (persistent.onReplay and persistent.runNumber > 3):
+        "{glitch=15.5}I remember you.{/glitch}" if (persistent.onReplay and persistent.runNumber >= 3):
             play music basement channel "music_CH1" volume 0.0
             play music corrupted channel "music_CH2" volume music_vol
 
@@ -362,7 +361,7 @@ label start:
             "He grins as he uses the tip of his knife to pick under his nails."
             $ caring += 1
 
-        "{glitch=15.5}You're not going to use it{p}again are you?{/glitch}" if (persistent.onReplay and persistent.runNumber > 3):
+        "{glitch=15.5}You're not going to use it{p}again are you?{/glitch}" if (persistent.onReplay and persistent.runNumber >= 3):
             play music basement channel "music_CH1" volume 0.0
             play music corrupted channel "music_CH2" volume music_vol
 
@@ -428,7 +427,7 @@ label start:
             cadmus "Being treated oh so well. Don't you think?"
             $ fearing += 1
 
-        "{glitch=15.5}Get this over with.{/glitch}" if (persistent.onReplay and persistent.runNumber > 3):
+        "{glitch=15.5}Get this over with.{/glitch}" if (persistent.onReplay and persistent.runNumber >= 3):
             show cadmus annoyed with dis
             cadmus "Such {cps=20}{sc=2}impatience{/sc}."
             $ _history = False
