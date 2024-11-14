@@ -700,20 +700,26 @@ label CareGoodEnding:
             "Cadmus twitches a bit and he laughs."
             "Is he ticklish?"
             cadmus "What will that be?"
-            ## TODO: make what this means
+            "You" "\"I'm here.\""
+            cadmus "Like saying everything's okay?"
+            cadmus "I like that."
+            $ persistent.code = "slide"
 
         "Tap twice with two fingers":
             "He smiles as he watches you."
-            cadmus "What will that be?"
-            ## TODO: make what this means
+            cadmus "What will that mean?"
+            "You" "\"Focus.\""
+            cadmus "So that we stay centered?"
+            cadmus "That works."
+            $ persistent.code = "doubletap"
 
-    "You both fall into a rhythm of idle chatter."
+    "You both laugh, simply enjoying each others company."
     "It's hard to imagine you used to feel uncomfortable because of him."
 
     cadmus "I'm going to get a drink, I'll be right back."
     hide cadmus with dis
 
-    "He ends up getting up and walking around every so often."
+    "He gets up every so often to walk the room."
     "You don't get those weird head pains much anymore."
     "Like you both aren't tethered, with clouded minds."
     "Sometimes it gets you wondering...when it will all go back to how it was."
@@ -721,16 +727,42 @@ label CareGoodEnding:
     "As if it were a dream."
     "You hope to never wake from it."
 
-    ## TODO: continue rewrite from here
     show cadmus at default with dis
-    "Despite his concerns, he frees one of your hands from the ropes."
-    "When he holds it, it brings you immense comfort."
-    "You love every second of it."
+    "He returns quickly- he still worries about losing you."
+    "Even with his concerns, it seems they weren't all that warranted."
+    "No matter how long he is gone for, you are both still here."
+    
+    cadmus "You're still here..."
+    "You" "I have no where else to go, I don't get why it still shocks you."
+    cadmus "...I thought we would be gone by now."
+    "You" "Gone?"
+
+    "He takes your hand in his, his fingers calloused."
+
+    "You" "Your hand seems worn."
+
+    "You make the comment without much thought, he smiles."
+
+    cadmus "I play in a band- lead guitar."
+    "You" "Really?"
+    cadmus "Is that surprising? Most people ask me if I'm in a band."
+    cadmus "It's the first question after \"Are you single?\""
+    "You" "I'm {i}so{/i} sure you aren't just pulling my leg."
+
+    "He snickers, running his thumb on the back on your hand."
+
+    cadmus "I do play guitar, I'm serious about that."
+    "You" "And about the rest?"
+    cadmus "A secret~"
+
     show cadmus embarassed with dis
+    cadmus "I hope I can play for you sometime."
+    "You" "That would be nice."
+
+    "Cadmus leans to your hand and kisses it, like it's the most delicate thing in the world."
     "To be with...the being of your affections."
-    "Cadmus really grew on you."
+    "Cadmus has really grown on you with the time you've spent together."
     show cadmus smileopenNU eyesS with dis
-    "His kisses are always so sweet, even if he refuses to kiss your lips."
     "You know one day you will both be happier."
     "You are both happy right now, you're certain."
     "But you both will be happier."
@@ -740,10 +772,10 @@ label CareGoodEnding:
         subpixel True
         blur 5.0
     "{cps=10}..."
-    "Your head is pounding."
+    "Your head suddenly starts pounding."
     "Why does it hurt so much?"
     show cadmus concern with dis
-    "You're trying to listen to him talk as usual..."
+    "You're trying to listen to him talk..."
     stop music channel "music_CH1" fadeout 1.0
     stop music channel "music_CH2"
     "His words fail to reach your ears."
