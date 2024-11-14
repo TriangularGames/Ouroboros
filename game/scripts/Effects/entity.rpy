@@ -43,6 +43,7 @@ init python:
         indexes = [0,1,2]
         global previousEntity
         if previousEntity >= 0:
+            renpy.hide(imageList[previousEntity])
             indexes.remove(previousEntity)
 
         currentEntity = indexes[renpy.random.randint(0,len(indexes)-1)]
@@ -50,15 +51,9 @@ init python:
         if renpy.random.randint(1,100) < 30:
             previousEntity = currentEntity
             renpy.show(imageList[currentEntity])
-            
-    def hideEntity():
-        renpy.hide("snakeC")
-        renpy.hide("snakeH")
-        renpy.hide("snakeS")
 
 ## TODO: find spot to put this in the code, and add a check for being on subsequent run
 screen entityEffect():
     ## TODO: find a way to have these occur at the same time, but the HIDE waits 3 seconds before occuring
-    timer 15 repeat True action Function(showRandSnake)
-    timer 18 repeat True action Function(hideEntity)
+    timer 60 repeat True action Function(showRandSnake)
 
