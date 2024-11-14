@@ -13,3 +13,4 @@ define audio.runningWater = "audio/sound effects/sink faucet running 3.mp3" ## u
 define audio.footSteps = "audio/sound effects/footsteps.mp3"
 define audio.knifeDrop = "audio/sound effects/knife drop.mp3"
 define audio.doorClose = "audio/sound effects/door close 10.mp3"
+define audio.entity = "audio/sound effects/entity.mp3" ## to be used
