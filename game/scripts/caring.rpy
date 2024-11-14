@@ -1034,11 +1034,12 @@ label CareBadEnd:
     "You" "Of course!"
 
     hide cadmus with dis
+    play sound footSteps with fadeout 2.0
     "You hear his footsteps fade away."
     play sound doorOpen
-    "The sound of a door opening"
-    ## TODO: get door closing sound here
-    extend ", and promptly closing."
+    "You can hear the door from the other side of the room"
+    play sound doorClose
+    extend ", and it promptly shut."
     "Cadmus is bringing you a gift."
     "He's getting you a present!"
     "You've been so good."
@@ -1098,7 +1099,7 @@ label CareBadEndSpecial:
     "What is he doing...?"
     "{sc=3.5}You can't move.{/sc}"
     "Suddenly you feel the ropes slip off you-"
-    ## TODO: get knife falling noise here
+    play sound knifeDrop
     "The sound of the knife clattering to the floor."
     ## TODO: camera lift up here
     "Cadmus forces your head up as he lunges at you."

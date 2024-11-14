@@ -385,7 +385,7 @@ label FearGoodBranchHalf:
             "The sudden motion shifting the ropes, allowing you more movement than you expected."
             "For a guy so proud of these stupid things, he sure didn't do that well tying you."
             "Cadmus is shocked, trying to speak but his words failing him."
-            ## have a zoom towards him?
+            ## TODO: have a zoom towards him?
             "Reaching for one of his pockets, you manage to find the knife."
 
     cadmus "W-wait!"
@@ -399,7 +399,7 @@ label FearGoodBranchHalf:
 
     "He simply points off to the side-"
     "You book it without looking back."
-    ## zoom into the door?
+    ## TODO: zoom into the door?
     play sound doorOpen
     "It's a short struggle to find the knob in the darkness, but the second your hand finds purchase- you keep moving."
     stop music channel "music_CH1" fadeout 1.0
@@ -559,7 +559,7 @@ label FearBadConverged:
     "{cps=10}JuSt LiKe He WiLl YoUr FlEsH{nw=3}"
     $ _history = True
     "You're horrified at what's coming for you."
-    ##add movement here so that he looks like he's holding you up
+    ## TODO: add movement here so that he looks like he's holding you up
     "Cadmus' hand firmly grasps your neck, lifting you from the chair with ease."
     $ _history = False
     "Not even giving you a second to react to being free from his tail's suffocation.{nw}"
@@ -571,7 +571,6 @@ label FearBadConverged:
     cadmus "CAN'T YOU SEE THAT I LOVE YOU?"
 
     "You gasp-"
-    ## blood splatter and screen shake here
     camera at shakeOnce
     play sound bloodSplat
     show cadmus bloodyarmsHK
