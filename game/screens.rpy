@@ -295,9 +295,7 @@ screen navigation():
         spacing gui.navigation_spacing
 
         if main_menu:
-
-            if persistent.TrueEnding == False:
-                textbutton _("Start") action Start()
+            textbutton _("Start") action Start()
 
         else:
 
@@ -360,8 +358,7 @@ screen main_menu():
     vbox:
         style_prefix "main"
 
-        if persistent.TrueEnding == False:
-            textbutton _("Start") action Start()
+        textbutton _("Start") action Start()
         textbutton _("Load") action ShowMenu("load")
         textbutton _("Options") action ShowMenu("preferences")
         if _in_replay:
