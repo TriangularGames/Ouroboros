@@ -17,6 +17,7 @@ label amnesia:
         matrixcolor InvertMatrix(0.0)*ContrastMatrix(1.0)*SaturationMatrix(1.0)*BrightnessMatrix(0.0)*HueMatrix(0.0) 
 
     "You aren't sure how long it's been since you fell unconscious."
+    "Feeling slightly off kilter."
     play music basement channel "music_CH1" fadein 0.5
     play music corrupted channel "music_CH2" volume 0.0
     hide black
@@ -85,11 +86,12 @@ label amnesia:
     camera at shakeHead
     "You shake your head firmly"
     show cadmus armsD -hand normalSmile with dis
-    extend ", and he smiles."
+    extend ", and he smiles, relaxed by your prompt response."
     camera at cameraReset
     cadmus "Good, you aren't uncomfortable are you?"
     show cadmus concern with dis
     cadmus "Are the ropes bothering you?"
+    "Though you want to question his sudden concern...it's best not to."
 
     menu:
         "So you'll untie me?":
@@ -127,7 +129,7 @@ label amnesia:
             "He checks the rope binding you, before taking a seat."
             show cadmus at sit
 
-    camera at shakeOnce
+    camera at shakeOnceNoBlur
     "There's a jitter in your vision, your head is pounding."
     camera at continuousShake
     "The whole room feels like it's on stilts and shaking, but you know you aren't moving."
@@ -135,7 +137,9 @@ label amnesia:
     show black zorder 5 at shortBlink
     "Cadmus vanishes from your view."
     "You feel nauseous."
+    "Like something is worming it's way to you."
     "Trying to move out of the ropes is futile- you know that."
+    "You can't calm yourself down."
     "You feel a lingering sensation against your neck."
     $ _history = False
     "Is it the bite?{nw}"
@@ -165,6 +169,10 @@ label amnesia:
 
             "It almost irritates you, his {i}act{/i} of concern."
             "You find it hard to respond."
+            "Or rather, you have no reason to respond."
+            "The silence carries for longer than it should."
+            "Clearly he was waiting for you to verbalize a response."
+            "Why the hell should you?"
 
             show cadmus concern with dis
             cadmus "I'm sorry..."
@@ -176,6 +184,8 @@ label amnesia:
         "Stay quiet":
             show cadmus disappointed with dis
             cadmus "Ah- not talktive."
+            "Despite his disappointment with your silence, he pulls himself together."
+            "As though what turmoil your silence brought him didn't exist."
             show cadmus regularE with dis
             cadmus "That's okay, I'm right here."
             jump AmnesiaBadBranch
@@ -183,6 +193,7 @@ label amnesia:
 label AmnesiaGoodBranch:
     "You almost wanna ask if he's keeping you safe from {i}him{/i}."
     show cadmus regularE -armsR -hand at sit
+    ## TODO: finger drumming sfx
     "He pulls his hand away, continuing to drum against the chair."
     "Leavng you to wonder what the best course of action is."
     "You know you could free your hand if you wanted to- but you don't know where his knife is."
@@ -193,7 +204,8 @@ label AmnesiaGoodBranch:
     "You don't even know {i}where{/i} the exit is."
 
     "It's hard to understand the situation you're even in."
-    "Perhaps he wouldn't mind some questions."
+    "Perhaps he wouldn't mind some questions?"
+    "Whatever things come to mind should work."
 
     menu:
         "Am I your first?":
@@ -210,11 +222,11 @@ label AmnesiaGoodBranch:
                     cadmus "Have eyes for me and only me darling~"
                     "You can't help but smile a bit just at how excited he is."
                     "Though, you quickly come back to your senses."
-                    "Happy that he's giddy over someone he's kidnapped?"
-                    "Ick."
+                    "How bizarre, to feel any sense of happiness for someone who kidnapped you."
+                    "Disgusting."
                 
                 "No":
-                    show cadmus regularE with dis
+                    show cadmus concern with dis
                     cadmus "Oh..."
                     show cadmus at lean
                     "He suddenly leans in closer to you."
@@ -227,12 +239,12 @@ label AmnesiaGoodBranch:
                     cadmus "You'll have eyes for only me now, right?"
                     "As he stares, his smile is a tad bit unnerving."
                     camera at nodHead
-                    "You nod."
-                    show cadmus at sit
-                    "Then Cadmus pulls away from you."
-                    "Conflicted between feeling bad for how sad he looked, and scared from his implied threat."
-                    "Though...why would you feel bad for him?"
-                    "Yuck."
+                    "You nod"
+                    show cadmus normalSmile at sit
+                    extend ", he seems to relax."
+                    "He looked so pathetic- as though it matters if he's the only one for you."
+                    "His threat barely means anything now that you're already caught in his trap."
+                    "What a weirdo."
         
         "Are you eating enough?":
             show cadmus confused with dis
@@ -253,6 +265,9 @@ label AmnesiaGoodBranch:
             show cadmus inLove with dis
             cadmus "Watch over you of course."
             cadmus "I have to make sure you're safe and no one takes you from me."
+            "You can't help but feel unnerved by his response."
+            "Though, the fact you even expected him to say something more {i}normal{/i}..."
+            "That's entirely on you."
 
         "Do you know where we are?":
             show cadmus shock with dis
@@ -261,6 +276,8 @@ label AmnesiaGoodBranch:
             "Struggling to put his emotions in check, you assume."
             cadmus "Well...of course I do, I brought you here."
             cadmus "This place is mine. Why would we be somewhere I didn't know?"
+            "He's probably just trying to pull your leg."
+            "Cadmus {i}definitely{/i} knows something you don't."
 
     show cadmus normalSmile removeExtras with dis
     cadmus "Such a curious little mouse."
@@ -277,6 +294,8 @@ label AmnesiaGoodBranch:
     cadmus "Darling?"
     cadmus "Are you worried about me? You seem so concerned."
 
+    "You have no idea how he got that from anything you've done."
+    "I guess asking him a question did do something."
     "You suppose...it might work to just play along with him."
 
     menu:
@@ -285,6 +304,8 @@ label AmnesiaGoodBranch:
             cadmus "I don't think you have that luxury, or I guess the curse of being able to try."
 
             "You didn't really, you are tied to the chair."
+            "If you actually {i}wanted{/i} to help him-"
+            "Which you don't."
 
             cadmus "I don't mean to make you feel bad, love."
             show cadmus eyesSld with dis
@@ -299,13 +320,16 @@ label AmnesiaGoodBranch:
             cadmus "Aren't you just the sweetest..."
             cadmus "I'll keep going knowing I have your support."
 
+            "He's so sappy..."
+
     show cadmus normalSmile with dis
     "As he is seemingly lost in thought about what to do to help make you feel better."
     "It gives you time to think."
     "You focus on the ropes surrounding you."
     "There seems to be a loose spot near your hand."
     "It would be best to think of a game plan."
-    "You could rid yourself of this situation, get out of here, leave it all behind."
+    "You could rid yourself of this situation"
+    extend ", get out of here, leave it all behind."
     "You just have to get out of the ropes."
     "{b}Grab his knife.{/b}"
     "{b}End it all.{/b}"
@@ -491,7 +515,7 @@ label AmnesiaBadBranch:
     "Cadmus comes into view, on the other side of the room, just barely visible."
     "He disappears back into the darkness just as quickly as he appeared."
     "Trying to comprehend all this...it hurts your head."
-    # screen shake and blur
+    
     camera at continuousShake
     "That pounding sensation returns."
     "He hasn't tried to hurt you- the ropes aren't even tight."
