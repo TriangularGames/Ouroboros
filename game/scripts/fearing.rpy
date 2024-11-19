@@ -37,7 +37,8 @@ label fearing:
 
     menu:
         "Pull on the ropes.":
-            camera at shakeOnce
+            camera at shakeOnceNoBlur
+            play sound moveInRope
             "Try as you might the ropes never budge."
             camera at cameraReset
             "Though the motion of your struggle scoots the chair about a centimeter."
@@ -54,7 +55,7 @@ label fearing:
     show black zorder 5 at shortBlink
     show cadmus normalSmile at default with dis
     cadmus "My little mouse is awake~!"
-    camera at shakeOnce
+    camera at shakeOnceNoBlur
     "His voice startles you straight."
     camera at cameraReset
     "He is sitting in the chair in front of you...as if he never left."
@@ -73,9 +74,9 @@ label fearing:
 
     show cadmus at lean
     "Cadmus stands from the chair, leaning close to you."
-    "His eyes search you hungrily."
+    "His eyes search you hungrily"
     show cadmus lick with dis
-    "His tongue dancing across his lips."
+    extend ", tongue dancing across his lips."
 
     show cadmus inLove with dis
     cadmus "You truly are the most beautiful being for my affections."
@@ -149,8 +150,9 @@ label fearing:
     centered "It's {size=50}whERE HE BIT YOU.{nw}"
     $ _history = True
     camera at cameraReset
-    "It's where the rope burns, you assume."
+    "It's {fast}where the rope burns, you assume."
 
+    play sound runningWater
     "You hear running water off in the corner."
     "While he's not around, you decide to reassess the ropes."
     "{cps=10}..."
@@ -180,6 +182,7 @@ label fearing:
     cadmus "Ah- of course, you can't actually drink it yourself."
     cadmus "Let me help you~"
 
+    show cadmus at lean
     "He brings the cup to your lips."
     "What if he poisoned the water?"
     "Is the cup even full of water?"
@@ -205,7 +208,7 @@ label fearing:
     "You follow the cup- desperately wanting more."
     show cadmus armsR at lean
     "He gently places his hand on your chin."
-    "Wiping your lips with his thumb, smiling as he does so."
+    "Wiping your lips with his thumb, seeming amused by you."
 
     show cadmus smirkingSoft with dis
     cadmus "I'll be faster next time, I promise."
@@ -225,7 +228,7 @@ label FearBadChoice1:
     show cadmus questioning with dis
     cadmus "Why so scared?"
     show cadmus at lean
-    "He leans towards you, eyeing you curiously."
+    "He's eyeing you curiously, as if he cannot begin to comprehend what you might be feeling."
     show cadmus concern with dis
     cadmus "Am I really oh so frightening? I couldn't hurt a fly~"
 
@@ -267,6 +270,7 @@ label FearBadChoice1:
     
     show cadmus concern with dis
     cadmus "Well, there must be something I can do to quell any possible concerns you might have..."
+    ## TODO: add finger drumming sfx
     "His fingers drum against the back of the chair as he ponders."
     show cadmus armsHighSH at lean
     "Just as you go to speak, he presses a finger to your lips."
@@ -278,6 +282,9 @@ label FearBadChoice1:
     "It's best you don't tempt the devil."
     show cadmus regularE -armsHighSH at sit
     "He pulls his hand away, continuing to drum against the chair."
+
+    ## TODO: perhaps add a bit more here specifically? Maybe another choice or two?
+
     "Leavng you to wonder what the best course of action is."
     "You know you could free your hand if you wanted to- but you don't know where his knife is."
     "Glancing at his legs, it's hard to see."
@@ -307,7 +314,7 @@ label FearBadChoice1:
     "{cps=10}..."
     "{cps=10}..."
     "You can't hear a single thing."
-    "There's no running water, no clanging of metal, no sound of a door, not even any sounds that'd be from him."
+    "There's no running water, no footsteps, no sound of a door, not even breathing."
     "The room is completely silent."
     "Honestly...maybe you should free your hand now."
     "Who knows what in the world Cadmus is planning."
@@ -365,7 +372,10 @@ label FearGoodBranchHalf:
     cadmus "I have you, no need for any other fanciful things."
     cadmus "My love is right here."
 
-    "Cadmus leans on his arm, staring at you once again."
+    show cadmus eyesSld with dis
+    "Cadmus glances away, stretching his neck"
+    show cadmus eyesS with dis
+    extend ", before staring at you once again."
     "He seems to have no interest in going anywhere."
     "...Now might be your chance."
 
@@ -415,6 +425,7 @@ label FearGoodBranchHalf:
     "There's light at the end of this corridor- a completely welcome sight to behold."
     hide black with dis
 
+    ## TODO: get grass running noise perhaps?
     "Reaching the outside- you find yourself in a field."
     "An endless field of grass."
     "Is this place...a bunker?"
@@ -469,6 +480,7 @@ label FearGoodBranchHalf:
 
 label FearBadBranchA:
     "Cadmus tosses the cup aside."
+    ## TODO: cup shattering noise
     "The porcelain shattering pierces your ears."
     $ _history = False
     "Would he do that to you?{nw}"
@@ -479,10 +491,14 @@ label FearBadBranchA:
     cadmus "Don't worry about that my love."
     cadmus "Cups are easy to replace..."
     cadmus "But you?"
-    "He places his hand against your cheek, his grin wide as he stares intently at you."
+    show cadmus armsR at lean
+    "He places his hand against your cheek"
+    show cadmus smilecreepyTeeth with dis
+    extend ", his grin wide as he stares intently at you."
     cadmus "My beautiful dear, you are irreplaceable~"
 
     "Letting it linger there, without him talking- you can pay attention to the way it feels."
+    show cadmus regularE with dis
     "{cps=15}His hand is cold."
     $ _history = False
     "Maybe he's cold blooded.{nw}"
@@ -490,20 +506,22 @@ label FearBadBranchA:
     "Maybe he{fast} has bad blood flow?"
     "His entire hand feels like ice against your face."
 
-    $ BadBranchA = True
-    jump FearBadChoice1
-
-label FearBranchACont:
     cadmus "You're so lovely to look at."
+    show cadmus armsD -hand at sit
     "His hand finally releases your cheek."
     cadmus "I want to stay with your forever."
 
     "He chuckles, amused at his own statement."
 
+    $ BadBranchA = True
+    jump FearBadChoice1
+
+label FearBranchACont:
     cadmus "Of course, that's what we're going to do."
 
+    ## TODO: finger drumming noise
     "He drums his fingers against the chair, lost in his own thoughts."
-    "Given he seems a bit distracted...now might be your chance."
+    "Given he seems a bit distracted- now might be your chance."
     "You could grab his knife and run...right?"
 
     menu:
@@ -531,6 +549,7 @@ label FearBranchACont:
             jump FearGoodBranchHalf
 
 label FearBadBranchB:
+    ## TODO: make this a big longer!! BUILD UP SUSPENSE OR W/E!!!
     "The sound of footsteps echo through the space."
     "He's returning."
     "You try to prepare yourself for anything- good, bad, and awful."
