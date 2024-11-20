@@ -78,7 +78,14 @@ transform liftUp:
     subpixel True 
     ypos 0 
     power_in2 0.22 ypos -80 
-    power_in2 0.13 ypos -70 
+    power_in2 0.13 ypos -70
+
+transform zoomOnDoor:
+    subpixel True 
+    xpos 0 offset (0.0, 0.0) zoom 1.0 
+    ease 0.50 xpos 0 offset (1926.0, 243.0) zoom 1.48 
+
+
 
 
         
