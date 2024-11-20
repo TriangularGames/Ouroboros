@@ -395,7 +395,7 @@ label FearGoodBranchHalf:
             "The sudden motion shifting the ropes, allowing you more movement than you expected."
             "For a guy so proud of these stupid things, he sure didn't do that well tying you."
             "Cadmus is shocked, trying to speak but his words failing him."
-            ## TODO: have a zoom towards him?
+            play sound pullOutKnife
             "Reaching for one of his pockets, you manage to find the knife."
 
     cadmus "W-wait!"
