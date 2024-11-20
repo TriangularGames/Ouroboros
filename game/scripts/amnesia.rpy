@@ -193,7 +193,7 @@ label amnesia:
 label AmnesiaGoodBranch:
     "You almost wanna ask if he's keeping you safe from {i}him{/i}."
     show cadmus regularE -armsR -hand at sit
-    ## TODO: finger drumming sfx
+    play sound drummingFingers
     "He pulls his hand away, continuing to drum against the chair."
     "Leavng you to wonder what the best course of action is."
     "You know you could free your hand if you wanted to- but you don't know where his knife is."

@@ -270,8 +270,8 @@ label FearBadChoice1:
     
     show cadmus concern with dis
     cadmus "Well, there must be something I can do to quell any possible concerns you might have..."
-    ## TODO: add finger drumming sfx
-    "His fingers drum against the back of the chair as he ponders."
+    play sound drummingFingers
+    "His fingers drum against the chair as he ponders."
     show cadmus armsHighSH at lean
     "Just as you go to speak, he presses a finger to your lips."
     show cadmus smirk with dis
@@ -520,7 +520,7 @@ label FearBadBranchA:
 label FearBranchACont:
     cadmus "Of course, that's what we're going to do."
 
-    ## TODO: finger drumming noise
+    play sound drummingFingers
     "He drums his fingers against the chair, lost in his own thoughts."
     "Given he seems a bit distracted- now might be your chance."
     "You could grab his knife and run...right?"
