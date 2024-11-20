@@ -65,6 +65,14 @@ transform shakeOnceNoBlur:
     linear 0.1*(not renpy.is_skipping()) xoffset 2 yoffset -2
     linear 0.1*(not renpy.is_skipping()) xoffset -3 yoffset 3
     linear 0.1*(not renpy.is_skipping()) xoffset 0 yoffset 0
+
+transform headPat:
+    subpixel True 
+    ypos 0 
+    linear 0.20 ypos 15 
+    linear 0.19 ypos 0 
+    linear 0.19 ypos 10 
+    linear 0.17 ypos 0 
         
 
 
