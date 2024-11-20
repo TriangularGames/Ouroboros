@@ -72,7 +72,15 @@ transform headPat:
     linear 0.20 ypos 15 
     linear 0.19 ypos 0 
     linear 0.19 ypos 10 
-    linear 0.17 ypos 0 
+    linear 0.17 ypos 0
+
+transform liftUp:
+    subpixel True 
+    ypos 0 
+    power_in2 0.22 ypos -80 
+    power_in2 0.13 ypos -70 
+
+
         
 
 
