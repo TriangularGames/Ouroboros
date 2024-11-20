@@ -232,8 +232,8 @@ label caring:
     "What is he doing?"
 
     menu:
-        "Where are you going?":
-            ## TODO: add headpat effect perhaps?
+        "Where are you going?":     
+            camera at headPat
             "He laughs, placing his hand on your head."
             cadmus "I'm just stretching my legs, no need to panic."
             cadmus "Just going to walk the room. I'll be quick."
@@ -651,7 +651,6 @@ label CareGoodBranchA:
     jump CareGoodEnding
 
 label CareGoodEnding:
-    # TODO: include some kind of "flash forward" effect here perhaps? Imply passage of time since
     show blank zorder 5 at blink
 
     show cadmus normalSmile with dis
@@ -1133,7 +1132,7 @@ label CareBadEndSpecial:
     "Suddenly you feel the ropes slip off you-"
     play sound knifeDrop
     "The sound of the knife clattering to the floor."
-    ## TODO: camera lift up here
+    camera at liftUp
     "Cadmus forces your head up as he lunges at you."
     show black zorder 5 at closeEyes
     "You scream as his teeth dig into the back of your neck."

@@ -80,7 +80,7 @@ label chaos:
             cadmus "OW!"
 
         "Move your head away":
-            ## TODO: camera move here
+            camera at tiltHead
             "You tilt your head away from his hand."
             $ _history = False
             camera at cameraReset

@@ -409,12 +409,13 @@ label FearGoodBranchHalf:
 
     "He simply points off to the side-"
     "You book it without looking back."
-    ## TODO: zoom into the door?
+    camera at zoomOnDoor
     play sound doorOpen
     "It's a short struggle to find the knob in the darkness, but the second your hand finds purchase- you keep moving."
     stop music channel "music_CH1" fadeout 1.0
     stop music channel "music_CH2"
     show black zorder 5 with dis
+    camera at cameraReset
 
     "Stopping now would be a horrible mistake."
     "Cadmus is going to find you."
@@ -578,7 +579,7 @@ label FearBadConverged:
     "{cps=10}JuSt LiKe He WiLl YoUr FlEsH{nw=3}"
     $ _history = True
     "You're horrified at what's coming for you."
-    ## TODO: add movement here so that he looks like he's holding you up
+    camera at liftUp
     "Cadmus' hand firmly grasps your neck, lifting you from the chair with ease."
     $ _history = False
     "Not even giving you a second to react to being free from his tail's suffocation.{nw}"
