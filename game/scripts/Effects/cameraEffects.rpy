@@ -83,7 +83,18 @@ transform liftUp:
 transform zoomOnDoor:
     subpixel True 
     xpos 0 offset (0.0, 0.0) zoom 1.0 
-    ease 0.50 xpos 0 offset (1926.0, 243.0) zoom 1.48 
+    ease 0.50 xpos 0 offset (1926.0, 243.0) zoom 1.48
+
+transform tiltHead:
+    subpixel True 
+    parallel:
+        xpos 0 
+        easein 0.26 xpos 150 
+    parallel:
+        rotate 0.0 
+        linear 0.26 rotate 2.0 
+
+
 
 
 
