@@ -1257,8 +1257,9 @@ label ChaosConvergedEnding:
     "You call for him, but he's still struggling, mumbling to himself."
 
     show cadmus at comeUp
-    "He pulls himself into the chair again, his hand pulling the knife from his pocket."
+    "He pulls himself into the chair again"
     show cadmus armsHK bloodyarmsHK with dis
+    extend ", his hand pulling the knife from his pocket."
 
     "You" "What are you doing? I thought we had stuff to talk about??"
 
@@ -1274,7 +1275,7 @@ label ChaosConvergedEnding:
 
     "He sounds...different."
     "The knife comes for your throat."
-    camera at shakeOnce
+    camera at shakeOnceNoBlur
     "Your hands clasp his, trying to keep the knife away from you."
     camera at cameraReset
 
@@ -1285,13 +1286,12 @@ label ChaosConvergedEnding:
     play sound stab
     show blank with flash
     "With his free hand he pulls your hands away, slicing at your neck."
-    show black with fade
+    show black with fade(0.2)
     "Everything goes dark in an instant."
     stop music channel "music_CH1" 
     stop music channel "music_CH2" fadeout 1.0
     "...there has to be an escape."
 
-    scene black with fade
     pause (0.5)
 
     cadmus "{cps=10}..."
