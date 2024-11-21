@@ -23,7 +23,7 @@ define gui.show_name = False
 
 ## The version of the game.
 
-define config.version = "0.5"
+define config.version = "0.6"
 
 
 ## Text that is placed on the game's about screen. Place the text between the
@@ -237,6 +237,7 @@ init python:
     build.classify('game/**.rpyc', 'archive')
     build.classify('game/**.jpg', 'archive')
     build.classify('game/**.png', 'archive')
+    build.classify('game/**.webp', 'archive')
     build.classify('game/**.mp3', 'archive')
 
     ## Files matching documentation patterns are duplicated in a mac app build,
