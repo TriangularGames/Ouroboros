@@ -56,21 +56,9 @@ Sound Effects:
 
 {a="https://simon13666.itch.io/sound-starter-pack"}Sound Effect Starter Pack{/a}
 
-
-Snake Images:
-
-{a="https://pixabay.com/users/pichler61-1723327/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1112063"}Günter Pichler{/a} from {a="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1112063"}Pixabay{/a}
-
-{a="https://pixabay.com/users/navoniloybhaumik-14149939/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=6971762"}NAVONILOY BHAUMIK{/a} from {a="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=6971762"}Pixabay{/a}
-
-{a="https://pixabay.com/users/navoniloybhaumik-14149939/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=6971762"}NAVONILOY BHAUMIK{/a} from {a="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=6971762"}Pixabay{/a}
-
-
 Effects:
 
-Glitch Image Effect by {a="https://github.com/Gouvernathor/renpy-ChromaGlitch"}Gouvernathor{/a}
-
-Kinetc Text Tags by {a="https://wattson.itch.io/kinetic-text-tags"}Wattson{/a}
+Kinetic Text Tags by {a="https://wattson.itch.io/kinetic-text-tags"}Wattson{/a}
 
 
 """)

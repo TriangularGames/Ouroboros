@@ -1,5 +1,4 @@
 define dis = {"master": Dissolve(0.5)}
-define slowdis = {"master": Dissolve(2.0)}
 
 init:
     $ flash = Fade(0.15,0,.25, color="#800")
@@ -50,6 +49,8 @@ transform shortBlink:
     "eyehalfopened.webp"
     .2*(not renpy.is_skipping())
     alpha 0.0
+
+## V Cadmus specific effects/animations here! V
 
 transform cadFidget:
     subpixel True
