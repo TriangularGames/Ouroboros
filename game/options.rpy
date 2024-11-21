@@ -56,6 +56,7 @@ Sound Effects:
 
 {a="https://simon13666.itch.io/sound-starter-pack"}Sound Effect Starter Pack{/a}
 
+
 Effects:
 
 Kinetic Text Tags by {a="https://wattson.itch.io/kinetic-text-tags"}Wattson{/a}
@@ -85,6 +86,7 @@ define config.has_voice = True
 ## To allow the user to play a test sound on the sound or voice channel,
 ## uncomment a line below and use it to set a sample sound to play.
 
+## TODO: setup test sounds for sfx and voice
 # define config.sample_sound = "sample-sound.ogg"
 # define config.sample_voice = "sample-voice.ogg"
 
@@ -232,8 +234,6 @@ init python:
 
     ## To archive files, classify them as 'archive'.
 
-    # build.classify('game/**.png', 'archive')
-    # build.classify('game/**.jpg', 'archive')
     build.classify('game/**.rpyc', 'archive')
     build.classify('game/**.jpg', 'archive')
     build.classify('game/**.png', 'archive')
