@@ -239,6 +239,8 @@ init python:
     build.classify('game/saves/**', None)
     build.classify('game/traceback.txt', None)
     build.classify('game/**.rpy', None)
+    build.classify('game/images/Cadmus/cadmusPNG', None)
+    build.classify('game/images/PNGfiles', None)
 
     ## To archive files, classify them as 'archive'.
 

@@ -44,7 +44,7 @@ layeredimage cadmus:
         attribute eyesCRAld:
             "pupils_crazy_ld"
         attribute emptyEyes:
-            "images/Cadmus/emptySprite.png"
+            "images/Cadmus/emptySprite.webp"
 
     group eyes:
         attribute lidsR default:
@@ -54,7 +54,7 @@ layeredimage cadmus:
         attribute lidsC:
             "lids closed"
         attribute lidsE:
-            "images/Cadmus/emptySprite.png"
+            "images/Cadmus/emptySprite.webp"
     
     group eyebrows:
         attribute eyebrowsN default:
@@ -108,7 +108,7 @@ layeredimage cadmus:
         attribute hairUp:
             "hair up"
         attribute HAHABALD:
-            "images/Cadmus/emptySprite.png"
+            "images/Cadmus/emptySprite.webp"
 
     group arms:
         attribute armsD default:
@@ -166,59 +166,59 @@ layeredimage cadmus:
 
     group faces:
         attribute confused:
-            "images/Cadmus/emptySprite.png"
+            "images/Cadmus/emptySprite.webp"
         attribute confusedLD:
-            "images/Cadmus/emptySprite.png"
+            "images/Cadmus/emptySprite.webp"
         attribute annoyed:
-            "images/Cadmus/emptySprite.png"
+            "images/Cadmus/emptySprite.webp"
         attribute inLove:
-            "images/Cadmus/emptySprite.png"
+            "images/Cadmus/emptySprite.webp"
         attribute embarassed:
-            "images/Cadmus/emptySprite.png"
+            "images/Cadmus/emptySprite.webp"
         attribute crazy:
-            "images/Cadmus/emptySprite.png"
+            "images/Cadmus/emptySprite.webp"
         attribute playfulK:
-            "images/Cadmus/emptySprite.png"
+            "images/Cadmus/emptySprite.webp"
         attribute regularE:
-            "images/Cadmus/emptySprite.png"
+            "images/Cadmus/emptySprite.webp"
         attribute questioning:
-            "images/Cadmus/emptySprite.png"
+            "images/Cadmus/emptySprite.webp"
         attribute normalSmile:
-            "images/Cadmus/emptySprite.png"
+            "images/Cadmus/emptySprite.webp"
         attribute angie:
-            "images/Cadmus/emptySprite.png"
+            "images/Cadmus/emptySprite.webp"
         attribute smirking:
-            "images/Cadmus/emptySprite.png"
+            "images/Cadmus/emptySprite.webp"
         attribute smirkingSoft:
-            "images/Cadmus/emptySprite.png"
+            "images/Cadmus/emptySprite.webp"
         attribute disappointed:
-            "images/Cadmus/emptySprite.png"
+            "images/Cadmus/emptySprite.webp"
         attribute concern:
-            "images/Cadmus/emptySprite.png"
+            "images/Cadmus/emptySprite.webp"
         attribute questioningA:
-            "images/Cadmus/emptySprite.png"
+            "images/Cadmus/emptySprite.webp"
         attribute creepy:
-            "images/Cadmus/emptySprite.png"
+            "images/Cadmus/emptySprite.webp"
         attribute quiveringEyes:
-            "images/Cadmus/emptySprite.png"
+            "images/Cadmus/emptySprite.webp"
         attribute frowning:
-            "images/Cadmus/emptySprite.png"
+            "images/Cadmus/emptySprite.webp"
         attribute shock:
-            "images/Cadmus/emptySprite.png"
+            "images/Cadmus/emptySprite.webp"
         attribute scared:
-            "images/Cadmus/emptySprite.png"
+            "images/Cadmus/emptySprite.webp"
 
     group remove multiple:
         attribute removeExtras:
-            "images/Cadmus/emptySprite.png"
+            "images/Cadmus/emptySprite.webp"
         attribute removeShadows:
-            "images/Cadmus/emptySprite.png"
+            "images/Cadmus/emptySprite.webp"
         attribute removeLids:
-            "images/Cadmus/emptySprite.png"
+            "images/Cadmus/emptySprite.webp"
         attribute removeBlood:
-            "images/Cadmus/emptySprite.png"
+            "images/Cadmus/emptySprite.webp"
         attribute resetArms:
-            "images/Cadmus/emptySprite.png"
+            "images/Cadmus/emptySprite.webp"
 
 
 image cadmusblinkingneutral:
