@@ -281,17 +281,62 @@ label FearBadChoice1:
     "You almost wanna ask if he's keeping you safe from {i}him{/i}, but given how sharp he is about things..."
     "It's best you don't tempt the devil."
     show cadmus regularE -armsHighSH at sit
+    play sound drummingFingers
     "He pulls his hand away, continuing to drum against the chair."
+    "It's hard to figure out what might be the best thing to do in this situation."
+    "You could try and strike up a conversation- but clearly he's lost in thought."
+    "If anything, trying to talk to him might upset him."
+    extend "..or make him way too happy you care."
+    "You could free your hand if you wanted-"
+    extend " though you don't know what he might do."
+    "If he pulls out his knife before you could grab it, you'd be in deep shit."
+    "It's hard to see his legs- given he's wearing black pants."
+    "You can roughly guess where his pockets might be..."
+    "What side did he pull the knife from again?"
+    "Though, even if you get out of the ropes and get the knife..."
+    "{i}Then what?{/i}"
+    "Sure you can barely see the door off to the right side of the room."
+    "What if it's fake?"
+    "Maybe it doesn't even lead out?"
+    "How can you be sure it's {i}the{/i} exit?"
 
-    ## TODO: perhaps add a bit more here specifically? Maybe another choice or two?
+    show cadmus questioning with dis
+    cadmus "What do you prefer, rain or shine?"
 
-    "Leavng you to wonder what the best course of action is."
-    "You know you could free your hand if you wanted to- but you don't know where his knife is."
-    "Glancing at his legs, it's hard to see."
-    "The room is too dark to get a good look as to where his pockets might be."
-    "Even if you manage to leave the ropes, get his knife- who knows what else he has on him."
-    "That's not to mention..."
-    "You don't even know {i}where{/i} the exit is."
+    "You" "...what?"
+
+    cadmus "Which do you prefer?"
+
+    "You can't even begin to comprehend what brought this question on."
+
+    define rain = False
+    menu:
+        "Rain.":
+            $ rain = True
+            "You" "It's relaxing, getting to stay indoors and just...listen to the rain."
+            show cadmus normalSmile with dis
+            cadmus "We truly make quite the pair."
+        
+        "Shine":
+            "You" "It's bright, and warm, hard to enjoy a day that rains when it's so gloomy."
+            show cadmus regularE with dis
+            cadmus "I suppose so."
+
+    "You" "Which do you prefer?"
+    show cadmus smirkingSoft with dis
+    cadmus "The rain."
+    cadmus "It's relaxing- you find a good book, sit in a nice chair."
+    cadmus "Let the day drift away."
+
+    if rain:
+        "You" "Well that makes two of us."
+    else:
+        "You" "To each their own."
+
+    show cadmus regularE with dis
+    "He nods, and goes back to staring off."
+    "You're not entirely sure how this relates to wanting to quell your concerns..."
+    "It was probably just some weird side tangent on his part."
 
     show cadmus eyebrowsR with dis
     cadmus "Hmm...ah!"
@@ -426,7 +471,7 @@ label FearGoodBranchHalf:
     "There's light at the end of this corridor- a completely welcome sight to behold."
     hide black with dis
 
-    ## TODO: get grass running noise perhaps?
+    play sound footstepsGrass
     "Reaching the outside- you find yourself in a field."
     "An endless field of grass."
     "Is this place...a bunker?"
@@ -481,7 +526,7 @@ label FearGoodBranchHalf:
 
 label FearBadBranchA:
     "Cadmus tosses the cup aside."
-    ## TODO: cup shattering noise
+    play sound teacupSmash
     "The porcelain shattering pierces your ears."
     $ _history = False
     "Would he do that to you?{nw}"
@@ -550,7 +595,6 @@ label FearBranchACont:
             jump FearGoodBranchHalf
 
 label FearBadBranchB:
-    ## TODO: make this a big longer!! BUILD UP SUSPENSE OR W/E!!!
     "The sound of footsteps echo through the space."
     "He's returning."
     "You try to prepare yourself for anything- good, bad, and awful."
@@ -567,7 +611,48 @@ label FearBadBranchB:
 
     cadmus "Oh how divine! How precious!"
     "His laughter fills your ears, it's almost comforting."
-    "{cps=10}But his face contorts."
+    show cadmus at cadFidget
+    "He shuffles in his chair, trying to get comfortable."
+    menu:
+        "Where did you go?":
+            cadmus "I went to go find something."
+            show cadmus frowning with dis
+            cadmus "Unfortunately...I couldn't figure out where it was."
+            cadmus "It is what it is."
+            show cadmus regularE with dis
+            "He shrugs, not seeming to fussed over it."
+
+        "Something wrong?":
+            show cadmus confused with dis
+            cadmus "Wrong?"
+            cadmus "Why would anything be wrong?"
+            "You" "Well you got up and left so quickly."
+            show cadmus regularE with dis
+            cadmus "Oh, that." ## bro sounds bored af
+            "His tone catches you off guard."
+            show cadmus smirk with dis
+            cadmus "It wasn't anything important."
+        
+    "He doesn't seem to be in any rush to explain whatever he was doing."
+    "It's probably better to drop the topic."
+
+    show cadmus normalSmile with dis
+    cadmus "You know..."
+    "The silence lingers, seeming to be in no rush."
+    cadmus "You're very clever."
+    "You" "I...am?"
+    cadmus "Oh yes, very clever."
+    show cadmus at lean
+    cadmus "Of course, my darling dearest would be, so very smart, yes?"
+    "You" "Um...sure."
+
+    "You have no idea what he's going on about."
+    "It's honestly making you wildly uncomfortable."
+    "Your hand twitches-"
+    show cadmus regularE with dis
+    cadmus "If only that were the truth."
+    show cadmus angie with dis
+    "{cps=10}His face contorts."
 
     cadmus "It's a shame...you think you're pulling a fast one on me."
 
@@ -586,6 +671,9 @@ label FearBadConverged:
     $ _history = True
     "Not even giving you a second to react to being free from{fast} the winding ropes."
 
+    show cadmus -eyeBS
+    show cadmus inLove with dis
+    show cadmus uglyTearsNU
     cadmus "I'VE DONE ALL THIS TO PROTECT YOU!"
     "He sounds...sad...why?"
     cadmus "CAN'T YOU SEE THAT I LOVE YOU?"
