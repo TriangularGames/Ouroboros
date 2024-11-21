@@ -717,7 +717,7 @@ label ChaosBadBranchA:
             cadmus "Silly mouse you are~"
     
     cadmus "You are just so amusing~"
-    cadmus "Shouldn't you be a bit more aware?”"
+    cadmus "Shouldn't you be a bit more aware?"
 
     "You" "Maybe I would if you were being so damn vague!"
 
@@ -833,7 +833,7 @@ label ChaosBadBranchA:
 
     "You can't help but feel so overwhelmed and confused."
 
-    "You" "You're my enemy...right?”"
+    "You" "You're my enemy...right?"
 
     show cadmus confused with dis
     cadmus "You're still on that?"
@@ -942,7 +942,7 @@ label ChaosBadBranchB:
             show cadmus confused with dis
             cadmus "Me? Abandon you? Why I'd never think about it."
 
-            "He looks a bit miffed, at least at first glance…"
+            "He looks a bit miffed, at least at first glance..."
             "But there's something distinct-"
 
             $ _history = False
