@@ -9,45 +9,45 @@ transform swipeDown:
     ease 0.8*(not renpy.is_skipping()) ypos 0
 
 transform blink:
-    "eyehalfopened.png"
+    "eyehalfopened.webp"
     .2*(not renpy.is_skipping())
-    "eyeclosed.png" 
+    "eyeclosed.webp" 
     .2*(not renpy.is_skipping())
-    "eyeopen.png"
+    "eyeopen.webp"
     .3*(not renpy.is_skipping())
-    "eyehalfopened.png"
+    "eyehalfopened.webp"
     .2*(not renpy.is_skipping())
-    "eyeclosed.png"
+    "eyeclosed.webp"
     .2*(not renpy.is_skipping())
-    "eyeopen.png"
+    "eyeopen.webp"
     .3*(not renpy.is_skipping())
-    "eyehalfopened.png"
+    "eyehalfopened.webp"
     .2*(not renpy.is_skipping())
-    "eyeclosed.png"
+    "eyeclosed.webp"
     .2*(not renpy.is_skipping())
-    "eyeopen.png"
+    "eyeopen.webp"
     alpha 0.0
 
 transform closeEyes:
-    "eyeopen.png"
+    "eyeopen.webp"
     .2*(not renpy.is_skipping())
-    "eyeclosed.png"
+    "eyeclosed.webp"
     .2*(not renpy.is_skipping())
-    "eyehalfopened.png"
+    "eyehalfopened.webp"
     .3*(not renpy.is_skipping())
-    "eyeopen.png"
+    "eyeopen.webp"
     .2*(not renpy.is_skipping())
-    "eyeclosed.png"
+    "eyeclosed.webp"
     .2*(not renpy.is_skipping())
-    "black.png"
+    "black.webp"
     alpha 1.0
 
 transform shortBlink:
-    "eyeclosed.png" 
+    "eyeclosed.webp" 
     .2*(not renpy.is_skipping())
-    "eyeopen.png"
+    "eyeopen.webp"
     .3*(not renpy.is_skipping())
-    "eyehalfopened.png"
+    "eyehalfopened.webp"
     .2*(not renpy.is_skipping())
     alpha 0.0
 
@@ -73,7 +73,7 @@ transform cadChuckle:
 
 transform eyesShakingSit:
     subpixel True
-    "images/Cadmus/pupils_snake.png"
+    "images/Cadmus/pupils_snake.webp"
     xalign 0.4 xoffset 0 yoffset -3 zoom 0.45
     xoffset -2.0 yoffset -1.0
     power_in3 0.06*(not renpy.is_skipping()) xoffset 2.0 yoffset 1.0
@@ -90,7 +90,7 @@ transform eyesShakingSit:
 
 transform eyesShakingLean:
     subpixel True
-    "images/Cadmus/pupils_crazy.png"
+    "images/Cadmus/pupils_crazy.webp"
     zoom 1.0 yalign 0.2 xoffset -260
     xoffset -255 yoffset -5.0
     power_in3 0.06*(not renpy.is_skipping()) xoffset -270 yoffset 5.0
