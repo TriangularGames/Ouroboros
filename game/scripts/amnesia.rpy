@@ -548,6 +548,7 @@ label AmnesiaBadEnding:
     "Cadmus suddenly pulls out the knife."
 
     cadmus "This has to end."
+    play sound heartBeat
     "You can't help but be afraid."
 
     show cadmus armsD with dis

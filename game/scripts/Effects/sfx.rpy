@@ -3,7 +3,7 @@
 define audio.bloodSplat = "audio/sound effects/blood splat.mp3"
 define audio.bodyFall = "audio/sound effects/bodyfall.mp3"
 define audio.doorOpen = "audio/sound effects/door open 5.mp3"
-define audio.heartBeat = "audio/sound effects/HeartBeatSlow2.mp3" ## unused
+define audio.heartBeat = "audio/sound effects/HeartBeatSlow2.mp3"
 define audio.pullOutKnife = "audio/sound effects/knife 8.mp3"
 define audio.stab = "audio/sound effects/knife stab.mp3"
 define audio.ropeFalls = "audio/sound effects/rope let go 5.mp3"

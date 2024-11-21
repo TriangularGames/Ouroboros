@@ -652,6 +652,7 @@ label FearBadBranchB:
     show cadmus regularE with dis
     cadmus "If only that were the truth."
     show cadmus angie with dis
+    play sound heartBeat
     "{cps=10}His face contorts."
 
     cadmus "It's a shame...you think you're pulling a fast one on me."
