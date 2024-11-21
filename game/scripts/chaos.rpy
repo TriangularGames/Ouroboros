@@ -650,8 +650,7 @@ label ChaosGoodConverged:
     cadmus "Stop!"
     "He suddenly grasps your shoulders."
     camera at cameraReset
-    ## TODO: maybe adjust this
-    show cadmus angie with dis
+    show cadmus scaredNoTears with dis
     cadmus "Stop it! Clear your mind, please."
 
     "You" "Huh- what-"

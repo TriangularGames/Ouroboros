@@ -207,6 +207,8 @@ layeredimage cadmus:
             "images/Cadmus/emptySprite.webp"
         attribute scared:
             "images/Cadmus/emptySprite.webp"
+        attribute scaredNoTears:
+            "images/Cadmus/emptySprite.webp"
 
     group remove multiple:
         attribute removeExtras:
@@ -559,6 +561,25 @@ init python:
             t_attrib.append('eyesS')
             t_attrib.append('eyebrowsTU')
             t_attrib.append('uglyTearsNU')
+            t_attrib.append('gasp')
+            t_attrib.append('NU')
+
+        if 'scaredNoTears' in t_attrib:
+            t_attrib.append('-blush')
+            t_attrib.append('-angryMark')
+            t_attrib.append('-sweating')
+            t_attrib.append('-uglyTears')
+            t_attrib.append('-uglyTearsNU')
+            t_attrib.append('-shadowTD')
+            t_attrib.append('-shadowTU')
+            t_attrib.append('-shadowN')
+            t_attrib.append('-lidsS')
+            t_attrib.append('-lidsC')
+            t_attrib.append('-lidsE')
+            t_attrib.append('-HAHABALD')
+
+            t_attrib.append('eyesS')
+            t_attrib.append('eyebrowsTU')
             t_attrib.append('gasp')
             t_attrib.append('NU')
         
