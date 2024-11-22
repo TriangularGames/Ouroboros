@@ -295,38 +295,47 @@ screen navigation():
         spacing gui.navigation_spacing
 
         if main_menu:
-            textbutton _("Start") action Start()
+            textbutton _("Start") action Start():
+                activate_sound "audio/sound effects/error_style_4_002.mp3"
 
         else:
 
             #textbutton _("History") action ShowMenu("history")
 
-            textbutton _("Save") action ShowMenu("save")
+            textbutton _("Save") action ShowMenu("save"):
+                activate_sound "audio/sound effects/error_style_4_002.mp3"
 
-        textbutton _("Load") action ShowMenu("load")
+        textbutton _("Load") action ShowMenu("load"):
+            activate_sound "audio/sound effects/error_style_4_002.mp3"
 
-        textbutton _("Options") action ShowMenu("preferences")
+        textbutton _("Options") action ShowMenu("preferences"):
+            activate_sound "audio/sound effects/error_style_4_002.mp3"
 
         if _in_replay:
 
-            textbutton _("End Replay") action EndReplay(confirm=True)
+            textbutton _("End Replay") action EndReplay(confirm=True):
+                activate_sound "audio/sound effects/error_style_4_002.mp3"
 
         elif not main_menu:
 
-            textbutton _("Main Menu") action MainMenu()
+            textbutton _("Main Menu") action MainMenu():
+                activate_sound "audio/sound effects/error_style_4_002.mp3"
 
-        textbutton _("Credits") action ShowMenu("about")
+        textbutton _("Credits") action ShowMenu("about"):
+            activate_sound "audio/sound effects/error_style_4_002.mp3"
 
         if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
 
             ## Help isn't necessary or relevant to mobile devices.
-            textbutton _("Help") action ShowMenu("help")
+            textbutton _("Help") action ShowMenu("help"):
+                activate_sound "audio/sound effects/error_style_4_002.mp3"
 
         if renpy.variant("pc"):
 
             ## The quit button is banned on iOS and unnecessary on Android and
             ## Web.
-            textbutton _("Quit") action Quit(confirm=not main_menu)
+            textbutton _("Quit") action Quit(confirm=not main_menu):
+                activate_sound "audio/sound effects/back_style_4_echo_001.mp3"
 
 
 style navigation_button is gui_button
@@ -358,18 +367,25 @@ screen main_menu():
     vbox:
         style_prefix "main"
 
-        textbutton _("Start") action Start()
-        textbutton _("Load") action ShowMenu("load")
-        textbutton _("Options") action ShowMenu("preferences")
+        textbutton _("Start") action Start():
+            activate_sound "audio/sound effects/error_style_4_002.mp3"
+        textbutton _("Load") action ShowMenu("load"):
+            activate_sound "audio/sound effects/error_style_4_002.mp3"
+        textbutton _("Options") action ShowMenu("preferences"):
+            activate_sound "audio/sound effects/error_style_4_002.mp3"
         if _in_replay:
-            textbutton _("End Replay") action EndReplay(confirm=True)
-        textbutton _("Credits") action ShowMenu("about")
+            textbutton _("End Replay") action EndReplay(confirm=True):
+                activate_sound "audio/sound effects/error_style_4_002.mp3"
+        textbutton _("Credits") action ShowMenu("about"):
+                activate_sound "audio/sound effects/error_style_4_002.mp3"
         if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
             ## Help isn't necessary or relevant to mobile devices.
-            textbutton _("Help") action ShowMenu("help")
+            textbutton _("Help") action ShowMenu("help"):
+                activate_sound "audio/sound effects/error_style_4_002.mp3"
         if renpy.variant("pc"):
             ## The quit button is banned on iOS and unnecessary on Android and Web.
-            textbutton _("Quit") action Quit(confirm=not main_menu)
+            textbutton _("Quit") action Quit(confirm=not main_menu):
+                activate_sound "audio/sound effects/back_style_4_echo_001.mp3"
 
     if gui.show_name:
         vbox:
@@ -491,6 +507,7 @@ screen game_menu(title, scroll=None, yinitial=0.0):
 
     textbutton _("Return"):
         style "return_button"
+        activate_sound "audio/sound effects/back_style_4_echo_001.mp3"
 
         action Return()
 
@@ -756,23 +773,30 @@ screen preferences():
                     vbox:
                         style_prefix "radio"
                         label _("Display")
-                        textbutton _("Window") action Preference("display", "window")
-                        textbutton _("Fullscreen") action Preference("display", "fullscreen")
+                        textbutton _("Window") action Preference("display", "window"):
+                            activate_sound "audio/sound effects/error_style_4_002.mp3"
+                        textbutton _("Fullscreen") action Preference("display", "fullscreen"):
+                            activate_sound "audio/sound effects/error_style_4_002.mp3"
 
                 vbox:
                     style_prefix "check"
                     label _("Skip")
-                    textbutton _("Unseen Text") action Preference("skip", "toggle")
-                    textbutton _("After Choices") action Preference("after choices", "toggle")
-                    textbutton _("Transitions") action InvertSelected(Preference("transitions", "toggle"))
+                    textbutton _("Unseen Text") action Preference("skip", "toggle"):
+                        activate_sound "audio/sound effects/error_style_4_002.mp3"
+                    textbutton _("After Choices") action Preference("after choices", "toggle"):
+                        activate_sound "audio/sound effects/error_style_4_002.mp3"
+                    textbutton _("Transitions") action InvertSelected(Preference("transitions", "toggle")):
+                        activate_sound "audio/sound effects/error_style_4_002.mp3"
 
                 ## Additional vboxes of type "radio_pref" or "check_pref" can be
                 ## added here, to add additional creator-defined preferences.
                 vbox:
                     style_prefix "radio"
                     label _("Font")
-                    textbutton _("Default") action gui.SetPreference("font", "BOOTERFZ.ttf")
-                    textbutton _("Dyslexic Friendly") action gui.SetPreference("font", "OpenDyslexic-Regular.otf")
+                    textbutton _("Default") action gui.SetPreference("font", "BOOTERFZ.ttf"):
+                        activate_sound "audio/sound effects/error_style_4_002.mp3"
+                    textbutton _("Dyslexic Friendly") action gui.SetPreference("font", "OpenDyslexic-Regular.otf"):
+                        activate_sound "audio/sound effects/error_style_4_002.mp3"
 
             null height (4 * gui.pref_spacing)
 
@@ -990,6 +1014,7 @@ screen history():
 
         textbutton "Return":
             style "history_return_button"
+            activate_sound "audio/sound effects/back_style_4_echo_001.mp3"
             action Return()
             alt _("Return")
 

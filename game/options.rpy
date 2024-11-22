@@ -56,6 +56,8 @@ Sound Effects:
 
 {a="https://simon13666.itch.io/sound-starter-pack"}Sound Effect Starter Pack{/a}
 
+{a="https://obsydianx.itch.io/interface-sfx-pack-1"}Interface SFX Pack 1{/a}
+
 
 Effects:
 
