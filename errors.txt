@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/scripts/caring.rpy", line 1037: expected end of line
-    play sound footSteps with fadeout 2.0
-                         ^
+File "game/screens.rpy", line 369: '_' is not a keyword argument or valid child of the imagebutton statement.
+    imagebutton _("Start") action Start():
+                 ^
 
 Ren'Py Version: Ren'Py 8.3.2.24090902
-Wed Nov 13 22:29:38 2024
+Fri Nov 22 10:40:42 2024
