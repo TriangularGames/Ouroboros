@@ -59,6 +59,11 @@ Sound Effects:
 {a="https://obsydianx.itch.io/interface-sfx-pack-1"}Interface SFX Pack 1{/a}
 
 
+Main Menu:
+
+Snake Image from {a="https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=2028134"}OpenClipart-Vectors{/a}
+
+
 Effects:
 
 Kinetic Text Tags by {a="https://wattson.itch.io/kinetic-text-tags"}Wattson{/a}
