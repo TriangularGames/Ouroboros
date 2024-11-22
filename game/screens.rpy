@@ -76,7 +76,6 @@ style frame:
     background Frame("gui/frame.png", gui.frame_borders, tile=gui.frame_tile)
 
 
-
 ################################################################################
 ## In-game screens
 ################################################################################
@@ -367,24 +366,39 @@ screen main_menu():
     vbox:
         style_prefix "main"
 
-        textbutton _("Start") action Start():
+        imagebutton action Start():
+            auto "gui/mainMenuButtons/mm_start_%s.png"
+            hover_sound "audio/sound effects/cursor_style_4.mp3"
             activate_sound "audio/sound effects/error_style_4_002.mp3"
-        textbutton _("Load") action ShowMenu("load"):
+        imagebutton action ShowMenu("load"):
+            auto "gui/mainMenuButtons/mm_load_%s.png"
+            hover_sound "audio/sound effects/cursor_style_4.mp3"
             activate_sound "audio/sound effects/error_style_4_002.mp3"
-        textbutton _("Options") action ShowMenu("preferences"):
+        imagebutton action ShowMenu("preferences"):
+            auto "gui/mainMenuButtons/mm_options_%s.png"
+            xoffset -25
+            hover_sound "audio/sound effects/cursor_style_4.mp3"
             activate_sound "audio/sound effects/error_style_4_002.mp3"
         if _in_replay:
             textbutton _("End Replay") action EndReplay(confirm=True):
+                hover_sound "audio/sound effects/cursor_style_4.mp3"
                 activate_sound "audio/sound effects/error_style_4_002.mp3"
-        textbutton _("Credits") action ShowMenu("about"):
+        imagebutton action ShowMenu("about"):
+                auto "gui/mainMenuButtons/mm_credits_%s.png"
+                xoffset -25
+                hover_sound "audio/sound effects/cursor_style_4.mp3"
                 activate_sound "audio/sound effects/error_style_4_002.mp3"
         if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
             ## Help isn't necessary or relevant to mobile devices.
-            textbutton _("Help") action ShowMenu("help"):
+            imagebutton action ShowMenu("help"):
+                auto "gui/mainMenuButtons/mm_help_%s.png"
+                hover_sound "audio/sound effects/cursor_style_4.mp3"
                 activate_sound "audio/sound effects/error_style_4_002.mp3"
         if renpy.variant("pc"):
             ## The quit button is banned on iOS and unnecessary on Android and Web.
-            textbutton _("Quit") action Quit(confirm=not main_menu):
+            imagebutton action Quit(confirm=not main_menu):
+                auto "gui/mainMenuButtons/mm_quit_%s.png"
+                hover_sound "audio/sound effects/cursor_style_4.mp3"
                 activate_sound "audio/sound effects/back_style_4_echo_001.mp3"
 
     if gui.show_name:
@@ -400,7 +414,7 @@ screen main_menu():
 style main_vbox:
     ypos 300
     xalign 0.5
-    spacing 24
+    spacing 20
 
 style main_button:
     xalign 0.5
