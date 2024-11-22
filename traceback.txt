@@ -1,40 +1,42 @@
-﻿='m sorry, but an uncaught exception occurred.
+﻿I'm sorry, but an uncaught exception occurred.
 
-After initialization, but before game start.
-  File "renpy/common/00start.rpy", line 83, in _init_language
-    renpy.change_language(language)
-SyntaxError: positional argument follows keyword argument (game/screens.rpy, line 138)
+While running game code:
+  File "renpy/common/00start.rpy", line 216, in script call
+    call _load_reload_game from _call__load_reload_game_1
+  File "renpy/common/00keymap.rpy", line 548, in script
+    python hide:
+  File "renpy/common/00keymap.rpy", line 548, in <module>
+    python hide:
+  File "renpy/common/00keymap.rpy", line 559, in _execute_python_hide
+    renpy.load(renpy.session["_reload_slot"])
+Exception: Couldn't find a place to stop rolling back. Perhaps the script changed in an incompatible way?
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "N:\Folder of Folders\Ren'py\renpy\bootstrap.py", line 359, in bootstrap
-    renpy.main.main()
-  File "N:\Folder of Folders\Ren'py\renpy\main.py", line 652, in main
-    run(restart)
-  File "N:\Folder of Folders\Ren'py\renpy\main.py", line 75, in run
-    renpy.translation.init_translation()
-  File "N:\Folder of Folders\Ren'py\renpy\translation\__init__.py", line 702, in init_translation
-    renpy.store._init_language() # type: ignore
-  File "renpy/common/00start.rpy", line 83, in _init_language
-    renpy.change_language(language)
-  File "N:\Folder of Folders\Ren'py\renpy\translation\__init__.py", line 796, in change_language
-    new_change_language(tl, language)
-  File "N:\Folder of Folders\Ren'py\renpy\translation\__init__.py", line 748, in new_change_language
-    i.apply()
-  File "N:\Folder of Folders\Ren'py\renpy\ast.py", line 2800, in apply
-    value = renpy.python.py_eval(expr)
-  File "N:\Folder of Folders\Ren'py\renpy\python.py", line 1207, in py_eval
-    code = py_compile(code, 'eval')
-  File "N:\Folder of Folders\Ren'py\renpy\python.py", line 1144, in py_compile
-    raise e
-  File "N:\Folder of Folders\Ren'py\renpy\python.py", line 1081, in py_compile
-    raise orig_e
-  File "N:\Folder of Folders\Ren'py\renpy\python.py", line 1073, in py_compile
-    tree = compile(source, filename, py_mode, ast.PyCF_ONLY_AST | flags, 1)
-SyntaxError: positional argument follows keyword argument (game/screens.rpy, line 138)
+  File "renpy/common/00start.rpy", line 216, in script call
+    call _load_reload_game from _call__load_reload_game_1
+  File "renpy/common/00keymap.rpy", line 548, in script
+    python hide:
+  File "N:\Folder of Folders\Ren'py\renpy\ast.py", line 821, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "N:\Folder of Folders\Ren'py\renpy\python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "renpy/common/00keymap.rpy", line 548, in <module>
+    python hide:
+  File "renpy/common/00keymap.rpy", line 559, in _execute_python_hide
+    renpy.load(renpy.session["_reload_slot"])
+  File "N:\Folder of Folders\Ren'py\renpy\loadsave.py", line 826, in load
+    log.unfreeze(roots, label="_after_load")
+  File "N:\Folder of Folders\Ren'py\renpy\rollback.py", line 1135, in unfreeze
+    self.rollback(0, force=True, label=label, greedy=greedy, on_load=True)
+  File "N:\Folder of Folders\Ren'py\renpy\rollback.py", line 930, in rollback
+    self.load_failed()
+  File "N:\Folder of Folders\Ren'py\renpy\rollback.py", line 848, in load_failed
+    raise Exception("Couldn't find a place to stop rolling back. Perhaps the script changed in an incompatible way?")
+Exception: Couldn't find a place to stop rolling back. Perhaps the script changed in an incompatible way?
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.3.2.24090902
-Ouroboros: Constricting Devotion 0.5
-Thu Nov 14 21:58:46 2024
+Ouroboros: Constricting Devotion 0.6
+Fri Nov 22 00:29:54 2024
