@@ -32,7 +32,7 @@ define config.version = "0.6"
 define gui.about = _p("""
 Director/Programmer/Writer - Nat
 
-Sprite/BG & Itch Page Asset Artist - ()
+Sprite/BG Artist - {a="https://cutiebeep.carrd.co/"}CutieBeep{/a}
 
 GUI Artist - ()
 
