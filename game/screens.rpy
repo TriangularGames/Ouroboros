@@ -367,15 +367,15 @@ screen main_menu():
         style_prefix "main"
 
         imagebutton action Start():
-            auto "gui/mainMenuButtons/mm_start_%s.png"
+            auto "gui/mainMenuButtons/mm_start_%s.webp"
             hover_sound "audio/sound effects/cursor_style_4.mp3"
             activate_sound "audio/sound effects/error_style_4_002.mp3"
         imagebutton action ShowMenu("load"):
-            auto "gui/mainMenuButtons/mm_load_%s.png"
+            auto "gui/mainMenuButtons/mm_load_%s.webp"
             hover_sound "audio/sound effects/cursor_style_4.mp3"
             activate_sound "audio/sound effects/error_style_4_002.mp3"
         imagebutton action ShowMenu("preferences"):
-            auto "gui/mainMenuButtons/mm_options_%s.png"
+            auto "gui/mainMenuButtons/mm_options_%s.webp"
             xoffset -25
             hover_sound "audio/sound effects/cursor_style_4.mp3"
             activate_sound "audio/sound effects/error_style_4_002.mp3"
@@ -384,20 +384,20 @@ screen main_menu():
                 hover_sound "audio/sound effects/cursor_style_4.mp3"
                 activate_sound "audio/sound effects/error_style_4_002.mp3"
         imagebutton action ShowMenu("about"):
-                auto "gui/mainMenuButtons/mm_credits_%s.png"
+                auto "gui/mainMenuButtons/mm_credits_%s.webp"
                 xoffset -25
                 hover_sound "audio/sound effects/cursor_style_4.mp3"
                 activate_sound "audio/sound effects/error_style_4_002.mp3"
         if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
             ## Help isn't necessary or relevant to mobile devices.
             imagebutton action ShowMenu("help"):
-                auto "gui/mainMenuButtons/mm_help_%s.png"
+                auto "gui/mainMenuButtons/mm_help_%s.webp"
                 hover_sound "audio/sound effects/cursor_style_4.mp3"
                 activate_sound "audio/sound effects/error_style_4_002.mp3"
         if renpy.variant("pc"):
             ## The quit button is banned on iOS and unnecessary on Android and Web.
             imagebutton action Quit(confirm=not main_menu):
-                auto "gui/mainMenuButtons/mm_quit_%s.png"
+                auto "gui/mainMenuButtons/mm_quit_%s.webp"
                 hover_sound "audio/sound effects/cursor_style_4.mp3"
                 activate_sound "audio/sound effects/back_style_4_echo_001.mp3"
 
