@@ -364,6 +364,12 @@ screen main_menu():
         ypos -200
 
     vbox:
+        add "gui/gameLogo.png":
+            xpos 620
+            ypos 70
+            zoom 0.6
+
+    vbox:
         style_prefix "main"
 
         imagebutton action Start():
