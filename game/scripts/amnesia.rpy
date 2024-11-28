@@ -552,11 +552,15 @@ label AmnesiaBadEnding:
     "You can't help but be afraid."
 
     show cadmus armsD with dis
-    "The knife slashes through the ropes, he tosses the knife to the floor."
+    play sound ropeFalls
+    "The knife slashes through the ropes"
+    play sound knifeDrop
+    extend ", he tosses the knife to the floor."
 
-    show cadmus eyesCRA with dis
+    show cadmus eyesCRA eyeBS with dis
     cadmus "I have to break it...that's the only way..."
     "He's muttering like he's lost his mind."
+    show cadmus smirk shadowTU at lean
     cadmus "The cycle has to break...it has to break. It's going to break."
 
     "You don't want to stay around to find out what in the world he's mumbling about."
