@@ -308,8 +308,59 @@ label ChaosGoodBranchA:
     "His eyes search your face, hoping for something."
 
     "It takes you a moment, sitting and really thinking about what he said."
-    ## TODO: insert photos here in the end
+    if persistent.lastRoute == "FG":
+        hide vignette with slowdis
+        show image fearGood with slowdis:
+            zoom 1.065
+            matrixcolor TintMatrix("#e4c986") * SaturationMatrix(0.0, (0.2126, 0.7152, 0.0722))
+
+    elif persistent.lastRoute == "FB":
+        hide vignette with slowdis
+        show image fearBad with slowdis:
+            zoom 1.065
+            matrixcolor TintMatrix("#e4c986") * SaturationMatrix(0.0, (0.2126, 0.7152, 0.0722))
+
+    elif persistent.lastRoute == "CG":
+        hide vignette with slowdis
+        show image careGood with slowdis:
+            zoom 1.065
+            matrixcolor TintMatrix("#e4c986") * SaturationMatrix(0.0, (0.2126, 0.7152, 0.0722))
+
+    elif persistent.lastRoute == "CB":
+        hide vignette with slowdis
+        show image careBad with slowdis:
+            zoom 1.065
+            matrixcolor TintMatrix("#e4c986") * SaturationMatrix(0.0, (0.2126, 0.7152, 0.0722))
+
+    elif persistent.lastRoute == "CS":
+        hide vignette with slowdis
+        show image careSpecial with slowdis:
+            zoom 1.065
+            matrixcolor TintMatrix("#e4c986") * SaturationMatrix(0.0, (0.2126, 0.7152, 0.0722))
+
+    elif persistent.lastRoute == "AG":
+        hide vignette with slowdis
+        show image amnesiaGood with slowdis:
+            zoom 1.065
+            matrixcolor TintMatrix("#e4c986") * SaturationMatrix(0.0, (0.2126, 0.7152, 0.0722))
+
+    elif persistent.lastRoute == "AB":
+        hide vignette with slowdis
+        show image amnesiaBad with slowdis:
+            zoom 1.065
+            matrixcolor TintMatrix("#e4c986") * SaturationMatrix(0.0, (0.2126, 0.7152, 0.0722))
+
     "The sensations of memories that don't feel like yours come back to you."
+    hide fearGood with slowdis
+    hide fearBad with slowdis
+    hide careGood with slowdis
+    hide careBad with slowdis
+    hide careSpecial with slowdis
+    hide amnesiaGood with slowdis
+    hide amnesiaBad with slowdis
+    show vignette zorder 4 with slowdis:
+        xpos -100
+        ypos -270
     "{i}He's telling the truth.{/i}"
 
     show cadmus normalSmile with dis
@@ -409,47 +460,158 @@ label ChaosGoodBranchB:
     "He doesn't seem in any rush to respond, fidgeting in his seat."
 
     "You" "Hellooo? Earth to Cadmus?"
+label testjump:
 
     show cadmus annoyed armsSH with dis
     "He holds his finger up to you, looking a bit annoyed."
     "Though perhaps he's worried?"
     camera:
         subpixel True
-        blur 3
-        matrixcolor InvertMatrix(0.0)*ContrastMatrix(1.0)*SaturationMatrix(1.0)*BrightnessMatrix(-0.15)*HueMatrix(0.0) 
+        ease 0.5 blur 3 matrixcolor InvertMatrix(0.0)*ContrastMatrix(1.0)*SaturationMatrix(1.0)*BrightnessMatrix(-0.15)*HueMatrix(0.0) 
     "Your head feels weird, the room seeming to darken."
     "You aren't entirely sure what the sensation is."
     "A thought pops into your head."
-    ## TODO: add the pictures here too pls!!
 
     if persistent.lastRoute == "FG":
+        hide vignette with slowdis
+        show image fearGood with slowdis:
+            zoom 1.065
+            matrixcolor TintMatrix("#e4c986") * SaturationMatrix(0.0, (0.2126, 0.7152, 0.0722))
+        camera:
+            subpixel True
+            blur 0.0 matrixcolor InvertMatrix(0.0)*ContrastMatrix(1.0)*SaturationMatrix(1.0)*BrightnessMatrix(0.0)*HueMatrix(0.0)
+
         centered "You barely managed to escape, but you were running through a seemingly endless field."
         centered "It was so exhausting you passed out."
 
+        hide fearGood with slowdis
+        show vignette zorder 4 with slowdis:
+            xpos -100
+            ypos -270
+        camera:
+            subpixel True
+            blur 3 matrixcolor InvertMatrix(0.0)*ContrastMatrix(1.0)*SaturationMatrix(1.0)*BrightnessMatrix(-0.15)*HueMatrix(0.0) 
+
     elif persistent.lastRoute == "FB":
+        hide vignette with slowdis
+        show image fearBad with slowdis:
+            zoom 1.065
+            matrixcolor TintMatrix("#e4c986") * SaturationMatrix(0.0, (0.2126, 0.7152, 0.0722))
+        camera:
+            subpixel True
+            blur 0.0 matrixcolor InvertMatrix(0.0)*ContrastMatrix(1.0)*SaturationMatrix(1.0)*BrightnessMatrix(0.0)*HueMatrix(0.0)
+
         centered "You were so afraid of him, and tried so hard to escape without him noticing...but he noticed."
         centered "He was so overwhelmed with anger over trying to leave him...he killed you."
 
+        hide fearBad with slowdis
+        show vignette zorder 4 with slowdis:
+            xpos -100
+            ypos -270
+        camera:
+            subpixel True
+            blur 3 matrixcolor InvertMatrix(0.0)*ContrastMatrix(1.0)*SaturationMatrix(1.0)*BrightnessMatrix(-0.15)*HueMatrix(0.0) 
+
     elif persistent.lastRoute == "CG":
+        hide vignette with slowdis
+        show image careGood with slowdis:
+            zoom 1.065
+            matrixcolor TintMatrix("#e4c986") * SaturationMatrix(0.0, (0.2126, 0.7152, 0.0722))
+        camera:
+            subpixel True
+            blur 0.0 matrixcolor InvertMatrix(0.0)*ContrastMatrix(1.0)*SaturationMatrix(1.0)*BrightnessMatrix(0.0)*HueMatrix(0.0)
+
         centered "You were both happy, and you loved him. You remember that feeling so well."
         centered "Something came over you and you just...passed out."
 
+        hide careGood with slowdis
+        show vignette zorder 4 with slowdis:
+            xpos -100
+            ypos -270
+        camera:
+            subpixel True
+            blur 3 matrixcolor InvertMatrix(0.0)*ContrastMatrix(1.0)*SaturationMatrix(1.0)*BrightnessMatrix(-0.15)*HueMatrix(0.0) 
+
     elif persistent.lastRoute == "CB":
+        hide vignette with slowdis
+        show image careBad with slowdis:
+            zoom 1.065
+            matrixcolor TintMatrix("#e4c986") * SaturationMatrix(0.0, (0.2126, 0.7152, 0.0722))
+        camera:
+            subpixel True
+            blur 0.0 matrixcolor InvertMatrix(0.0)*ContrastMatrix(1.0)*SaturationMatrix(1.0)*BrightnessMatrix(0.0)*HueMatrix(0.0)
+
         centered "You recall being so fixated on him, like he was your own personal obsession."
         centered "Loving him was breathing...and he left you."
 
+        hide careBad with slowdis
+        show vignette zorder 4 with slowdis:
+            xpos -100
+            ypos -270
+        camera:
+            subpixel True
+            blur 3 matrixcolor InvertMatrix(0.0)*ContrastMatrix(1.0)*SaturationMatrix(1.0)*BrightnessMatrix(-0.15)*HueMatrix(0.0) 
+
     elif persistent.lastRoute == "CS":
+        hide vignette with slowdis
+        show image careSpecial with slowdis:
+            zoom 1.065
+            matrixcolor TintMatrix("#e4c986") * SaturationMatrix(0.0, (0.2126, 0.7152, 0.0722))
+        camera:
+            subpixel True
+            blur 0.0 matrixcolor InvertMatrix(0.0)*ContrastMatrix(1.0)*SaturationMatrix(1.0)*BrightnessMatrix(0.0)*HueMatrix(0.0)
+
         centered "He asked you for the truth, and you told him you didn't love him."
         centered "He was so upset he bit you so hard you passed out."
 
+        hide careSpecial with slowdis
+        show vignette zorder 4 with slowdis:
+            xpos -100
+            ypos -270
+        camera:
+            subpixel True
+            blur 3 matrixcolor InvertMatrix(0.0)*ContrastMatrix(1.0)*SaturationMatrix(1.0)*BrightnessMatrix(-0.15)*HueMatrix(0.0) 
+
     elif persistent.lastRoute == "AG":
+        hide vignette with slowdis
+        show image amnesiaGood with slowdis:
+            zoom 1.065
+            matrixcolor TintMatrix("#e4c986") * SaturationMatrix(0.0, (0.2126, 0.7152, 0.0722))
+        camera:
+            subpixel True
+            blur 0.0 matrixcolor InvertMatrix(0.0)*ContrastMatrix(1.0)*SaturationMatrix(1.0)*BrightnessMatrix(0.0)*HueMatrix(0.0)
+
         centered "You took matters into your own hands...and you killed him."
         centered "It was terrifying and yet it made you feel so much bigger than you were."
         centered "Like you...both switched places."
 
+        hide amnesiaGood with slowdis
+        show vignette zorder 4 with slowdis:
+            xpos -100
+            ypos -270
+        camera:
+            subpixel True
+            blur 3 matrixcolor InvertMatrix(0.0)*ContrastMatrix(1.0)*SaturationMatrix(1.0)*BrightnessMatrix(-0.15)*HueMatrix(0.0) 
+
     elif persistent.lastRoute == "AB":
+        hide vignette with slowdis
+        show image amnesiaBad with slowdis:
+            zoom 1.065
+            matrixcolor TintMatrix("#e4c986") * SaturationMatrix(0.0, (0.2126, 0.7152, 0.0722))
+        camera:
+            subpixel True
+            blur 0.0 matrixcolor InvertMatrix(0.0)*ContrastMatrix(1.0)*SaturationMatrix(1.0)*BrightnessMatrix(0.0)*HueMatrix(0.0)
+
         centered "He kept talking madness about \"breaking the cycle\" and when he cut you free, you tried to escape..."
         centered "But he captured you and bit into you like his prey."
+
+        hide amnesiaBad with slowdis
+        show vignette zorder 4 with slowdis:
+            xpos -100
+            ypos -270
+        camera:
+            subpixel True
+            blur 3 matrixcolor InvertMatrix(0.0)*ContrastMatrix(1.0)*SaturationMatrix(1.0)*BrightnessMatrix(-0.15)*HueMatrix(0.0) 
 
     "A memory that isn't yours but...you can't help but feel like it is."
     "That moment happened to you."
@@ -459,8 +621,7 @@ label ChaosGoodBranchB:
     cadmus "...there it is."
     camera:
         subpixel True
-        blur 0.0
-        matrixcolor InvertMatrix(0.0)*ContrastMatrix(1.0)*SaturationMatrix(1.0)*BrightnessMatrix(0.0)*HueMatrix(0.0)
+        ease 0.5 blur 0.0 matrixcolor InvertMatrix(0.0)*ContrastMatrix(1.0)*SaturationMatrix(1.0)*BrightnessMatrix(0.0)*HueMatrix(0.0)
     "The room comes back into focus."
     "Cadmus looks almost...sad, but relieved."
     cadmus "You do realize it."

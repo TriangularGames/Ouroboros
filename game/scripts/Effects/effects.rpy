@@ -1,4 +1,15 @@
 define dis = {"master": Dissolve(0.5)}
+define slowdis = {"master": Dissolve(1.5)}
+
+## Images for Chaos:
+
+define fearGood = "images/fearGoodEnd.webp"
+define fearBad = "images/fearbad.webp"
+define careGood = "images/caregood.webp"
+define careBad = "images/carebad.webp"
+define careSpecial = "images/carespecial.webp"
+define amnesiaGood = "images/amnesiagood.webp"
+define amnesiaBad = "images/amnesiabad.webp"
 
 init:
     $ flash = Fade(0.15,0,.25, color="#800")
