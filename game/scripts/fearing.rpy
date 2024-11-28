@@ -439,6 +439,7 @@ label FearGoodBranchHalf:
             "You pull your hand free-"
             "The sudden motion shifting the ropes, allowing you more movement than you expected."
             "For a guy so proud of these stupid things, he sure didn't do that well tying you."
+            show cadmus shock with dis
             "Cadmus is shocked, trying to speak but his words failing him."
             play sound pullOutKnife
             "Reaching for one of his pockets, you manage to find the knife."
@@ -452,6 +453,7 @@ label FearGoodBranchHalf:
 
     "You command his attention, despite the fact your voice is shaking."
 
+    show cadmus concern with dis
     "He simply points off to the side-"
     "You book it without looking back."
     camera at zoomOnDoor
@@ -460,6 +462,8 @@ label FearGoodBranchHalf:
     stop music channel "music_CH1" fadeout 1.0
     stop music channel "music_CH2"
     show black zorder 5 with dis
+    hide cadmus
+    hide chair
     camera at cameraReset
 
     "Stopping now would be a horrible mistake."
@@ -467,17 +471,19 @@ label FearGoodBranchHalf:
     "He's definitely going to come after you once the shock wears off."
     "You cannot allow yourself to slow down- even for a second."
 
-    show bg not_bliss
+    show bg not_bliss:
+        zoom 1.065
     "There's light at the end of this corridor- a completely welcome sight to behold."
+    hide vignette
     hide black with dis
 
-    play sound footstepsGrass
     "Reaching the outside- you find yourself in a field."
     "An endless field of grass."
     "Is this place...a bunker?"
     "In the middle of nowhere?"
     "Now's not the time to wonder that!"
     "Shaking the thought from your mind, you continue to run."
+    play sound footstepsGrass volume 0.2
     "Civilization must be close, you just know it."
     "{cps=10}..."
     "{cps=10}..."
