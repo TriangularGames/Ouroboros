@@ -34,10 +34,6 @@ Director/Programmer/Writer - Nat
 
 Sprite/BG Artist - {a="https://cutiebeep.carrd.co/"}CutieBeep{/a}
 
-GUI Artist - ()
-
-Cadmus' Voice Actor - ()
-
 
 Music/Ambient Background:
 

@@ -93,12 +93,3 @@ transform tiltHead:
     parallel:
         rotate 0.0 
         linear 0.26 rotate 2.0 
-
-
-
-
-
-
-        
-
-
