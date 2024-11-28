@@ -658,12 +658,15 @@ label CareGoodEnding:
     cadmus "I'm glad we can just...be."
     cadmus "It's something I've missed. Just existing for the sake of it."
     "You" "Can you normally not?"
+    show cadmus confusedLD with dis
     cadmus "That's hard to explain..."
 
     "There's a hesitancy, one you've become quite familiar with."
     "Topics that tend to be avoided, words that don't linger."
     "A taste of something different."
 
+    show cadmus normalSmile with dis
+    show cadmus smileopenNU
     cadmus "I can teach you something, that's what we can do today."
 
     "He holds his hand near your right, using his other hand to slide the ropes a bit."
@@ -672,9 +675,11 @@ label CareGoodEnding:
 
     "You" "...what are you doing?"
     cadmus "Teaching you, of course."
+    show cadmus normalSmile with dis
     cadmus "You know what morse code is?"
     "You" "You're not teaching me that are you? Isn't that complicated?"
 
+    show cadmus smirkingSoft with dis
     "He laughs, shaking his head."
     "He taps on your hand once."
 
@@ -686,25 +691,30 @@ label CareGoodEnding:
     "Twice is yes, once is no."
     "He's teaching you without speaking."
 
+    show cadmus smileopenNU with dis
     cadmus "What a smart cookie~"
 
     "His eyes twinkle, staring at you with the utmost affection."
 
     cadmus "We'll make others I'm sure, do you have one?"
 
+    show cadmus smirkingSoft with dis
     "As you ponder, he places your finger ontop of his palm."
 
     menu:
         "Slide your finger on his palm":
+            show cadmus smileopenNU blush with dis
             "Cadmus twitches a bit and he laughs."
             "Is he ticklish?"
             cadmus "What will that be?"
             "You" "\"I'm here.\""
             cadmus "Like saying everything's okay?"
+            show cadmus -blush with dis
             cadmus "I like that."
             $ persistent.code = "slide"
 
         "Tap twice with two fingers":
+            show cadmus smileopenNU with dis
             "He smiles as he watches you."
             cadmus "What will that mean?"
             "You" "\"Focus.\""
@@ -731,8 +741,10 @@ label CareGoodEnding:
     "Even with his concerns, it seems they weren't all that warranted."
     "No matter how long he is gone for, you are both still here."
     
+    show cadmus concern with dis
     cadmus "You're still here..."
     "You" "I have no where else to go, I don't get why it still shocks you."
+    show cadmus smirk at lean
     cadmus "...I thought we would be gone by now."
     "You" "Gone?"
 
@@ -742,16 +754,21 @@ label CareGoodEnding:
 
     "You make the comment without much thought, he smiles."
 
+    show cadmus normalSmile with dis
     cadmus "I play in a band- lead guitar."
     "You" "Really?"
+    show cadmus confused with dis
     cadmus "Is that surprising? Most people ask me if I'm in a band."
+    show cadmus smirk with dis
     cadmus "It's the first question after \"Are you single?\""
     "You" "I'm {i}so{/i} sure you aren't just pulling my leg."
 
+    show cadmus normalSmile with dis
     "He snickers, running his thumb on the back on your hand."
 
     cadmus "I do play guitar, I'm serious about that."
     "You" "And about the rest?"
+    show cadmus smirkingSoft with dis
     cadmus "A secret~"
 
     show cadmus embarassed with dis
@@ -763,6 +780,7 @@ label CareGoodEnding:
     "Cadmus has really grown on you with the time you've spent together."
     show cadmus smileopenNU eyesS with dis
     "You know one day you will both be happier."
+    show cadmus at sit
     "You are both happy right now, you're certain."
     "But you both will be happier."
     "So very soon."
@@ -1040,9 +1058,11 @@ label CareBadEnd:
     
     "You're so excited as he returns to you, he seems to tense when you speak."
 
+    show cadmus confusedLD with dis
     cadmus "Yes...I missed you as well."
 
     "There's a long silence as you watch him, his beautiful sharp features accentuated as he glances off to the side."
+    show cadmus regularE with dis
     "You can't help but love looking at him."
     "He's so beautiful."
     "The being of your affections."
@@ -1121,20 +1141,25 @@ label CareBadEndSpecial:
     show cadmus shadowTD frown lidsS with dis
     "His eyes stare daggers into you."
     "It tickles the back of your head in a way that just..."
+    play sound heartBeat
     "Fills you with pure fear."
     "The silence stretches for longer than it should."
     show cadmus armsR at lean
     "His hand comes up to your face."
     "Nails digging into your cheeks."
+    play sound pullOutKnife
     "You catch the glint of his knife being pulled from his pocket."
     "What is he doing...?"
     "{sc=3.5}You can't move.{/sc}"
+    play sound ropeFalls
     "Suddenly you feel the ropes slip off you-"
     play sound knifeDrop
     "The sound of the knife clattering to the floor."
     camera at liftUp
-    "Cadmus forces your head up as he lunges at you."
-    show black zorder 5 at closeEyes
+    show cadmus smilecreepyTeeth with dis
+    "Cadmus forces your head up as he bears his teeth at you."
+    show black zorder 5 at closeEyes:
+        yoffset -100
     "You scream as his teeth dig into the back of your neck."
     "The pounding in your head starts again."
     "{sc=3.5}You can't focus at all.{/sc}"
