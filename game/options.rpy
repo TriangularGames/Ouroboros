@@ -93,8 +93,8 @@ define config.has_voice = True
 ## To allow the user to play a test sound on the sound or voice channel,
 ## uncomment a line below and use it to set a sample sound to play.
 
-## TODO: setup test sounds for sfx and voice
-# define config.sample_sound = "sample-sound.ogg"
+## TODO: setup test sounds for voice
+define config.sample_sound = "audio/sound effects/HeartBeatSlow2.mp3"
 # define config.sample_voice = "sample-voice.ogg"
 
 
