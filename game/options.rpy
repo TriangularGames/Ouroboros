@@ -23,7 +23,7 @@ define gui.show_name = False
 
 ## The version of the game.
 
-define config.version = "0.6"
+define config.version = "0.7"
 
 
 ## Text that is placed on the game's about screen. Place the text between the
@@ -88,7 +88,7 @@ define build.name = "OurborosConstrictingDevotion"
 
 define config.has_sound = True
 define config.has_music = True
-define config.has_voice = True
+define config.has_voice = False
 
 
 ## To allow the user to play a test sound on the sound or voice channel,
