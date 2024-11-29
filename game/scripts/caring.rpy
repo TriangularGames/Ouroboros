@@ -227,6 +227,7 @@ label caring:
                     "What exactly is he even protecting you from?"
     
     hide cadmus with dis
+    play sound "<from 0 to 5>audio/sound effects/footsteps.mp3" fadeout 0.5
     "Cadmus stands from his seat, walking just out of your view."
     "Is he going somewhere?"
     "What is he doing?"
@@ -237,6 +238,7 @@ label caring:
             "He laughs, placing his hand on your head."
             cadmus "I'm just stretching my legs, no need to panic."
             cadmus "Just going to walk the room. I'll be quick."
+            play sound footSteps fadeout 1.0
             "He starts to walk, his footsteps filling your ears."
 
         "Don't leave me.":
@@ -245,6 +247,7 @@ label caring:
             show cadmus smileopenNU with dis
             cadmus "Silly mouse~ I'm just stretching my legs, I'll be back shortly."
             hide cadmus with dis
+            play sound "<from 0 to 5>audio/sound effects/footsteps.mp3" fadeout 0.5
             "He once again stands, and sounds like he's stepping away."
 
             menu:
@@ -259,6 +262,7 @@ label caring:
                     jump CareBadBranchA
                 
                 "Let him go.":
+                    play sound footSteps fadeout 1.0
                     "{nw}"
 
     
@@ -271,8 +275,8 @@ label caring:
     "He's looking after you, he isn't hurting you."
     "He cares for you."
     "He loves you."
-    "Cadmus comes into view, on the other side of the room, just barely visible."
-    "He disappears back into the darkness just as quickly as he appeared."
+    "You can vaguely make out Cadmus' presence on the other side of the room, but you can't see him."
+    "The feeling of his presence fades back into the darkness just as quickly as it was felt."
     "Trying to comprehend all this...it hurts your head."
     # screen shake and blur
     camera at continuousShake
@@ -283,7 +287,7 @@ label caring:
 
     cadmus "Hey, darling...hey, over here."
     camera at cameraReset
-    show cadmus normalSmile at default with dis
+    show cadmus concern at default with dis
     "He suddenly comes into view across from you, pulling your focus from the pain."
     show cadmus sweating with dis
 
@@ -443,7 +447,7 @@ label CareGoodBranchA:
         "You're...nice.":
             show cadmus embarassed with dis
             show cadmus smileclosedND with dis
-            "Cadmus smiles, you notice a faint blush on his cheeks."
+            "Cadmus smiles, seeming a bit surprised at your comment."
             cadmus "I wouldn't be anything else to you my love."
             show cadmus eyesS with dis
             cadmus "...I want to keep you safe."
@@ -477,8 +481,6 @@ label CareGoodBranchA:
     centered "{cps=10}{sc=3}What the hell?{/sc}"
     $ _history = True
     camera at cameraReset
-    camera:
-        blur 0
     show black zorder 10 at shortBlink
 
     cadmus "I'll make sure you stay safe."
@@ -505,6 +507,7 @@ label CareGoodBranchA:
             "...he did notice something, but can't acknowledge it aloud."
             "You both lock eyes."
             show cadmus normalSmile with dis
+            show cadmus armsD -hand
             "He simple smiles, pulling his hand away."
             show cadmus at sit
 
@@ -514,7 +517,7 @@ label CareGoodBranchA:
         "Is something wrong?":
             show cadmus normalSmile with dis
             "Cadmus shakes his head, his smile reassuring."
-            "You're startled when he rubs his tumb against your cheek."
+            "You're startled when he rubs his thumb against your cheek."
             "Two quick swipes."
             "What is he doing?"
             "He seems to sense your confusion, and does it again."
@@ -522,6 +525,7 @@ label CareGoodBranchA:
             "Meaning...yes?"
             "...so something is wrong?"
             "Why can't he acknowledge it out loud, or even shake his head 'yes'?"
+            show cadmus armsD -hand
             "He calmly pulls his hand away, as if nothing happened."
             show cadmus at sit
     
@@ -643,14 +647,18 @@ label CareGoodBranchA:
     show cadmus smileclosedND with dis
     cadmus "I do mean that."
     cadmus "With every fiber of my being."
+    camera at cameraReset
+    hide black
+    hide blank
 
     "You have no reason to doubt him on that."
     "All you both can really do...is trust he can."
     show black zorder 5 at closeEyes
-    pause (1)
+    pause 2
     jump CareGoodEnding
 
 label CareGoodEnding:
+    hide black
     show blank zorder 5 at blink
 
     show cadmus normalSmile with dis
@@ -808,6 +816,7 @@ label CareGoodEnding:
     "{cps=10}...won't it?"
 
     scene black with fade
+    camera at cameraReset
     pause (0.5)
 
     cadmus "Darling? Where did you go?"

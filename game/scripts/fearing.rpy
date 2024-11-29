@@ -129,17 +129,19 @@ label fearing:
     "His index finger captures your chin- thumb gently rubbing your bottom lip."
     cadmus "Your lips are dry...I'll fix this darling."
 
+    play sound footSteps fadeout 1.0
     hide cadmus with dis
     "He starts moving away, but his hand on your chin is the last thing to leave your vision."
     "Footsteps echoing throughout the space- not as much as you expected it would."
-    "The room must be much smaller than it appears, the minimal light is doing wonders to cause you panic over the sheer scale of the darkness surrounding you."
+    "The room must be much smaller than it appears..."
+    "The minimal light is doing wonders to cause you panic over the sheer scale of the darkness surrounding you."
 
     "There's an itching at the back of your neck...you can't shake it."
     "This feeling of unease enveloping you."
     "You're trapped."
-    "How did you get here?{nw=180}"
-    "How will you get out?{nw=180}"
-    "Does anyone miss you?{nw=180}"
+    "How did you get here?{nw}"
+    "How will you get out?{nw}"
+    "Does anyone miss you?{nw}"
     camera:
         subpixel True
         linear 0.5*(not renpy.is_skipping()) matrixcolor InvertMatrix(0.0)*ContrastMatrix(1.0)*SaturationMatrix(1.0)*BrightnessMatrix(-0.15)*HueMatrix(0.0) 
@@ -152,7 +154,7 @@ label fearing:
     camera at cameraReset
     "It's {fast}where the rope burns, you assume."
 
-    play sound runningWater
+    play sound runningWater volume 0.05 fadeout 2.0
     "You hear running water off in the corner."
     "While he's not around, you decide to reassess the ropes."
     "{cps=10}..."
@@ -175,7 +177,6 @@ label fearing:
 
     show cadmus normalSmile at default with dis
     "Cadmus promptly returns, cupped in his hands is a chipped teacup, lacking a handle."
-    "He sits in front of you again."
     show cadmus smirkingSoft with dis
     cadmus "Your drink of water, my beloved!"
     "He holds the cup out towards you."
@@ -188,12 +189,12 @@ label fearing:
     "Is the cup even full of water?"
     "What in the world is he giving to you?!"
     $ _history = False
-    "You try to keep your lips shut-{nw}"
-    "You can't drink it!{nw}"
-    "...You're so thirsty-{nw}"
-    "Your lips are so dry...{nw}"
-    "No! No!{nw}"
-    "He's trying to kill you!{nw}"
+    "You try to keep your lips shut-{w=0.3}{nw}"
+    "You can't drink it!{w=0.3}{nw}"
+    "...You're so thirsty-{w=0.3}{nw}"
+    "Your lips are so dry...{w=0.3}{nw}"
+    "No! No!{w=0.3}{nw}"
+    "He's trying to kill you!{w=0.3}{nw}"
     $ _history = True
     show cadmus smileopenNU with dis
     "He's trying to{fast} help you."
@@ -260,8 +261,8 @@ label FearBadChoice1:
             "He pouts, clearly a bit upset. Doing what you can only assume to be puppy eyes at you."
             cadmus "I'm a well behaved young man, I promise~"
 
-            show cadmus smileteeth eyebrowsN with dis
             show cadmus at sit
+            show cadmus smileteeth eyebrowsN with dis
             "With a grin he proceeds to lean back away from you, giving you back your precious breathing room."
             "Much needed breathing room."
 
@@ -311,7 +312,7 @@ label FearBadChoice1:
 
     define rain = False
     menu:
-        "Rain.":
+        "Rain":
             $ rain = True
             "You" "It's relaxing, getting to stay indoors and just...listen to the rain."
             show cadmus normalSmile with dis
@@ -340,10 +341,11 @@ label FearBadChoice1:
 
     show cadmus eyebrowsR with dis
     cadmus "Hmm...ah!"
-    "Cadmus suddenly stands, startling you."
     hide cadmus with dis
+    "Cadmus suddenly stands, startling you."
     cadmus "I'll be right back my love~"
 
+    play sound "<from 0 to 15>audio/sound effects/footsteps.mp3" fadeout 1.0
     "Once again, wandering off somewhere, scooping the cup off the ground as he makes his way out of sight."
     "You could only wish he'd be out of mind."
     $ _history = False
@@ -353,6 +355,7 @@ label FearBadChoice1:
     "Your head hurts so much...what even was in that drink anyways?"
     "That's not important, at least not right now."
     "Trying to figure out what he's up to is more pressing."
+    stop sound
     "Straining to listen to whatever odd sounds you can..."
     "{cps=10}..."
     "There's nothing."
@@ -601,6 +604,7 @@ label FearBranchACont:
             jump FearGoodBranchHalf
 
 label FearBadBranchB:
+    play sound "<from 0 to 5>audio/sound effects/footsteps.mp3" fadeout 1.0
     "The sound of footsteps echo through the space."
     "He's returning."
     "You try to prepare yourself for anything- good, bad, and awful."
@@ -608,14 +612,19 @@ label FearBadBranchB:
     "{cps=10}..."
     "Nothing?"
 
+    show cadmus normalSmile at default with dis
     cadmus "I return my little mouse~"
     "He excitedly plops himself back across from you."
     cadmus "Did you miss me?"
 
-    "Knowing he truly believes you're in love, you nod at him."
+    "Knowing he truly believes you're in love"
+    camera at nodHead
+    extend ", you nod at him."
+    show cadmus inLove with dis
     "His eyes glimmer with excitement."
 
     cadmus "Oh how divine! How precious!"
+    show cadmus smileopenNU with dis
     "His laughter fills your ears, it's almost comforting."
     show cadmus at cadFidget
     "He shuffles in his chair, trying to get comfortable."
@@ -649,6 +658,7 @@ label FearBadBranchB:
     "You" "I...am?"
     cadmus "Oh yes, very clever."
     show cadmus at lean
+    show cadmus smileopenNU with dis
     cadmus "Of course, my darling dearest would be, so very smart, yes?"
     "You" "Um...sure."
 
@@ -690,20 +700,25 @@ label FearBadConverged:
     play sound bloodSplat
     show cadmus bloodyarmsHK
     "He drove the knife into your side."
-
+    
+    show cadmus smileopenNU with dis
     cadmus "I LOVE YOU I LOVE YOU I LOVE YOU I LOVE YOU I LOVE YOU-"
 
     "Cadmus keeps incessantly repeating the phrase with each stab, blood gushing from your stomach."
     camera:
         subpixel True
         blur 5
+        matrixcolor InvertMatrix(0.0)*ContrastMatrix(1.0)*SaturationMatrix(1.0)*BrightnessMatrix(-0.15)*HueMatrix(0.0) 
     "Your mind is clouded."
     "You're going to die here."
     "God...you're going to die here."
     "You're {i}dying{/i} here."
+    hide black
+    hide blank
     stop music channel "music_CH1" fadeout 1.0
     stop music channel "music_CH2"
     "His voice begins to fade..."
+    
     camera:
         subpixel True
         linear 0.5*(not renpy.is_skipping()) matrixcolor InvertMatrix(0.0)*ContrastMatrix(1.0)*SaturationMatrix(1.0)*BrightnessMatrix(-0.15)*HueMatrix(0.0) 
@@ -715,6 +730,7 @@ label FearBadConverged:
     scene black with fade
     pause (0.5)
 
+    camera at cameraReset
     cadmus "I just...want to protect you..."
     cadmus "Believe in me...please..."
 

@@ -28,7 +28,7 @@ label chaos:
     "The light behind him catches on the knife he holds in his hand."
 
     cadmus "Nice of you to wake up."
-    show cadmus -angryMark with dis
+    show cadmus -angryMark
     cadmus "Took you less than last time."
 
     menu:
@@ -262,6 +262,7 @@ label ChaosGoodBranchA:
     "You" "You literally trapped me in here, how should I not even be here?"
 
     hide cadmus with dis
+    play sound "<from 0 to 10>audio/sound effects/footsteps.mp3"
     "Cadmus stands, moving towards the darkness. His footsteps are easily heard, he didn't go far."
     "As much as you want to repeat yourself, it's clear enough from his huffing; he's either struggling or a bit annoyed."
 
@@ -460,7 +461,6 @@ label ChaosGoodBranchB:
     "He doesn't seem in any rush to respond, fidgeting in his seat."
 
     "You" "Hellooo? Earth to Cadmus?"
-label testjump:
 
     show cadmus annoyed armsSH with dis
     "He holds his finger up to you, looking a bit annoyed."
@@ -670,7 +670,7 @@ label ChaosGoodConverged:
     camera at nodHead
     extend ", but you nod at him."
     show cadmus normalSmile -armsHighSH at sit
-    "He moves back into his seat and relaxes a bit."
+    "He seems to relax, looking relieved."
 
     "You" "So what do we do then?"
     "You" "Ideas? Plans? Anything?"
@@ -1419,6 +1419,7 @@ label ChaosConvergedEnding:
     show cadmus at comeUp
     "He pulls himself into the chair again"
     show cadmus armsHK bloodyarmsHK with dis
+    play sound pullOutKnife
     extend ", his hand pulling the knife from his pocket."
 
     "You" "What are you doing? I thought we had stuff to talk about??"
@@ -1429,6 +1430,7 @@ label ChaosConvergedEnding:
     "You" "Cadmus! What's going on!"
 
     show cadmus at lean
+    play sound ropeFalls
     "He approaches you, cutting you free from the ropes."
 
     cadmus "{cps=10}{font=HelpMe.ttf}Time. Is. Up. Little. Mouse.{/font}"
@@ -1444,9 +1446,12 @@ label ChaosConvergedEnding:
     "Despite your pleading...you know in your heart it isn't reaching him."
     "He's not the one in front of you now."
     play sound stab
+    camera:
+        subpixel True
+        blur 1.0
     show blank with flash
     "With his free hand he pulls your hands away, slicing at your neck."
-    show black with fade(0.2)
+    show black with Fade(0.2, 0.0, 0.4)
     "Everything goes dark in an instant."
     stop music channel "music_CH1" 
     stop music channel "music_CH2" fadeout 1.0

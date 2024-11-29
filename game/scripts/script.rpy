@@ -172,6 +172,7 @@ label start:
         "Where am I?":
             show cadmus questioning with dis
             cadmus "You can't tell?"
+            show cadmus at cadFidget
             "The chair creaks as [persistent.they] adjust[persistent.s] [persistent.their] legs."
             show cadmus disappointed with dis
             cadmus "My poor, poor baby..."
@@ -389,7 +390,7 @@ label start:
             hide black
             hide hair
             hide cadmusblinkingneutral
-            show cadmus resetArms concern at default
+            show cadmus armsKP concern at default
             cadmus "Again?"
             cadmus "Why, I'd never dream of doing it once, let alone multiple times, my love."
             $ chaos += 1
@@ -464,13 +465,13 @@ label start:
     ## Sets you on your route
     ## If you mainly select 1 option, thats the route you get
     ## Otherwise, you get the amnesia route
-    if caring > 3:
+    if caring >= 3:
         $_skipping = True
         jump caring
-    if fearing > 3:
+    if fearing >= 3:
         $_skipping = True
         jump fearing
-    if chaos > 3:
+    if chaos >= 3:
         $_skipping = True
         jump chaos
     $_skipping = True

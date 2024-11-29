@@ -193,10 +193,12 @@ label amnesia:
 label AmnesiaGoodBranch:
     "You almost wanna ask if he's keeping you safe from {i}him{/i}."
     show cadmus regularE -armsR -hand at sit
+    "He pulls his hand away"
     play sound drummingFingers
-    "He pulls his hand away, continuing to drum against the chair."
+    extend ", drumming his fingers against the chair."
     "Leavng you to wonder what the best course of action is."
-    "You know you could free your hand if you wanted to- but you don't know where his knife is."
+    "You know you could try freeing yourself, perhaps your hand?"
+    "But you don't know where his knife is."
     "Glancing at his legs, it's hard to see."
     "The room is too dark to get a good look as to where his pockets might be."
     "Even if you manage to leave the ropes, get his knife- who knows what else he has on him."
@@ -315,9 +317,10 @@ label AmnesiaGoodBranch:
         "I'm sorry you're doing so much.":
             show cadmus embarassed with dis
             show cadmus smileclosedND
-            "He smiles brightly, a faint blush on his cheeks."
+            "He smiles timidly, seemingly happy at your apology."
 
             cadmus "Aren't you just the sweetest..."
+            show cadmus eyesS with dis
             cadmus "I'll keep going knowing I have your support."
 
             "He's so sappy..."
