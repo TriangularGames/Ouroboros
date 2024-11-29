@@ -59,11 +59,9 @@ Image:
 
 Logo & Game Icon: {a="https://pixabay.com/users/gustavorezende-1488336/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=6291969"}Gustavo Rezende{/a}
 
-
-Main Menu:
-
 Snake Image from {a="https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=2028134"}OpenClipart-Vectors{/a}
 
+Snake Skin from {a="https://www.pexels.com/photo/bush-anole-lizard-camouflage-25015085/"}Alejandro  Orozco{/a}
 
 Effects:
 
