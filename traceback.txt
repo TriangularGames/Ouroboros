@@ -1,28 +1,30 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/options.rpy", line 97, in script
-    define config.sample_sound = bloodSplat
-  File "game/options.rpy", line 97, in <module>
-    define config.sample_sound = bloodSplat
-NameError: name 'bloodSplat' is not defined
+  File "game/scripts/chaos.rpy", line 1451, in script
+    show black with Fade(0.2)
+TypeError: Fade() missing 2 required positional arguments: 'hold_time' and 'in_time'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/options.rpy", line 97, in script
-    define config.sample_sound = bloodSplat
-  File "N:\Folder of Folders\Ren'py\renpy\ast.py", line 2235, in execute
-    self.set()
-  File "N:\Folder of Folders\Ren'py\renpy\ast.py", line 2249, in set
-    value = renpy.python.py_eval_bytecode(self.code.bytecode)
-  File "N:\Folder of Folders\Ren'py\renpy\python.py", line 1202, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/options.rpy", line 97, in <module>
-    define config.sample_sound = bloodSplat
-NameError: name 'bloodSplat' is not defined
+  File "game/scripts/chaos.rpy", line 1451, in script
+    show black with Fade(0.2)
+  File "N:\Folder of Folders\Ren'py\renpy\ast.py", line 1361, in execute
+    renpy.exports.with_statement(trans, paired=paired)
+  File "N:\Folder of Folders\Ren'py\renpy\exports\statementexports.py", line 257, in with_statement
+    return renpy.game.interface.do_with(trans, paired, clear=clear)
+  File "N:\Folder of Folders\Ren'py\renpy\display\core.py", line 1578, in do_with
+    return self.interact(trans_pause=True,
+  File "N:\Folder of Folders\Ren'py\renpy\display\core.py", line 2215, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "N:\Folder of Folders\Ren'py\renpy\display\core.py", line 2666, in interact_core
+    trans = instantiate_transition(None, old_root, layers_root)
+  File "N:\Folder of Folders\Ren'py\renpy\display\core.py", line 2575, in instantiate_transition
+    trans = self.ongoing_transition[layer](
+TypeError: Fade() missing 2 required positional arguments: 'hold_time' and 'in_time'
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.3.2.24090902
-Ouroboros: Constricting Devotion 0.6
-Wed Nov 27 21:30:28 2024
+Ouroboros: Constricting Devotion 0.7
+Fri Nov 29 13:17:02 2024

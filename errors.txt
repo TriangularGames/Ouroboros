@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/options.rpy", line 105: invalid syntax
-    "horror-piano-250870.mp3" volume 0.7
-                               ^
+File "game/scripts/chaos.rpy", line 1454: end of line expected.
+    show black with fade 0.2
+                         ^
 
 Ren'Py Version: Ren'Py 8.3.2.24090902
-Wed Nov 27 23:19:02 2024
+Fri Nov 29 13:16:01 2024

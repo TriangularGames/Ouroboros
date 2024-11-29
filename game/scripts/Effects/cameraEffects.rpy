@@ -7,6 +7,7 @@ transform cameraReset:
     xzoom 1.0
     zoom 1.0
     blur 0.0
+    rotate 0.0
     matrixcolor InvertMatrix(0.0)*ContrastMatrix(1.0)*SaturationMatrix(1.0)*BrightnessMatrix(0.0)*HueMatrix(0.0)
 
 transform shakeHead:
@@ -19,7 +20,6 @@ transform shakeHead:
 
 transform nodHead:
     subpixel True
-    ypos -30.0 *(not renpy.is_skipping())
     ease2 0.21*(not renpy.is_skipping()) ypos -10
     ease2 0.22*(not renpy.is_skipping()) ypos -30
     ease2 0.22*(not renpy.is_skipping()) ypos -10
