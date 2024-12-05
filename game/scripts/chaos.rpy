@@ -191,7 +191,7 @@ label chaos:
             show cadmus armsHK
             "Your eyes catch the knife dancing in his fingers.{nw}"
             $ _history = True
-            show cadmus armsHair
+            show cadmus armsHair -shadowTD
             "His hand runs through his hair, looking a bit unamused."
             show cadmus normalSmile armsD -hairUp with dis
             cadmus "...doesn't matter."
