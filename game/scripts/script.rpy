@@ -45,7 +45,7 @@ init python:
     config.layers = ['backdrop', 'background', 'master', 'transient', 'screens', 'overlay']
 
 # To prevent going back, uncomment when building
-#define config.rollback_enabled = False
+define config.rollback_enabled = False
 
 
 # The game starts here.

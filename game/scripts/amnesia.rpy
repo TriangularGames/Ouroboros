@@ -483,10 +483,11 @@ label AmnesiaBadBranch:
 
     menu:
         "Where are you going?":
-            ## add headpat effect perhaps?
+            camera at headPat
             "He laughs, placing his hand on your head."
             cadmus "I'm just stretching my legs, no need to panic."
             cadmus "Just going to walk the room. I'll be quick."
+            ## TODO: add footsteps
             "He starts to walk, his footsteps filling your ears."
 
         "Don't leave me.":
@@ -500,6 +501,7 @@ label AmnesiaBadBranch:
             menu:
                 "Beg him to stay":
                     cadmus "I have to go dear, I'll be back."
+                    ## TODO: add footsteps
                     "He simply continues to walk away from you."
                 
                 "Let him go.":

@@ -949,6 +949,7 @@ label CareBadBranchA:
     "He gently pats your head, before walking off."
 
     "You" "Hurry back!"
+    ## TODO: add footsteps
     "You lean towards his direction, the ropes tightly pulling against you as his footsteps drip away."
     hide cadmus with dis
 
@@ -963,6 +964,7 @@ label CareBadBranchBJump:
     "You can't help but miss him."
     
     if CBBB:
+        play sound runningWater volume 0.05 fadeout 2.0
         "You hear the sound of running water in the distance."
         "It stops just as quickly as it was heard."
     else:
@@ -989,9 +991,10 @@ label CareBadBranchB:
     "Oh."
     "So."
     "Fond of."
-    "Darling you worry far too much about trivial things."
 
+    cadmus "Darling you worry far too much about trivial things."
     "You" "Worrying about you is...trivial? But that's absurd!"
+
     "Him saying such a thing makes your blood boil"
     "The being of {i}your{/i} affections?"
     "{i}Trivial?{/i}"
