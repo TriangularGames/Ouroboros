@@ -949,8 +949,8 @@ label CareBadBranchA:
     "He gently pats your head, before walking off."
 
     "You" "Hurry back!"
-    ## TODO: add footsteps
-    "You lean towards his direction, the ropes tightly pulling against you as his footsteps drip away."
+    play sound "<from 0 to 15>audio/sound effects/footsteps.mp3" fadeout 1.0
+    "You lean towards his direction, the ropes tightly pulling against you as his footsteps drift away."
     hide cadmus with dis
 
 label CareBadBranchBJump:
