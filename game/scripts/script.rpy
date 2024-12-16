@@ -363,7 +363,7 @@ label start:
             "He grins as he uses the tip of his knife to pick under his nails."
             $ caring += 1
 
-        "{glitch=15.5}You're not going to use it{p}again are you?{/glitch}" if (persistent.onReplay and persistent.runNumber >= 3):
+        "{glitch=15.5}You're not going to use it again are you?{/glitch}" if (persistent.onReplay and persistent.runNumber >= 3):
             play music basement channel "music_CH1" volume 0.0
             play music corrupted channel "music_CH2" volume music_vol
 
@@ -379,7 +379,7 @@ label start:
                 zoom 1.0
                 yalign 0.2
                 xoffset -260
-            "{cps=10}{sc=1.5}His smile is unnaturally wide, holding the knife to your throat.{/sc}"
+            "{cps=10}{sc=1.5}His smile is unnaturally wide,{p}holding the knife to your throat.{/sc}"
             cadmus "{cps=10}{sc=1.5}{font=HelpMe.ttf}{size=50}Wouldn't you like to find out...{/size}{/font}{/sc}{nw}"
             $ _history = True
 
