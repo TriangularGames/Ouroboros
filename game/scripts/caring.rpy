@@ -212,11 +212,12 @@ label caring:
                     "Maybe you could let this go for now."
 
                 "Are we both trapped here?":
-                    "Cadmus' gaze holds firm, whatever emotional turmoil the initial question put him in now gone."
+                    ## TODO: make his face no longer confused here
+                    "Cadmus' gaze holds firm, whatever emotional turmoil the initial question put him in, is now gone."
                     cadmus "Such nonsense, I trapped you with me, how can we both be trapped?"
 
-                    "You" "You seemed worried I asked where we are."
-                    "You" "Is it wrong of my to ask?"
+                    "You" "You seemed worried that I asked where we are."
+                    "You" "Is it wrong of me to ask?"
 
                     "His gaze softens slightly."
 
@@ -306,7 +307,7 @@ label caring:
     cadmus "Told you I wouldn't be long, right?"
 
     show cadmus normalSmile with dis
-    "He quickly wipes his foreheard, eyes focusing back on yours, smiling slightly."
+    "He quickly wipes his forehead, eyes focusing back on yours, smiling slightly."
     "...does he know something you don't?"
     "How did he even know something was wrong?"
     "It's so hard to even see in here, you didn't even know where he was."
@@ -508,7 +509,7 @@ label CareGoodBranchA:
             "You both lock eyes."
             show cadmus normalSmile with dis
             show cadmus armsD -hand
-            "He simple smiles, pulling his hand away."
+            "He simply smiles, pulling his hand away."
             show cadmus at sit
 
         "Nuzzle his hand":
@@ -541,7 +542,7 @@ label CareGoodBranchA:
     "You feel a bit nervous at that...does he really think so much of you?"
     "Is this some kind of ploy?"
     show cadmus smileopenNU with dis
-    "He laughs, presumably at whatever face your making, though his expression softens."
+    "He laughs, presumably at whatever face you're making, though his expression softens."
 
     show cadmus at lean
     cadmus "Come now, no need for that face."
@@ -707,7 +708,7 @@ label CareGoodEnding:
     cadmus "We'll make others I'm sure, do you have one?"
 
     show cadmus smirkingSoft with dis
-    "As you ponder, he places your finger ontop of his palm."
+    "As you ponder, he places your finger on top of his palm."
 
     menu:
         "Slide your finger on his palm":
@@ -730,7 +731,7 @@ label CareGoodEnding:
             cadmus "That works."
             $ persistent.code = "doubletap"
 
-    "You both laugh, simply enjoying each others company."
+    "You both laugh, simply enjoying each other's company."
     "It's hard to imagine you used to feel uncomfortable because of him."
 
     cadmus "I'm going to get a drink, I'll be right back."
@@ -751,7 +752,7 @@ label CareGoodEnding:
     
     show cadmus concern with dis
     cadmus "You're still here..."
-    "You" "I have no where else to go, I don't get why it still shocks you."
+    "You" "I have nowhere else to go, I don't get why it still shocks you."
     show cadmus smirk at lean
     cadmus "...I thought we would be gone by now."
     "You" "Gone?"
@@ -772,7 +773,7 @@ label CareGoodEnding:
     "You" "I'm {i}so{/i} sure you aren't just pulling my leg."
 
     show cadmus normalSmile with dis
-    "He snickers, running his thumb on the back on your hand."
+    "He snickers, running his thumb on the back of your hand."
 
     cadmus "I do play guitar, I'm serious about that."
     "You" "And about the rest?"
@@ -887,7 +888,7 @@ label CareBadBranchA:
     "His head snaps back at you."
     "You suppose your voice was a bit stern...it wasn't your intention..."
     show cadmus concern with dis
-    cadmus "No where, dear, don't worry!"
+    cadmus "Nowhere, dear, don't worry!"
     cadmus "I'm simply just...so overwhelmed by you."
 
     "Your heart swells, his words so sickening and sweet."

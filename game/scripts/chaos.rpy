@@ -253,11 +253,11 @@ label ChaosGoodBranchA:
     show cadmus regularE with dis
     cadmus "I'm doing you a favour by not explaining, eventually you'll realize that."
 
-    "You" "Nothing you're doing is making any sense!"
+    "You" "Nothing you're doing makes any sense!"
 
     cadmus "Well neither is you being here."
     show cadmus pout armsR at lean
-    cadmus "You shouldn't BE here, darling."
+    cadmus "You shouldn't {i}be{/i} here, darling."
 
     "You" "You literally trapped me in here, how should I not even be here?"
 
@@ -1312,7 +1312,7 @@ label ChaosBadConverged:
     "There's a silence that stretches between you both as he seems lost in thought."
     "It at the very least gives you an opportunity to take in what you've been told."
     "You're both stuck here, neither of you know why..."
-    "Who even trapped you both."
+    "You aren't sure who trapped you both."
     "And he loves you."
     "You're a bit surprised of all things to be true, that one seems to be."
     "Does that mean you know each other outside of this?"

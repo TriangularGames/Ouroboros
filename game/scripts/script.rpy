@@ -320,7 +320,7 @@ label start:
             play music corrupted channel "music_CH2" volume 0.0
 
             show cadmus -eyeBS -shadowTD -hand armsD smirkingSoft at default
-            cadmus "I'm so glad love!"
+            cadmus "I'm so glad, love!"
             show cadmus eyebrowsTD with dis
             "He tucks your hair behind your ear, eyes staring daggers into you."
             show cadmus smileopenNU with dis

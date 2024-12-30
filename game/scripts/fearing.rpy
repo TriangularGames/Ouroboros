@@ -370,7 +370,7 @@ label FearBadChoice1:
     menu:
         "Free your hand":
             "Taking chances leaving it now can only mean bad things for you."
-            "It takes a few second but you get your hand free."
+            "It takes a few seconds but you get your hand free."
             "Doing your best to leave it concealed within the ropes."
             "If he came back and noticed...you'd be in deep shit."
             jump FearBadBranchB
@@ -443,7 +443,7 @@ label FearGoodBranchHalf:
             "The sudden motion shifting the ropes, allowing you more movement than you expected."
             "For a guy so proud of these stupid things, he sure didn't do that well tying you."
             show cadmus shock with dis
-            "Cadmus is shocked, trying to speak but his words failing him."
+            "Cadmus is shocked, trying to speak but his words fail him."
             play sound pullOutKnife
             "Reaching for one of his pockets, you manage to find the knife."
 
@@ -564,7 +564,7 @@ label FearBadBranchA:
     cadmus "You're so lovely to look at."
     show cadmus armsD -hand at sit
     "His hand finally releases your cheek."
-    cadmus "I want to stay with your forever."
+    cadmus "I want to stay with you forever."
 
     "He chuckles, amused at his own statement."
 

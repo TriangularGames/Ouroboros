@@ -137,7 +137,7 @@ label amnesia:
     show black zorder 5 at shortBlink
     "Cadmus vanishes from your view."
     "You feel nauseous."
-    "Like something is worming it's way to you."
+    "Like something is worming its way to you."
     "Trying to move out of the ropes is futile- you know that."
     "You can't calm yourself down."
     "You feel a lingering sensation against your neck."
@@ -183,7 +183,7 @@ label amnesia:
 
         "Stay quiet":
             show cadmus disappointed with dis
-            cadmus "Ah- not talktive."
+            cadmus "Ah- not talkative."
             "Despite his disappointment with your silence, he pulls himself together."
             "As though what turmoil your silence brought him didn't exist."
             show cadmus regularE with dis
@@ -196,7 +196,7 @@ label AmnesiaGoodBranch:
     "He pulls his hand away"
     play sound drummingFingers
     extend ", drumming his fingers against the chair."
-    "Leavng you to wonder what the best course of action is."
+    "Leaving you to wonder what the best course of action is."
     "You know you could try freeing yourself, perhaps your hand?"
     "But you don't know where his knife is."
     "Glancing at his legs, it's hard to see."
@@ -253,6 +253,7 @@ label AmnesiaGoodBranch:
             "Cadmus looks at you, completely taken off guard by the question."
             show cadmus eyesSld with dis
             "His eyes drift from being locked on yours."
+            ## TODO: make him look actually sad ^
             "You almost think he looks...sad."
             show cadmus smirkingSoft with dis
             "Whatever he was feeling quickly leaves, he looks at you confidently."
