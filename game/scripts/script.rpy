@@ -56,9 +56,9 @@ label start:
     $ config.font_replacement_map[('BOOTERFZ.ttf', False, True)] = ('BOOTERFF.ttf', False, False)
 
     # dyslexic font
-    $ config.font_replacement_map[('OpenDyslexic-Regular.oft', True, False)] = ('OpenDyslexic-Bold.otf', False, False)
-    $ config.font_replacement_map[('OpenDyslexic-Regular.oft', False, True)] = ('OpenDyslexic-Italic.otf', False, False)
-    $ config.font_replacement_map[('OpenDyslexic-Regular.oft', True, True)] = ('OpenDyslexic-Bold-Italic.otf', False, False)
+    $ config.font_replacement_map[('OpenDyslexic-Regular.otf', True, False)] = ('OpenDyslexic-Bold.otf', False, False)
+    $ config.font_replacement_map[('OpenDyslexic-Regular.otf', False, True)] = ('OpenDyslexic-Italic.otf', False, False)
+    $ config.font_replacement_map[('OpenDyslexic-Regular.otf', True, True)] = ('OpenDyslexic-Bold-Italic.otf', False, False)
 
     #music vol setting
     $ music_vol = _preferences.get_volume("music")
