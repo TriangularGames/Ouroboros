@@ -98,7 +98,7 @@ label amnesia:
             show cadmus questioning with dis
             cadmus "Untie you? And lose you again? Nonsense my dear."
             show cadmus normalSmile at sit
-            "He returns to his seat."
+            "He returns to his seat." ## TODO: remove this
             show cadmus confused with dis
             cadmus "Why do you need to be anywhere else?"
             cadmus "I can take care of you right here."
@@ -126,11 +126,11 @@ label amnesia:
             "{cps=10}..."
             show cadmus smileteeth with dis
             cadmus "I'm so happy..."
-            "He checks the rope binding you, before taking a seat."
+            "He checks the rope binding you, before returning to his seat."
             show cadmus at sit
 
     camera at shakeOnceNoBlur
-    "There's a jitter in your vision, your head is pounding."
+    "There's a jitter in your vision- your head is pounding."
     camera at continuousShake
     "The whole room feels like it's on stilts and shaking, but you know you aren't moving."
     hide cadmus
@@ -170,9 +170,10 @@ label amnesia:
             "It almost irritates you, his {i}act{/i} of concern."
             "You find it hard to respond."
             "Or rather, you have no reason to respond."
+            "{cps=10}..."
             "The silence carries for longer than it should."
             "Clearly he was waiting for you to verbalize a response."
-            "Why the hell should you?"
+            "Why the hell {i}should{/i} you?"
 
             show cadmus concern with dis
             cadmus "I'm sorry..."
@@ -197,7 +198,7 @@ label AmnesiaGoodBranch:
     play sound drummingFingers
     extend ", drumming his fingers against the chair."
     "Leaving you to wonder what the best course of action is."
-    "You know you could try freeing yourself, perhaps your hand?"
+    "You know you could try freeing yourself- perhaps your hand?"
     "But you don't know where his knife is."
     "Glancing at his legs, it's hard to see."
     "The room is too dark to get a good look as to where his pockets might be."
@@ -224,7 +225,7 @@ label AmnesiaGoodBranch:
                     cadmus "Have eyes for me and only me darling~"
                     "You can't help but smile a bit just at how excited he is."
                     "Though, you quickly come back to your senses."
-                    "How bizarre, to feel any sense of happiness for someone who kidnapped you."
+                    "How bizarre- to feel any sense of happiness for someone who kidnapped you."
                     "Disgusting."
                 
                 "No":
@@ -276,7 +277,6 @@ label AmnesiaGoodBranch:
             show cadmus shock with dis
             "He looks caught off guard by the question."
             show cadmus concern with dis
-            "Struggling to put his emotions in check, you assume."
             cadmus "Well...of course I do, I brought you here."
             cadmus "This place is mine. Why would we be somewhere I didn't know?"
             "He's probably just trying to pull your leg."
@@ -288,14 +288,14 @@ label AmnesiaGoodBranch:
 
     "He watches you closely, seemingly occupied by you."
     show cadmus at cadFidget
-    "Fidgeting in his chair a bit."
+    "Fidgeting in his chair a bit." ## TODO: maybe remove this
     "It's hard to focus on anything, your mind feels so fuzzy."
     "Why are you here?"
     "Is he just taunting you?"
 
     show cadmus concern with dis
     cadmus "Darling?"
-    cadmus "Are you worried about me? You seem so concerned."
+    cadmus "Are you worried about me? You seem so concerned." ## TODO: break this into two lines
 
     "You have no idea how he got that from anything you've done."
     "I guess asking him a question did do something."
@@ -306,8 +306,9 @@ label AmnesiaGoodBranch:
             show cadmus frowning with dis
             cadmus "I don't think you have that luxury, or I guess the curse of being able to try."
 
-            "You didn't really, you are tied to the chair."
-            "If you actually {i}wanted{/i} to help him-"
+            "You didn't really."
+            "You are tied to the chair."
+            "If you actually even {i}wanted{/i} to help him-"
             "Which you don't."
 
             cadmus "I don't mean to make you feel bad, love."
@@ -368,11 +369,11 @@ label AmnesiaGoodEnding:
     hide black
     camera at cameraReset
     "It's...horrifying..."
-    "But you feel so...in control."
+    "But you feel so...{b}in control{/b}."
     show black zorder 5 at closeEyes
     hide blank
     "Your head starts pounding, causing you to forcibly shut your eyes."
-    "It hurts so bad."
+    "{i}It hurts so bad.{/i}"
     hide bg basement
     show bg wall
     show cadmus lidsC armsT at default:
@@ -383,7 +384,7 @@ label AmnesiaGoodEnding:
     show blank zorder 5 at blink
     "When you open them, everything looks different."
     "As your eyes focus, Cadmus sits limply in a chair in front of you."
-    "Ropes hold him there."
+    "{b}Ropes hold him there.{/b}"
     "He's against the wall you just were."
     show cadmus lidsR gasp shadowTU eyeBS with dis
     "He opens his eyes, and looks horrified."
@@ -548,6 +549,7 @@ label AmnesiaBadBranch:
     jump AmnesiaBadEnding
 
 label AmnesiaBadEnding:
+    ## TODO: rewrite this entire ending it sucks
     play music basement channel "music_CH1" volume 0.0
     play music corrupted channel "music_CH2" volume music_vol
     show cadmus armsHK with dis
