@@ -83,7 +83,7 @@ label caring:
     cadmus "Did I do something wrong?"
 
     "The last thing you want is him to be upset."
-    "For your safety, obviously."
+    "For your safety, {i}obviously{/i}."
     "You don't know what he's capable of."
     
     camera at shakeHead
@@ -154,7 +154,7 @@ label caring:
             show cadmus confused with dis
             "Cadmus looks at you, completely taken off guard by the question."
             show cadmus eyesSld with dis
-            "His eyes drift from being locked on yours."
+            "His eyes drift from being locked on yours." ## TODO: remove maybe?
             "You almost think he looks...sad."
             show cadmus smirkingSoft with dis
             "Whatever he was feeling quickly leaves, he looks at you confidently."
@@ -197,7 +197,6 @@ label caring:
             show cadmus shock with dis
             "He looks caught off guard by the question."
             show cadmus concern with dis
-            "Struggling to put his emotions in check, you assume."
             cadmus "Well...of course I do, I brought you here."
             cadmus "This place is mine. Why would we be somewhere I didn't know?"
 
@@ -221,7 +220,7 @@ label caring:
 
                     "His gaze softens slightly."
 
-                    cadmus "No. it's not."
+                    cadmus "No. It's not."
                     cadmus "I promise...I'll protect you."
 
                     "He's resolute with his words, and doesn't say anything else."
