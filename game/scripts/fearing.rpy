@@ -66,14 +66,13 @@ label fearing:
     show cadmus inLove with dis
     cadmus "I missed you~"
 
-    "His fingers excitedly drum his thighs as he speaks."
+    "His fingers excitedly drum his thighs as he speaks." # TODO: either change this line or add the SFX
 
     cadmus "Not that there's anyone else here...it's just you. and. me."
     show cadmus smirkingSoft with dis
     cadmus "All of our love captured in a single place. Isn't that divine?"
 
     show cadmus at lean
-    "Cadmus stands from the chair, leaning close to you."
     "His eyes search you hungrily"
     show cadmus lick with dis
     extend ", tongue dancing across his lips."
@@ -90,9 +89,8 @@ label fearing:
             show cadmus normalSmile with dis
             cadmus "Untie you? And lose you again? Nonsense my dear."
             show cadmus at sit
-            "He returns to his seat, acting in mock concern."
             show cadmus confused with dis
-            cadmus "Why do you need to be anywhere else?"
+            cadmus "Why do you need to be anywhere else?" ## Here he is pretending to be concerned
             cadmus "I can take care of you right here."
 
             menu:
@@ -118,7 +116,7 @@ label fearing:
             "{cps=10}..."
             show cadmus smileteeth with dis
             cadmus "I'm so happy..."
-            "He checks the rope binding you, before taking a seat."
+            "He checks the rope binding you, before sitting down again."
             show cadmus at sit
 
     show cadmus regularE removeExtras with dis
@@ -134,7 +132,7 @@ label fearing:
     "He starts moving away, but his hand on your chin is the last thing to leave your vision."
     "Footsteps echoing throughout the space- not as much as you expected it would."
     "The room must be much smaller than it appears..."
-    "The minimal light is doing wonders to cause you panic over the sheer scale of the darkness surrounding you."
+    "The minimal light is doing wonders to cause you panic over the sheer scale of the darkness surrounding you." ## TODO: add a pause after this
 
     "There's an itching at the back of your neck...you can't shake it."
     "This feeling of unease enveloping you."
@@ -155,7 +153,7 @@ label fearing:
     "It's {fast}where the rope burns, you assume."
 
     play sound runningWater volume 0.05 fadeout 2.0
-    "You hear running water off in the corner."
+    "The sound of running water catches you off guard."
     "While he's not around, you decide to reassess the ropes."
     "{cps=10}..."
     "{cps=10}..."
@@ -167,7 +165,7 @@ label fearing:
             "You shouldn't take chances."
             "{cps=10}..."
             "You manage to free your hand."
-            "Of course, keeping it concealed within the ropes."
+            "Of course- keeping it concealed within the ropes."
             "The last thing you need is him realizing you've done this."
             $ FearbadRoute = True
         
@@ -263,7 +261,7 @@ label FearBadChoice1:
 
             show cadmus at sit
             show cadmus smileteeth eyebrowsN with dis
-            "With a grin he proceeds to lean back away from you, giving you back your precious breathing room."
+            "With a grin he yields, giving you back your precious breathing room."
             "Much needed breathing room."
 
             if BadBranchA:
@@ -272,7 +270,7 @@ label FearBadChoice1:
     show cadmus concern with dis
     cadmus "Well, there must be something I can do to quell any possible concerns you might have..."
     play sound drummingFingers
-    "His fingers drum against the chair as he ponders."
+    "He hums and has as he seemingly ponders."
     show cadmus armsHighSH at lean
     "Just as you go to speak, he presses a finger to your lips."
     show cadmus smirk with dis
@@ -283,9 +281,9 @@ label FearBadChoice1:
     "It's best you don't tempt the devil."
     show cadmus regularE -armsHighSH at sit
     play sound drummingFingers
-    "He pulls his hand away, continuing to drum against the chair."
+    "He pulls his hand away, returning to his thoughts- you presume."
     "It's hard to figure out what might be the best thing to do in this situation."
-    "You could try and strike up a conversation- but clearly he's lost in thought."
+    "You could try and strike up a conversation- but given the silence it's best not to try."
     "If anything, trying to talk to him might upset him."
     extend "..or make him way too happy you care."
     "You could free your hand if you wanted-"
@@ -388,6 +386,7 @@ label FearGoodBranchHalf:
     "{cps=15}Miss...him."
     "Miss him?"
     "There's a weird thought."
+    ## TODO: add footstep sfx
     "Suddenly the sound of footsteps- he's coming back."
     "It's almost reassuring."
     "Are you...worrying about him?"
