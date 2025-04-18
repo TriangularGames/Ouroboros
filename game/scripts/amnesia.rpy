@@ -550,6 +550,9 @@ label AmnesiaBadBranch:
 
 label AmnesiaBadEnding:
     ## TODO: rewrite this entire ending it sucks
+    ## Plan for rewrite: when he says some nonsense and cuts the ropes still- but before he grabs you, you make a break for the door
+    ## the door opens to an empty void and you fall- seeing Cadmus' standing at the door, backlit by the lone light, as you disappear
+    ## the fade to black- you hear the sound of him hitting the floor as he cries
     play music basement channel "music_CH1" volume 0.0
     play music corrupted channel "music_CH2" volume music_vol
     show cadmus armsHK with dis
