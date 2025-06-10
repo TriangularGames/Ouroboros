@@ -549,10 +549,6 @@ label AmnesiaBadBranch:
     jump AmnesiaBadEnding
 
 label AmnesiaBadEnding:
-    ## TODO: rewrite this entire ending it sucks
-    ## Plan for rewrite: when he says some nonsense and cuts the ropes still- but before he grabs you, you make a break for the door
-    ## the door opens to an empty void and you fall- seeing Cadmus' standing at the door, backlit by the lone light, as you disappear
-    ## the fade to black- you hear the sound of him hitting the floor as he cries
     play music basement channel "music_CH1" volume 0.0
     play music corrupted channel "music_CH2" volume music_vol
     show cadmus armsHK with dis
@@ -580,28 +576,51 @@ label AmnesiaBadEnding:
         subpixel True
         ease_expo 3.00 xpos 1920 ypos 300 zoom 1.5
     "Standing and running for the door."
-    cadmus "{size=50}LIKE HELL YOU'RE LEAVING!{/size}"
-    camera at shakeOnce
-    "You feel him grab your shoulders from behind you."
-    camera:
-        subpixel True
-        xpos 1920 ypos 300 zoom 1.5
-    "You can't move."
-    "God why won't your legs move?!"
-    "Run idiot!!"
 
-    show blank with flash
-    "You feel his teeth dig into your neck, and scream."
-    show black at closeEyes
-    "Your eyes shut from how horrible the pain is."
-    "He holds you firmly as he bites harder, your legs barely keeping you standing."
-    "All sensations fade away."
+    ## Rewritten part starts here
+    ## TODO: add footsteps running here
+    "You hear his foosteps behind you as your scramble, desperately trying to get away."
+    "The door is within reach-"
+    ## TODO: add door open noise
+    "Taking the handle, the door swings open with ease..."
+    "It...was never locked?"
+    "You rush through into the darkened hallway- finally, freedom!"
+    "You're getting the hell out of here!"
+    "..."
+    "...and yet..."
+    "{b}Your feet touch nothing.{/b}"
+
+    ## TODO: add wind rushing noise for the fall
+    "You try to turn back, grasp onto the door...{b}anything!{/b}"
+    "But it's already much too late."
+    "You can see Cadmus standing there."
+    "Watching you fall."
+
+    # old stuff here just in case
+    #cadmus "{size=50}LIKE HELL YOU'RE LEAVING!{/size}"
+    #camera at shakeOnce
+    #"You feel him grab your shoulders from behind you."
+    #camera:
+    #    subpixel True
+    #    xpos 1920 ypos 300 zoom 1.5
+    #"You can't move."
+    #"God why won't your legs move?!"
+    #"Run idiot!!"
+
+    #show blank with flash
+    #"You feel his teeth dig into your neck, and scream."
+    #show black at closeEyes
+    #"Your eyes shut from how horrible the pain is."
+    #"He holds you firmly as he bites harder, your legs barely keeping you standing."
+    #"All sensations fade away."
+
     stop music channel "music_CH1" 
     stop music channel "music_CH2" fadeout 1.0
 
     scene black with fade
     pause (0.5)
 
+    ## TODO: add sound of him falling to the floor
     cadmus "...we'll never be free from {b}it{/b}...will we..."
 
     ## fade out, title "Amnesia: Bad Ending?"
