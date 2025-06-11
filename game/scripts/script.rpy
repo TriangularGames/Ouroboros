@@ -143,7 +143,7 @@ label start:
                 cadmus "Did I say something strange?"
                 cadmus "Let's not dwell on it."
 
-            "You know?":
+            "Huh?":
                 show cadmus frowning with dis
                 "He doesn't seem in a rush to comment."
 
