@@ -1080,6 +1080,8 @@ label CareBadEnd:
     "He's so beautiful."
     "The being of your affections."
 
+    ## TODO: add a conversation based on one of the topics in the Cadmus Character Info sheet in the doc
+
     show cadmus concern with dis
     cadmus "Look...dear, I have to...go find something."
     show cadmus regularE with dis
@@ -1150,6 +1152,7 @@ label CareBadEnd:
 
 
 label CareBadEndSpecial:
+    ## TODO: rewrite this. it's also kinda fuckin mid s m h
     "You want to try and say something, but every word is caught in your throat."
     show cadmus shadowTD frown lidsS with dis
     "His eyes stare daggers into you."
