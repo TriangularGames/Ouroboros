@@ -178,7 +178,7 @@ label start:
             cadmus "My poor, poor baby..."
             $ fearing += 1
 
-        "{glitch=15.5}Again?{/glitch}" if (persistent.onReplay and persistent.runNumber >= 3):
+        "{glitch=15.5}This feels weird?{/glitch}" if (persistent.onReplay and persistent.runNumber >= 3):
             show cadmus smileopenNU with dis
             "He just laughs."
             $ chaos += 1
@@ -303,7 +303,7 @@ label start:
             $ remember = True
             $ caring += 1
 
-        "{glitch=15.5}I remember you.{/glitch}" if (persistent.onReplay and persistent.runNumber >= 3):
+        "{glitch=15.5}I feel like I know you.{/glitch}" if (persistent.onReplay and persistent.runNumber >= 3):
             play music basement channel "music_CH1" volume 0.0
             play music corrupted channel "music_CH2" volume music_vol
 
