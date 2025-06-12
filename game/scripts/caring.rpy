@@ -801,6 +801,7 @@ label CareGoodEnding:
     "Why does it hurt so much?"
     show cadmus concern with dis
     "You're trying to listen to him talk..."
+    ## muffled he's saying "Hey...are you okay?" "Is something wrong?" "No no...no god." "Please, pay attention to me!" "Please..."
     stop music channel "music_CH1" fadeout 1.0
     stop music channel "music_CH2"
     "His words fail to reach your ears."
