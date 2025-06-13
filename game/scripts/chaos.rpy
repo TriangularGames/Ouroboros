@@ -299,8 +299,8 @@ label ChaosGoodBranchA:
 
     elif persistent.lastRoute == "AB":
         cadmus "I wanted so badly to get us both out of this...cycle."
-        cadmus "But I couldn't keep myself together...and when I freed you I just..."
-        cadmus "I couldn't let you escape..."
+        cadmus "But I couldn't keep myself together...and when I freed you..."
+        cadmus "I couldn't stop you before you fell..."
 
     "You" "...what?"
 
@@ -603,7 +603,7 @@ label ChaosGoodBranchB:
             blur 0.0 matrixcolor InvertMatrix(0.0)*ContrastMatrix(1.0)*SaturationMatrix(1.0)*BrightnessMatrix(0.0)*HueMatrix(0.0)
 
         centered "He kept talking madness about \"breaking the cycle\" and when he cut you free, you tried to escape..."
-        centered "But he captured you and bit into you like his prey."
+        centered "And that door...it was just pure nothingness."
 
         hide amnesiaBad with slowdis
         show vignette zorder 4 with slowdis:
@@ -643,6 +643,7 @@ label ChaosGoodBranchB:
     "You" "So how much is real? Fake? Is there a truth?"
     "You" "Have you just been playing me with the whole 'being of my affections' bit?"
 
+    ## TODO: make him look offended/upset here
     cadmus "...yikes...a {i}bit{/i}."
     cadmus "I wasn't lying-"
     show cadmus armsHair with dis
@@ -763,7 +764,7 @@ label ChaosGoodConverged:
     "You" "I thought you were worried about the amount of time we have and even talking about anything?"
 
     show cadmus normalSmile with dis
-    cadmus "I think it's worth a risk."
+    cadmus "I think it's probably worth a risk."
     cadmus "I will have to dance around a few things...so I'm sorry about that."
 
     "You" "Whatever you can give me, maybe I'll be able to help or at least retain something?"
@@ -776,11 +777,14 @@ label ChaosGoodConverged:
 
     show cadmus regularE with dis
     cadmus "There's more to this place than even I understand, I've been outside all of about four times."
+    cadmus "Most of the time, the door won't even open...and even then-"
     show cadmus eyesSld with dis
     cadmus "It's just an inescapably endless field. Which is why I think we aren't exactly in a tangible place. This place is impossible."
 
     if persistent.lastRoute == "FG":
         "That makes sense, when you did manage to escape it just went on forever until you passed out from sheer exhaustion."
+    if persistent.lastRoute == "AB":
+        "An endless field sounds pretty awful...but the endless pit you experienced might've been way worse."
     else:
         "That sounds horrifying, just watching the field constantly extending out before you...no end in sight..."
 
@@ -1402,6 +1406,8 @@ label ChaosConvergedEnding:
     play music basement channel "music_CH1" volume 0.0
     play music corrupted channel "music_CH2" volume music_vol
 
+    ## TODO: add some extra conversation here, pertaining to some of the character info in the Info sheet in the doc
+
     show cadmus at fallOff
     play sound silencepoint5
     queue sound bodyFall
@@ -1444,7 +1450,7 @@ label ChaosConvergedEnding:
     "You" "Please! Cadmus! Snap out of it!"
 
     "Despite your pleading...you know in your heart it isn't reaching him."
-    "He's not the one in front of you now."
+    "{b}He's not the one in front of you now.{/b}"
     play sound stab
     camera:
         subpixel True
