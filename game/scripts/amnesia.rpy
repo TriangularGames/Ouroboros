@@ -98,7 +98,7 @@ label amnesia:
             show cadmus questioning with dis
             cadmus "Untie you? And lose you again? Nonsense my dear."
             show cadmus normalSmile at sit
-            "He returns to his seat." ## TODO: remove this
+            #"He returns to his seat."
             show cadmus confused with dis
             cadmus "Why do you need to be anywhere else?"
             cadmus "I can take care of you right here."
@@ -286,16 +286,17 @@ label AmnesiaGoodBranch:
     cadmus "Such a curious little mouse."
     cadmus "I'm appreciative of your curiosity."
 
-    "He watches you closely, seemingly occupied by you."
+    "He watches you closely, seemingly occupied by you, though also distracted."
     show cadmus at cadFidget
-    "Fidgeting in his chair a bit." ## TODO: maybe remove this
+    #"Fidgeting in his chair a bit."
     "It's hard to focus on anything, your mind feels so fuzzy."
     "Why are you here?"
     "Is he just taunting you?"
 
     show cadmus concern with dis
     cadmus "Darling?"
-    cadmus "Are you worried about me? You seem so concerned." ## TODO: break this into two lines
+    cadmus "Are you worried about me?"
+    cadmus "You seem so concerned."
 
     "You have no idea how he got that from anything you've done."
     "I guess asking him a question did do something."

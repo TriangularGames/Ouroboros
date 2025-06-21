@@ -49,8 +49,8 @@ label trueIntro:
     "The smirk on his face was soft- inviting."
 
     cadmus "We only have so much time..."
-    ## TODO: edit this line
-    "his face drops as he speaks, his hand coming to your cheek."
+    ## TODO: add a worried expression here
+    "He glances away, hand coming to your cheek."
     cadmus "but- I have a plan."
 
     "You smile at him, attempting to be reassuring to him."
@@ -66,9 +66,9 @@ label trueIntro:
     "The tightness of his grip on the knife, the way his muscles tense holding it, causing his hand to quiver."
     "He just as quickly puts the knife away."
 
-    ## TODO: perhaps reword this section
-    cadmus "I'm surprised you don't have any questions." #he says, even if his voice trails off,
-    cadmus "I feel like normally you have some comments to make…perhaps it wasn't even you that had those comments to make."
+    cadmus "I'm surprised you don't have more to say." #he says, even if his voice trails off,
+    cadmus "I feel like normally you have so many quips..."
+    cadmus "Perhaps- it wasn't even you."
 
     menu:
         "Did you want me to?":

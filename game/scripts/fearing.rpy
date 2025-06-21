@@ -132,7 +132,10 @@ label fearing:
     "He starts moving away, but his hand on your chin is the last thing to leave your vision."
     "Footsteps echoing throughout the space- not as much as you expected it would."
     "The room must be much smaller than it appears..."
-    "The minimal light is doing wonders to cause you panic over the sheer scale of the darkness surrounding you." ## TODO: add a pause after this
+    "The minimal light is doing wonders to cause you panic over the sheer scale of the darkness surrounding you."
+
+    ## TODO: check the pause here is sufficient
+    pause (2)
 
     "There's an itching at the back of your neck...you can't shake it."
     "This feeling of unease enveloping you."
