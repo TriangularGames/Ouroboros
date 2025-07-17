@@ -1403,9 +1403,6 @@ label ChaosBadConverged:
     jump ChaosConvergedEnding
 
 label ChaosConvergedEnding:
-    play music basement channel "music_CH1" volume 0.0
-    play music corrupted channel "music_CH2" volume music_vol
-
     ## TODO: expression work for new convo
 
     cadmus "Can I ask you something?"
@@ -1561,6 +1558,8 @@ label ChaosConvergedEnding:
             cadmus "If anyone should be sorry it's me."
             extend " I don't want you to be troubled."          
 
+    play music basement channel "music_CH1" volume 0.0
+    play music corrupted channel "music_CH2" volume music_vol
     show cadmus at fallOff
     play sound silencepoint5
     queue sound bodyFall

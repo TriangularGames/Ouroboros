@@ -761,6 +761,7 @@ label CareGoodEnding:
 
     "You make the comment without much thought, he smiles."
 
+    ## TODO: extend guitar convo with the new info
     show cadmus normalSmile with dis
     cadmus "I play in a band- lead guitar."
     "You" "Really?"
