@@ -1406,7 +1406,160 @@ label ChaosConvergedEnding:
     play music basement channel "music_CH1" volume 0.0
     play music corrupted channel "music_CH2" volume music_vol
 
-    ## TODO: add some extra conversation here, pertaining to some of the character info in the Info sheet in the doc
+    ## TODO: expression work for new convo
+
+    cadmus "Can I ask you something?"
+
+    "You" "I don't see why not."
+
+    cadmus "You close with your family?"
+
+    menu:
+        "Sort of.":
+            $ persistent.family = "sortOf"
+
+            "You" "I don't see them very often, but it's not like I hate them."
+
+            cadmus "...I see."
+            "Though he seems to smile, it doesn't entirely reach his eyes."
+            "You can help but wonder why he's making such a face."
+
+        "Yes.":
+            $ persistent.family = "close"
+            "You" "I'd say so yeah. I love them."
+
+            cadmus "...that's really nice."
+            "He almost sounds regretful, jealous maybe?"
+            "Though he smiles warmly, Cadmus seems conflicted."
+
+        "No.":
+            $ persistent.family = "distant"
+            "You" "I stopped bothering to see them after a while. I'm on my own now."
+
+            "Cadmus nods."
+            "He regards you with a half smile, almost as though he can relate to your plight."
+
+    "You" "What about you? Are you close to them?"
+
+    cadmus "Maybe at some point I was. I haven't seen or heard from any of them in a long time."
+    "He sighs, his hand combing through his hair."
+    cadmus "I last saw my sister a few years ago."
+
+    "You" "You have a sister? Is she older?"
+
+    cadmus "Younger sister, we used to be very tight knit when we were younger..."
+    cadmus "...time does interesting things to people."
+    cadmus "Even more so when they're told things that aren't true."
+
+    "Cadmus glances off, perhaps remembering something, perhaps not."
+    "You can't help but be a little curious..."
+    "Though it seems like the topic of family troubles him."
+
+    menu:
+        "Pry":
+            $ persistent.pry = True
+
+            "You" "Did...something happen?"
+
+            "He seems to hesitate, his breath catching in his throat."
+
+            cadmus "A friend of mine did terrible things, and I took the blame for him."
+
+            "You" "What sort of things?"
+
+            cadmus "Y'know how there's stories of kids being weird with pets and small animals?"
+
+            "You" "...like, injuring them?"
+
+            cadmus "Sometimes worse."
+
+            "You" "You knew someone like that?"
+
+            "Cadmus nods, avoiding your gaze entirely."
+
+            "You" "And you defended them? Why on earth would you do that?!"
+
+            cadmus "I owed him."
+
+            "You can't help but feel confused at this."
+            "You wait in the hopes that he'll give more information- that can't just be the reason."
+            "The silence continues, his eyes avoid yours entirely, the confusion gnaws at you."
+
+            "You" "What would make defending that worth while?!"
+
+            cadmus "Doesn't...matter much now, does it?"
+            cadmus "Taking that marked me as a certifiably untrustworthy person to most people."
+            cadmus "Being in high school- you don't think much about the greater ramifications for yourself."
+            cadmus "He didn't have the means to survive getting caught. I did."
+
+            "You" "...sure."
+            "You" "Are you two even still friends?"
+
+            "He laughs- dejectedly."
+            cadmus "He abandoned me the second I took the blame."
+            cadmus "...I was never very good at picking people."
+
+            "Cadmus looks at you- finally- searching your gaze for something."
+            "You aren't really sure what to feel."
+            "Bad?"
+            "Angry?"
+            "Worried?"
+            "Everything?"
+            "You both feel entirely too close to him and entirely too far away."
+            "{i}What do you even know about him?{/i}"
+
+            cadmus "Do you think I'm stupid for that?"
+            cadmus "...do you also want nothing to do with me?"
+
+            menu:
+                "No, you aren't stupid":
+                    "You" "While I don't understand it myself..."
+                    "You" "You're the one that has to live with it, not me."
+                    "You" "It's not like {i}you{/i} did those things."
+
+                    cadmus "...you're very kind."
+
+                    "You" "Your family wasn't?"
+
+                    "He laughs at that- bitter and tainted with negativity."
+                
+                "Yes, you're stupid":
+                    ## have him shut his eyes here
+                    "You" "Completely stupid for it."
+                    "You" "You ruined yourself for a guy who didn't even give a shit about you?!"
+
+                    "He sighs- you almost wonder if he's even taking you seriously until he glances back at you."
+
+                    cadmus "Yeah...real stupid."
+
+                    "You" "Even with that, it's not like you actually did those things."
+                    "You" "So why would I abandon you just 'cause of something you didn't do?"
+
+                    cadmus "Not like you could abandon me anyway."
+
+                    "He chuckles softly."
+
+            cadmus "I am surprised you're just going to take me at my word."
+            cadmus "I tell you I didn't do something and you'll just believe me?"
+
+            "You" "Whenever I get the hell away from you, I can verify it."
+
+            "He laughs, nearly falling off his own chair with how amused he is."
+
+            cadmus "You're spunk never ceases to amaze me, darling."
+            cadmus "If you get me out of here too- you can also turn me in."
+            cadmus "So don't run without me, 'kay~"
+
+        "Don't":
+            "It's probably better to leave it alone."
+            "You" "I'm sorry."
+
+            cadmus "For what, darling? I'm the one that brought it up."
+
+            "He smiles gently, caressing your cheek."
+
+            cadmus "If anyone should be sorry it's me."
+            extend " I don't want you to be troubled."          
 
     show cadmus at fallOff
     play sound silencepoint5

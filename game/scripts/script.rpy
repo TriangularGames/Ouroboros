@@ -30,6 +30,12 @@ default persistent.AmnesiaGoodEnd = False
 default persistent.ChaosEnding = False
 default persistent.lastRoute = ""
 
+## Special Conversation Notes!
+
+## From chaos
+default persistent.family = ""
+default persistent.pry = False
+
 ## From caring ending
 default persistent.code = ""
 
