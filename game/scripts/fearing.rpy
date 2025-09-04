@@ -260,7 +260,7 @@ label FearBadChoice1:
             cadmus "You always told me you {i}adored{/i} my smile, darling."
             show cadmus concern with dis
             "He pouts, clearly a bit upset. Doing what you can only assume to be puppy eyes at you."
-            cadmus "I'm a well behaved young man, I promise~"
+            cadmus "I'm a good boy, I promise~"
 
             show cadmus at sit
             show cadmus smileteeth eyebrowsN with dis
@@ -316,8 +316,9 @@ label FearBadChoice1:
         "Rain":
             $ rain = True
             "You" "It's relaxing, getting to stay indoors and just...listen to the rain."
+            ## TODO: might need to edit this expression here
             show cadmus normalSmile with dis
-            cadmus "We truly make quite the pair."
+            "He smiles with kind affection."
         
         "Shine":
             "You" "It's bright, and warm, hard to enjoy a day that rains when it's so gloomy."

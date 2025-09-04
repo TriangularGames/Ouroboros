@@ -472,7 +472,7 @@ label AmnesiaBadBranch:
             cadmus "You always told me you {i}adored{/i} my smile, darling."
             show cadmus concern with dis
             "He pouts, clearly a bit upset. Doing what you can only assume to be puppy eyes at you."
-            cadmus "I'm a well behaved young man, I promise~"
+            cadmus "I'm a good boy, I promise~"
 
             show cadmus smileteeth eyebrowsN with dis
             show cadmus at sit

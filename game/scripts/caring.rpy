@@ -761,7 +761,6 @@ label CareGoodEnding:
 
     "You make the comment without much thought, he smiles."
 
-    ## TODO: extend guitar convo with the new info
     show cadmus normalSmile with dis
     cadmus "I play in a band- lead guitar."
     "You" "Really?"
@@ -1080,7 +1079,39 @@ label CareBadEnd:
     "He's so beautiful."
     "The being of your affections."
 
-    ## TODO: add a conversation based on one of the topics in the Cadmus Character Info sheet in the doc
+    ## TODO: add expression work to new convo
+    "Your eyes are drawn to the snake tattoo on his arm."
+    "The way it flows from his hand to his neck."
+
+    cadmus "Curious about it?"
+    cadmus "I got it on a bit of a whim."
+
+    "You" "Really? Why?"
+
+    cadmus "I kept having this dream-"
+    cadmus "Walking to a marble building, like a colosseum of sorts."
+    cadmus "There was a beautiful courtyard and you could see the clouds just above the walls..."
+    cadmus "Walking up to this platform this large snake would come from the ground."
+    cadmus "Stark white, dark eyes- if I had reason to I probably would've been afraid."
+    cadmus "But it would tell me things..."
+    cadmus "Things that became true when I'd be awake."
+
+    "You" "It told you the future?"
+
+    cadmus "I guess so."
+    cadmus "I thought about it so much I decided to get a tattoo of a snake."
+    cadmus "...it felt like I had too."
+
+    menu:
+        "It suits you.":
+            "You" "It makes you all the more beautiful."
+
+            "He glances away, seeming nervous- perhaps bashful, you aren't sure."
+        
+        "It was meant to be.":
+            "You" "Like you and that snake are connected."
+
+            cadmus "...perhaps."
 
     show cadmus concern with dis
     cadmus "Look...dear, I have to...go find something."

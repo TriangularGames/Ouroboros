@@ -1464,28 +1464,32 @@ label ChaosConvergedEnding:
 
             "You" "What sort of things?"
 
-            cadmus "Y'know how there's stories of kids being weird with pets and small animals?"
+            cadmus "Y'know for some people that curiosity about fire never goes away?"
 
-            "You" "...like, injuring them?"
+            "You" "...yeah?"
 
-            cadmus "Sometimes worse."
+            cadmus "That was him."
 
-            "You" "You knew someone like that?"
+            "You" "What did he do?"
 
-            "Cadmus nods, avoiding your gaze entirely."
+            cadmus "He 'accidentally' burned down our school."
 
-            "You" "And you defended them? Why on earth would you do that?!"
+            "Cadmus avoids your gaze entirely."
+
+            "You" "Why would you even take the blame?!"
+
+            "He sighs, seemingly uninterested in responding, but he obliges you."
 
             cadmus "I owed him."
 
             "You can't help but feel confused at this."
             "You wait in the hopes that he'll give more information- that can't just be the reason."
-            "The silence continues, his eyes avoid yours entirely, the confusion gnaws at you."
+            "The silence continues, his refuses to even look at you, the confusion gnaws at you."
 
             "You" "What would make defending that worth while?!"
 
             cadmus "Doesn't...matter much now, does it?"
-            cadmus "Taking that marked me as a certifiably untrustworthy person to most people."
+            cadmus "Taking that marked me as a certifiably untrustworthy, crazy person to most people."
             cadmus "Being in high school- you don't think much about the greater ramifications for yourself."
             cadmus "He didn't have the means to survive getting caught. I did."
 
@@ -1525,7 +1529,7 @@ label ChaosConvergedEnding:
                     "You" "Completely stupid for it."
                     "You" "You ruined yourself for a guy who didn't even give a shit about you?!"
 
-                    "He sighs- you almost wonder if he's even taking you seriously until he glances back at you."
+                    "He sighs- you almost wonder if he's even taking you seriously until he opens his eyes."
 
                     cadmus "Yeah...real stupid."
 
@@ -1543,7 +1547,7 @@ label ChaosConvergedEnding:
 
             "He laughs, nearly falling off his own chair with how amused he is."
 
-            cadmus "You're spunk never ceases to amaze me, darling."
+            cadmus "Your spunk never ceases to amaze me, darling."
             cadmus "If you get me out of here too- you can also turn me in."
             cadmus "So don't run without me, 'kay~"
 
@@ -1556,6 +1560,7 @@ label ChaosConvergedEnding:
             "He smiles gently, caressing your cheek."
 
             cadmus "If anyone should be sorry it's me."
+            ## TODO: have him sit back in his chair here
             extend " I don't want you to be troubled."          
 
     play music basement channel "music_CH1" volume 0.0
