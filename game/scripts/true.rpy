@@ -27,8 +27,8 @@ label trueIntro:
     "You slowly open your eyes, struggling to adjust to the dimly lit space you find yourself in."
     "The man you know all too well seated just in front of you."
 
-    cadmus "Welcome back darling."
-    "Cadmus says with a smile, the casualness of his words not lost on the moment. You've been here so many times."
+    cadmus "Welcome back darling." ## have him smiling here
+    "The casualness of his words not lost on the moment. You've been here so many times."
 
     "Despite the straining of your eyes you glance at him, ever annoyed by the hanging bulb behind him."
     "His sharp jawline, messy dark hair, his exhausted sunken features, you wonder how he'd look without the dread."
@@ -44,6 +44,7 @@ label trueIntro:
         subpixel True
         blur 0.0
         matrixcolor InvertMatrix(0.0)*ContrastMatrix(1.0)*SaturationMatrix(1.0)*BrightnessMatrix(0.0)*HueMatrix(0.0)
+    
     "Your eyes finally adjust, Cadmus coming into focus."
     "The dull thumping pain disappears into the background. His eyes focusing, peering into your soul."
     "The smirk on his face was soft- inviting."
@@ -73,25 +74,29 @@ label trueIntro:
     menu:
         "Did you want me to?":
             "You" "I still could ask you questions if you'd like."
+
             "You respond calmly, he glances away from you."
+
             cadmus "It's better you don't...I think." # he mutters,
             cadmus "The less we both talk and think about things the better it is."
+
             "You" "So it's kept hidden?"
+
             cadmus "Exactly..." # he smiles gently,
             extend "You truly are wonderful."
 
     "Cadmus' eyes trail up and down you- the intensity of his gaze..."
     "His affection oozes from it."
-
     "It's so charming."
-
-    "You adjust your wrist from beneath the ropes, you had almost forgotten they were there. Probably one of the only things here that slipped your mind."
+    "You adjust your wrist from beneath the ropes, you had almost forgotten they were there."
+    extend "Probably one of the only things here that slipped your mind."
 
     cadmus "I'll get you out of those soon enough."
+
     "He seems determined about whatever plan he has in mind."
 
     menu:
-        "We’ll get out of here soon enough.":
+        "We'll get out of here soon enough.":
             "He chuckles."
             cadmus "Yes, of course."
 
@@ -103,7 +108,27 @@ label trueIntro:
     cadmus "Yes, just like the other times."
     ## TODO: use the cover eyes thing
     centered "{cps=10}His hand delicately coming over your eyes."
+    centered "{cps=10}{i}See you soon.{/i}" ## this line is spoken by him
     centered "{cps=10}The sounds slowly but surely fading away."
+    hide cadmus
 
 label trueRoute:
-    ""
+    ## open eyes anim thing
+    ## maybe add some slight coloration to the background to indicate the difference
+    "You struggle to open your eyes, as if weighed down by a force."
+    "The room looks the same as it always has."
+    "Though Cadmus is not in front of you as you'd expect."
+    "You try to adjust yourself in your seat- but your limbs refuse to move."
+    "The sensation is so odd, like you're paralyzed."
+    "This hasn't happened before."
+    "Why is it suddenly different?"
+    "For the first time in a long time it feels...different."
+    "You take another glance around the room."
+    "It...{i}is{/i} the same room...right?"
+    ## add door slamming sound
+    "The sound of a door slamming startles you- only then are you able to move."
+    ## footstep sounds
+    "The radiating aura of the person approaching you is unlike anything you've experienced."
+    show cadmus smirking at default
+    "Cadmus sits across from you, like always."
+    "{i}It is him right?{/i}"
