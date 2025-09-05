@@ -132,3 +132,54 @@ label trueRoute:
     show cadmus smirking at default
     "Cadmus sits across from you, like always."
     "{i}It is him right?{/i}"
+
+    ## TODO: add effect to him having black scaleras
+    cadmus "Darling, how lovely to see you."
+    
+    menu:
+        "What's going on?":
+            pass
+        "Where were you?":
+            pass
+        "Are you alright?":
+            pass
+
+    "Though you try to speak, nothing escapes your lips."
+    "He seems to find it rather amusing, as he closes the gap."
+
+    cadmus "Oh my, did I simply take your breath away?" ## he chuckles
+    "There's a deepness to his voice that..."
+    extend "doesn't sound right."
+
+    "His hand comes to your face"
+    extend "- it's ice cold."
+    "The sensation messes with your vision again, that force weighing on you only gets worse."
+    "Something is definitely off."
+    "So much for his {i}plan{/i}..."
+    "What the hell is going on?"
+
+    cadmus "Now now, don't give me that look."
+    "His hand runs along your cheek, as he regards you lovingly."
+    cadmus "You're perfectly safe with me."
+    cadmus "You haven't forgotten that...have you?"
+
+    menu:
+        "I haven't.":
+            ""
+        "I don't know who you are.":
+            ""
+        "It would seem so.":
+            ""
+    
+    "You're honestly surprised your voice even came out that time."
+    "As he returns to his seat, you try to speak again."
+    "And find you can't."
+    "Was his hand being there somehow allowing you to talk?"
+    "But..."
+    extend "that's never been an issue before."
+
+    menu:
+        "Try to scream":
+            pass
+        "Try to move":
+            pass
