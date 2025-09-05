@@ -1404,7 +1404,6 @@ label ChaosBadConverged:
 
 label ChaosConvergedEnding:
     ## TODO: expression work for new convo
-
     cadmus "Can I ask you something?"
 
     "You" "I don't see why not."
@@ -1525,7 +1524,7 @@ label ChaosConvergedEnding:
                     "He laughs at that- bitter and tainted with negativity."
                 
                 "Yes, you're stupid":
-                    ## have him shut his eyes here
+                    ## TODO: have him shut his eyes here
                     "You" "Completely stupid for it."
                     "You" "You ruined yourself for a guy who didn't even give a shit about you?!"
 

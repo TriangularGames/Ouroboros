@@ -1215,7 +1215,6 @@ label CareBadEndSpecial:
     "If you could you think he'd stop."
     "Maybe whatever is going on would stop."
     "The words just won't come, and you struggle to breathe."
-    ## TODO: add a blur here
     camera:
         linear 1 blur 5
     show black zorder 5 at closeEyes:
