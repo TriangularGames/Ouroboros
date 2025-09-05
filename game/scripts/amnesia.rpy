@@ -286,6 +286,8 @@ label AmnesiaGoodBranch:
     cadmus "Such a curious little mouse."
     cadmus "I'm appreciative of your curiosity."
 
+    ## TODO: add one of the new convos here (probably the needles one tbh)
+
     "He watches you closely, seemingly occupied by you, though also distracted."
     show cadmus at cadFidget
     #"Fidgeting in his chair a bit."
@@ -478,6 +480,65 @@ label AmnesiaBadBranch:
             show cadmus at sit
             "With a grin he proceeds to lean back away from you, giving you back your precious breathing room."
             "Much needed breathing room."
+
+    ## TODO: add expression work here
+
+    cadmus "Do you like my piercings?"
+
+    "You" "...huh?"
+
+    "The out of no where question caught you off guard."
+    "You're not entirely sure what brought it on."
+    "Maybe to try and be more friendly?"
+
+    cadmus "My piercings."
+    cadmus "Do you like them?"
+
+    menu:
+        "Yes.":
+            "You" "They look cool."
+
+            "He chuckles, smiling brightly."
+
+            cadmus "I agree, that's why I got them."
+            cadmus "Well...one of the reasons."
+
+            "You" "What's another reason?"
+
+        "No.":
+            "You" "Not much of a fan personally."
+
+            "He stares blankly, seemingly struggling to catch up with what you said."
+
+            cadmus "Oh."
+
+            "The pause that carries his exclamation is thick in the air."
+            "You decide to try and break it kindly."
+
+            "You" "Do you like them?"
+
+            cadmus "Yes, otherwise I wouldn't have gotten them."
+            cadmus "Well...that and another reason."
+
+            "You" "Which would be...?"
+
+    ## TODO: add lean in here
+    "The chair creaks a bit as he leans forward, his breath tickling your face."
+
+    cadmus "I have a bit of an empty face."
+
+    "You" "...uh huh."
+    "You" "What does that have to do with it?"
+
+    cadmus "I thought I'd look better with piercings so...I got them."
+    cadmus "I think they suit me."
+
+    "You aren't entirely sure what answer or response to give him."
+    "He's seemingly content with your lack of response."
+    "And...extremely amused."
+    "Which worries you."
+
+    ## end of new section
 
     hide cadmus with dis
     "Cadmus stands from his seat, walking just out of your view."
