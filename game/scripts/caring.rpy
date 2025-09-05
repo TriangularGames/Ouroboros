@@ -1194,27 +1194,56 @@ label CareBadEndSpecial:
     show cadmus armsR at lean
     "His hand comes up to your face."
     "Nails digging into your cheeks."
-    play sound pullOutKnife
-    "You catch the glint of his knife being pulled from his pocket."
-    "What is he doing...?"
-    "{sc=3.5}You can't move.{/sc}"
-    play sound ropeFalls
-    "Suddenly you feel the ropes slip off you-"
-    play sound knifeDrop
-    "The sound of the knife clattering to the floor."
-    camera at liftUp
-    show cadmus smilecreepyTeeth with dis
-    "Cadmus forces your head up as he bears his teeth at you."
+
+    cadmus "Wanna say that again?"
+    
+    "You can't even begin to form the words lingering in your mind."
+    "Like something is holding your lips shut."
+    "Or gripping your throat."
+
+    cadmus "Little mouse..."
+    cadmus "{cps=10}Say. It. Again.{/cps}"
+
+    "His hand glides from your cheek to your throat."
+    "Only then does the sensation hit you."
+    "The ropes holding you dig into every part of your body."
+
+    cadmus "{font=HelpMe.ttf}{size=40}SPEAK!{/size}{/font}"
+
+    "If you could you think he'd stop."
+    "Maybe whatever is going on would stop."
+    "The words just won't come, and you struggle to breathe."
+    ## TODO: add a blur here
     show black zorder 5 at closeEyes:
         yoffset -100
-    "You scream as his teeth dig into the back of your neck."
-    "The pounding in your head starts again."
-    "{sc=3.5}You can't focus at all.{/sc}"
+    "The world around you blurs, as you shut your eyes."
     stop music channel "music_CH1" fadeout 1.0
     stop music channel "music_CH2"
-    "Shutting your eyes, trying to forget the pain."
-    "You feel something wet against your shoulder."
-    "As all sensation slips away."
+    "Soon...you don't feel anything at all."
+    "Free from whatever oppressive feeling overtook you."
+
+    ## Old code for reference
+    # play sound pullOutKnife
+    # "You catch the glint of his knife being pulled from his pocket."
+    # "What is he doing...?"
+    # "{sc=3.5}You can't move.{/sc}"
+    # play sound ropeFalls
+    # "Suddenly you feel the ropes slip off you-"
+    # play sound knifeDrop
+    # "The sound of the knife clattering to the floor."
+    # camera at liftUp
+    # show cadmus smilecreepyTeeth with dis
+    # "Cadmus forces your head up as he bears his teeth at you."
+    # show black zorder 5 at closeEyes:
+    #     yoffset -100
+    # "You scream as his teeth dig into the back of your neck."
+    # "The pounding in your head starts again."
+    # "{sc=3.5}You can't focus at all.{/sc}"
+    # stop music channel "music_CH1" fadeout 1.0
+    # stop music channel "music_CH2"
+    # "Shutting your eyes, trying to forget the pain."
+    # "You feel something wet against your shoulder."
+    # "As all sensation slips away."
 
     scene black with fade
     pause (0.5)
