@@ -210,13 +210,16 @@ label caring:
                     "Maybe you could let this go for now."
 
                 "Are we both trapped here?":
-                    ## TODO: make his face no longer confused here
+                    ## TODO: check expressions are good
+                    show cadmus neutral with dis
                     "Cadmus' gaze holds firm, whatever emotional turmoil the initial question put him in, is now gone."
+                    show cadmus smirking with dis
                     cadmus "Such nonsense, I trapped you with me, how can we both be trapped?"
 
                     "You" "You seemed worried that I asked where we are."
                     "You" "Is it wrong of me to ask?"
 
+                    show cadmus smirkingsoft with dis
                     "His gaze softens slightly."
 
                     cadmus "No. It's not."
