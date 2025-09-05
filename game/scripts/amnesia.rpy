@@ -286,6 +286,59 @@ label AmnesiaGoodBranch:
     cadmus "I'm appreciative of your curiosity."
 
     ## TODO: add one of the new convos here (probably the needles one tbh)
+    ## change expression here probs
+    cadmus "Curious about anything else?"
+
+    "You were only really asking for the sake of it..."
+    "Perhaps he has something particular in mind?"
+
+    "You" "Whatever you're willing to share."
+
+    cadmus "Oh? how kind of you to offer."
+
+    "He runs his hands on his pants, lost in the motions for a brief moment."
+
+    cadmus "Do you like my tattoo?"
+
+    menu:
+        "Yes.":
+            "You" "It's quite large."
+
+            cadmus "It is, isn't it?"
+            cadmus "It was quite an ordeal getting it done."
+
+            "You" "Because it took several days?"
+        
+        "No.":
+            cadmus "Hm. That's fine."
+
+            "He surprisingly takes your disinterest in stride."
+
+            cadmus "I quite like it, even if the process took a while."
+
+            "You" "I'm sure it was an ordeal getting it done."
+
+    cadmus "I quite hate needles."
+        
+    "You can't help but be confused at this."
+    "Given all his piercings and the tattoo, you find it hard to believe."
+    "He chuckles at your confusion."
+
+    cadmus "They almost had to knock me out just to get through the sessions."
+    cadmus "Even when I got my piercings, nearly fainted."
+    cadmus "Is that so hard to believe?"
+
+    "You" "It just..."
+
+    menu:
+        "Seems wrong.":
+            cadmus "I suppose it does."
+            cadmus "But it's the truth."
+
+        "Seems weird.":
+            cadmus "People are much different than their looks."
+            cadmus "I suppose I'm proof of that."
+    ## end of new section
 
     "He watches you closely, seemingly occupied by you, though also distracted."
     show cadmus at cadFidget
