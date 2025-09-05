@@ -252,9 +252,8 @@ label AmnesiaGoodBranch:
         "Are you eating enough?":
             show cadmus confused with dis
             "Cadmus looks at you, completely taken off guard by the question."
-            show cadmus eyesSld with dis
+            show cadmus eyesSld eyebrowsTU lidsS with dis
             "His eyes drift from being locked on yours."
-            ## TODO: make him look actually sad ^
             "You almost think he looks...sad."
             show cadmus smirkingSoft with dis
             "Whatever he was feeling quickly leaves, he looks at you confidently."
