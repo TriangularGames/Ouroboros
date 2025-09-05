@@ -1186,7 +1186,6 @@ label CareBadEnd:
 
 
 label CareBadEndSpecial:
-    ## TODO: rewrite this. it's also kinda fuckin mid s m h
     "You want to try and say something, but every word is caught in your throat."
     show cadmus shadowTD frown lidsS with dis
     "His eyes stare daggers into you."
@@ -1217,6 +1216,8 @@ label CareBadEndSpecial:
     "Maybe whatever is going on would stop."
     "The words just won't come, and you struggle to breathe."
     ## TODO: add a blur here
+    camera:
+        linear 1 blur 5
     show black zorder 5 at closeEyes:
         yoffset -100
     "The world around you blurs, as you shut your eyes."
