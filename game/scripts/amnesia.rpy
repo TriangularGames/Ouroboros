@@ -18,8 +18,8 @@ label amnesia:
 
     "You aren't sure how long it's been since you fell unconscious."
     "Feeling slightly off kilter."
-    play music basement channel "music_CH1" fadein 0.5
-    play music corrupted channel "music_CH2" volume 0.0
+    play music basement channel "music_CH1" fadein 0.5 loop
+    play music corrupted channel "music_CH2" volume 0.0 loop
     hide black
     show blank zorder 5 at blink
     "Struggling to refocus, you noticed Cadmus is still across from you, smiling."
@@ -106,6 +106,7 @@ label amnesia:
             menu:
                 "But what if I need to sleep?":
                     cadmus "The ropes aren't that tight are they?"
+                    show cadmus eyebrowsN with dis
                     "Cadmus tugs at them, tilting his head curiously."
                     show cadmus normalSmile with dis
                     cadmus "Seems just fine to me, I don't know what you're so concerned about."
@@ -197,15 +198,19 @@ label AmnesiaGoodBranch:
     "He pulls his hand away"
     play sound drummingFingers
     extend ", drumming his fingers against the chair."
+    show cadmus eyesSld with dis
     "Leaving you to wonder what the best course of action is."
     "You know you could try freeing yourself- perhaps your hand?"
+    show cadmus eyesS with dis
     "But you don't know where his knife is."
     "Glancing at his legs, it's hard to see."
     "The room is too dark to get a good look as to where his pockets might be."
+    show cadmus eyebrowsC with dis
     "Even if you manage to leave the ropes, get his knife- who knows what else he has on him."
     "That's not to mention..."
     "You don't even know {i}where{/i} the exit is."
 
+    show cadmus regularE with dis
     "It's hard to understand the situation you're even in."
     "Perhaps he wouldn't mind some questions?"
     "Whatever things come to mind should work."
@@ -285,60 +290,78 @@ label AmnesiaGoodBranch:
     cadmus "Such a curious little mouse."
     cadmus "I'm appreciative of your curiosity."
 
-    ## TODO: new convo expression work
+    show cadmus smirkingSoft at lean
     cadmus "Want to know anything else?"
 
     "You were only really asking for the sake of it..."
     "Perhaps he has something particular in mind?"
 
     "You" "Whatever you're willing to share."
-
+    
+    show cadmus eyebrowsC smileclosedND at sit
     cadmus "Oh? how kind of you to offer."
 
+    show cadmus eyebrowsN with dis
     "He runs his hands on his pants, lost in the motions for a brief moment."
 
+    show cadmus eyebrowsC smirk lidsS with dis
     cadmus "Do you like my tattoo?"
 
-    menu:
+    menu test:
         "Yes.":
+            show cadmus smileopenNU eyebrowsN lidsR with dis
             "You" "It's impressive, and quite large."
 
+            show cadmus smirk with dis
             cadmus "It is, isn't it?"
+            show cadmus eyebrowsTU pout with dis
             cadmus "It was an ordeal getting it done."
 
             "You" "Because it took several days?"
         
         "No.":
+            show cadmus pout eyebrowsN with dis
             cadmus "Hm. That's fine."
 
             "He surprisingly takes your disinterest in stride."
 
+            show cadmus eyesSld frown lidsR with dis
             cadmus "I quite like it, even if the process took a while."
 
             "You" "I'm sure it was an ordeal getting it done."
 
+    show cadmus eyesSld sweating frown with dis
     cadmus "I really hate needles- horrified of them honestly."
         
     "You can't help but be confused at this."
+    show cadmus eyesS eyebrowsN -sweating with dis
     "Given all his piercings and the tattoo, you find it hard to believe."
+    ## TODO: add chuckle effect
+    show cadmus smirk with dis
     "He chuckles at your confusion."
 
     cadmus "They almost had to knock me out just to get through the sessions."
+    show cadmus eyebrowsTU with dis
     cadmus "Even when I got my piercings, I nearly fainted."
+    show cadmus eyebrowsC with dis
     cadmus "Is that so hard to believe?"
 
     "You" "It just..."
 
     menu:
         "Seems wrong.":
+            show cadmus eyebrowsN with dis
             cadmus "I suppose it does."
+            show cadmus tongueOut with dis
             cadmus "But it's the truth."
 
         "Seems weird.":
+            show cadmus eyebrowsN with dis
             cadmus "People are much different than their looks."
+            show cadmus tongueOut with dis
             cadmus "Shouldn't judge a book by it's cover, no?"
-    ## end of new section
 
+    show cadmus regularE with dis
     "He watches you closely, seemingly occupied by you, though also distracted."
     "You're honestly uncertain if he was waiting for some kind of response."
     show cadmus at cadFidget
