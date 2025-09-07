@@ -12,8 +12,8 @@ label chaos:
     show cadmus annoyed at default
     show cadmus armsKP
 
-    play music basement channel "music_CH1" fadein 0.5
-    play music corrupted channel "music_CH2" volume 0.0
+    play music basement channel "music_CH1" fadein 0.5 loop
+    play music corrupted channel "music_CH2" volume 0.0 loop
 
     hide black
     camera:

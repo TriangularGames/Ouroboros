@@ -96,8 +96,8 @@ label start:
     centered "{cps=10}{sc=1}That's all you can focus on.{/sc}"
     centered "{cps=10}{sc=1}It's entirely disorienting.{/sc}"
 
-    play music basement channel "music_CH1" fadein 1.0
-    play music corrupted channel "music_CH2" volume 0.0
+    play music basement channel "music_CH1" fadein 1.0 loop
+    play music corrupted channel "music_CH2" volume 0.0 loop
 
     "The sound of a whirring fan slowly fills your ears- a tapping of a foot- shallow breaths."
 

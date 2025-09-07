@@ -15,8 +15,8 @@ label fearing:
     show chair at default
 
     "You aren't sure how long it's been since you fell unconscious."
-    play music basement channel "music_CH1" fadein 0.5
-    play music corrupted channel "music_CH2" volume 0.0
+    play music basement channel "music_CH1" fadein 0.5 loop
+    play music corrupted channel "music_CH2" volume 0.0 loop
     hide black
     camera:
         subpixel True 
