@@ -50,7 +50,7 @@ label trueIntro:
     "The smirk on his face was soft- inviting."
 
     cadmus "We only have so much time..."
-    ## TODO: add a worried expression here
+    ## FIXME: add a worried expression here
     "He glances away, hand coming to your cheek."
     cadmus "but- I have a plan."
 

@@ -72,7 +72,7 @@ transform cadFidget:
     ease 0.3*(not renpy.is_skipping()) xoffset 0 yoffset 0
     xalign 0.4 xoffset 0 yoffset 0 zoom 0.45
 
-## FIX: put chuckles in where he chuckle pls
+## FIXME: put chuckles in where he chuckle pls
 transform cadChuckle:
     subpixel True
     yzoom 1.0

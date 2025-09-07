@@ -643,7 +643,7 @@ label ChaosGoodBranchB:
     "You" "So how much is real? Fake? Is there a truth?"
     "You" "Have you just been playing me with the whole 'being of my affections' bit?"
 
-    ## TODO: make him look offended/upset here
+    ## FIXME: make him look offended/upset here
     cadmus "...yikes...a {i}bit{/i}."
     cadmus "I wasn't lying-"
     show cadmus armsHair with dis
@@ -1524,7 +1524,7 @@ label ChaosConvergedEnding:
                     "He laughs at that- bitter and tainted with negativity."
                 
                 "Yes, you're stupid":
-                    ## TODO: have him shut his eyes here
+                    ## FIXME: have him shut his eyes here
                     "You" "Completely stupid for it."
                     "You" "You ruined yourself for a guy who didn't even give a shit about you?!"
 
@@ -1559,7 +1559,7 @@ label ChaosConvergedEnding:
             "He smiles gently, caressing your cheek."
 
             cadmus "If anyone should be sorry it's me."
-            ## TODO: have him sit back in his chair here
+            ## FIXME: have him sit back in his chair here
             extend " I don't want you to be troubled."          
 
     play music basement channel "music_CH1" volume 0.0
