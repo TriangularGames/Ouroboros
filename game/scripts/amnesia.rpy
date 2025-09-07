@@ -285,9 +285,8 @@ label AmnesiaGoodBranch:
     cadmus "Such a curious little mouse."
     cadmus "I'm appreciative of your curiosity."
 
-    ## TODO: add one of the new convos here (probably the needles one tbh)
-    ## change expression here probs
-    cadmus "Curious about anything else?"
+    ## TODO: new convo expression work
+    cadmus "Want to know anything else?"
 
     "You were only really asking for the sake of it..."
     "Perhaps he has something particular in mind?"
@@ -302,10 +301,10 @@ label AmnesiaGoodBranch:
 
     menu:
         "Yes.":
-            "You" "It's quite large."
+            "You" "It's impressive, and quite large."
 
             cadmus "It is, isn't it?"
-            cadmus "It was quite an ordeal getting it done."
+            cadmus "It was an ordeal getting it done."
 
             "You" "Because it took several days?"
         
@@ -318,14 +317,14 @@ label AmnesiaGoodBranch:
 
             "You" "I'm sure it was an ordeal getting it done."
 
-    cadmus "I quite hate needles."
+    cadmus "I really hate needles- horrified of them honestly."
         
     "You can't help but be confused at this."
     "Given all his piercings and the tattoo, you find it hard to believe."
     "He chuckles at your confusion."
 
     cadmus "They almost had to knock me out just to get through the sessions."
-    cadmus "Even when I got my piercings, nearly fainted."
+    cadmus "Even when I got my piercings, I nearly fainted."
     cadmus "Is that so hard to believe?"
 
     "You" "It just..."
@@ -337,13 +336,14 @@ label AmnesiaGoodBranch:
 
         "Seems weird.":
             cadmus "People are much different than their looks."
-            cadmus "I suppose I'm proof of that."
+            cadmus "Shouldn't judge a book by it's cover, no?"
     ## end of new section
 
     "He watches you closely, seemingly occupied by you, though also distracted."
+    "You're honestly uncertain if he was waiting for some kind of response."
     show cadmus at cadFidget
     #"Fidgeting in his chair a bit."
-    "It's hard to focus on anything, your mind feels so fuzzy."
+    "It's hard to completely focus, your mind feels fuzzy."
     "Why are you here?"
     "Is he just taunting you?"
 
@@ -389,7 +389,8 @@ label AmnesiaGoodBranch:
     "There seems to be a loose spot near your hand."
     "It would be best to think of a game plan."
     "You could rid yourself of this situation"
-    extend ", get out of here, leave it all behind."
+    extend ", get out of here"
+    extend ", leave it all behind."
     "You just have to get out of the ropes."
     "{b}Grab his knife.{/b}"
     "{b}End it all.{/b}"
@@ -437,8 +438,8 @@ label AmnesiaGoodEnding:
     hide black
     play music basement channel "music_CH1" volume music_vol
     show blank zorder 5 at blink
-    "When you open them, everything looks different."
-    "As your eyes focus, Cadmus sits limply in a chair in front of you."
+    "When you open your eyes again, everything looks different."
+    "As things come into focus, Cadmus sits limply in a chair in front of you."
     "{b}Ropes hold him there.{/b}"
     "He's against the wall you just were."
     show cadmus lidsR gasp shadowTU eyeBS with dis
