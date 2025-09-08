@@ -533,7 +533,7 @@ label AmnesiaBadBranch:
             "With a grin he proceeds to lean back away from you, giving you back your precious breathing room."
             "Much needed breathing room."
 
-    ## TODO: add expression work here
+    ## TODO: add expression work here for new convo
 
     cadmus "Do you like my piercings?"
 
