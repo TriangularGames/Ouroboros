@@ -22,8 +22,8 @@ label caring:
         matrixcolor InvertMatrix(0.0)*ContrastMatrix(1.0)*SaturationMatrix(1.0)*BrightnessMatrix(0.0)*HueMatrix(0.0) 
 
     "You aren't sure how long it's been since you fell unconscious."
-    play music basement channel "music_CH1" fadein 0.5
-    play music corrupted channel "music_CH2" volume 0.0
+    play music basement channel "music_CH1" fadein 0.5 loop
+    play music corrupted channel "music_CH2" volume 0.0 loop
     hide black
     show blank zorder 5 at blink
     "Struggling to refocus, you noticed Cadmus is still across from you, smiling."

@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/scripts/chaos.rpy", line 1454: end of line expected.
-    show black with fade 0.2
-                         ^
+File "game/scripts/amnesia.rpy", line 294: end of line expected.
+    show cadmus smirking with dis at lean
+                                  ^
 
-Ren'Py Version: Ren'Py 8.3.2.24090902
-Fri Nov 29 13:16:01 2024
+Ren'Py Version: Ren'Py 8.4.1.25072401
+Sun Sep  7 10:53:23 2025

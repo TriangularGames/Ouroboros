@@ -15,8 +15,8 @@ label fearing:
     show chair at default
 
     "You aren't sure how long it's been since you fell unconscious."
-    play music basement channel "music_CH1" fadein 0.5
-    play music corrupted channel "music_CH2" volume 0.0
+    play music basement channel "music_CH1" fadein 0.5 loop
+    play music corrupted channel "music_CH2" volume 0.0 loop
     hide black
     camera:
         subpixel True 
@@ -66,7 +66,7 @@ label fearing:
     show cadmus inLove with dis
     cadmus "I missed you~"
 
-    "His fingers excitedly drum his thighs as he speaks." # TODO: either change this line or add the SFX
+    "His fingers excitedly drum his thighs as he speaks." # FIXME: either change this line or add the SFX
 
     cadmus "Not that there's anyone else here...it's just you. and. me."
     show cadmus smirkingSoft with dis
@@ -134,7 +134,7 @@ label fearing:
     "The room must be much smaller than it appears..."
     "The minimal light is doing wonders to cause you panic over the sheer scale of the darkness surrounding you."
 
-    ## TODO: check the pause here is sufficient
+    ## FIXME check the pause here is sufficient
     pause (2)
 
     "There's an itching at the back of your neck...you can't shake it."
@@ -316,7 +316,7 @@ label FearBadChoice1:
         "Rain":
             $ rain = True
             "You" "It's relaxing, getting to stay indoors and just...listen to the rain."
-            ## TODO: might need to edit this expression here
+            ## FIXME: might need to edit this expression here
             show cadmus normalSmile with dis
             "He smiles with kind affection."
         
@@ -390,7 +390,7 @@ label FearGoodBranchHalf:
     "{cps=15}Miss...him."
     "Miss him?"
     "There's a weird thought."
-    ## TODO: add footstep sfx
+    ## FIXME: add footstep sfx
     "Suddenly the sound of footsteps- he's coming back."
     "It's almost reassuring."
     "Are you...worrying about him?"
