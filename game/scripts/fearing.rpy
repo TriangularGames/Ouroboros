@@ -134,7 +134,7 @@ label fearing:
     "The room must be much smaller than it appears..."
     "The minimal light is doing wonders to cause you panic over the sheer scale of the darkness surrounding you."
 
-    ## FIXME check the pause here is sufficient
+    ## FIXME: check the pause here is sufficient
     pause (2)
 
     "There's an itching at the back of your neck...you can't shake it."
