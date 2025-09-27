@@ -107,7 +107,7 @@ label trueIntro:
 
     cadmus "Yes, just like the other times."
     ## TODO: use the cover eyes thing
-    centered "{cps=10}His hand delicately coming over your eyes."
+    centered "{cps=10}His hand delicately comes over your eyes."
     centered "{cps=10}{i}See you soon.{/i}" ## this line is spoken by him
     centered "{cps=10}The sounds slowly but surely fading away."
     hide cadmus
@@ -115,6 +115,7 @@ label trueIntro:
 label trueRoute:
     ## open eyes anim thing
     ## maybe add some slight coloration to the background to indicate the difference
+    $ mus = '???'
     "You struggle to open your eyes, as if weighed down by a force."
     "The room looks the same as it always has."
     "Though Cadmus is not in front of you as you'd expect."
@@ -153,6 +154,7 @@ label trueRoute:
 
     "His hand comes to your face"
     extend "- it's ice cold."
+    ## TODO: have him bug out here
     "The sensation messes with your vision again, that force weighing on you only gets worse."
     "Something is definitely off."
     "So much for his {i}plan{/i}..."
@@ -165,11 +167,22 @@ label trueRoute:
 
     menu:
         "I haven't.":
-            ""
+            cadmus "Good."
+            "There's a tone behind it that's comfortingly famliar."
+            "So it is him."
+            "Or...at least, somewhere that person you know is in front of you."
+
         "I don't know who you are.":
-            ""
+            cadmus "Hm."
+            "He seems to ponder, almost like he'll say more."
+            "But he doesn't."
+            "You can faintly see tears welling up in his eyes..."
+            "They're gone in an instant."
+
         "It would seem so.":
-            ""
+            cadmus "So it would."
+            "The slight smile reminiscent of ones you've seen countless times."
+            "Yet, somehow it feels so foreign in this moment."
     
     "You're honestly surprised your voice even came out that time."
     "As he returns to his seat, you try to speak again."
@@ -183,3 +196,281 @@ label trueRoute:
             pass
         "Try to move":
             pass
+    
+    ## TODO: sound distorts here, and maybe just black out the screen
+    "Suddenly your head is forced down, staring at the floor."
+    "You gasp for air- unable to pull yourself back up."
+    "He grasps your shoulders, the only things grounding you to the present."
+    "Other than the feeling of the concrete floor beneath your feet."
+    "There's a complete imbalance in yourself."
+    "Clearly he isn't himself anymore."
+    "{i}Clearly{/i} this isn't the same space anymore."
+    "Or rather-"
+    "This place has never existed."
+    "It's been the same thing, over"
+    extend ", and over"
+    extend ", and over"
+    extend ", and over."
+    "{i}The plan must be in motion.{/i}"
+    "...and if this isn't him in front of you..."
+
+    menu:
+        "Acknowledge {b}{i}IT{/b}{/i}":
+            pass
+    
+    "You" "Let me go."
+    "You can feel the way your voice struggles to escape your lips."
+    "Finally able to control your own body. Looking up-"
+    ## TODO: add cadmus looking posessed spooky
+    extend " the man in front of you is just barely recognizable."
+
+    cadmus "Feisty~"
+    cadmus "Just like I remember."
+    "Even as he pulls away, his fingers linger on your shoulders."
+    "The cold sensation of his touch sticks to you through your shirt."
+    "You watch as the eyes you've come to find comfort in search you."
+    "All familiarity about him entirely lost in his far seeing gaze."
+
+    cadmus "You look so beautiful." # he sighs as he says this
+    "He laughs jovially, leaning back slightly in his seat as he regards you."
+    cadmus "Confusion did always look best on you."
+
+    "His compliment makes your skin crawl."
+    "This is definitely not the man you hoped to see."
+    "It's hard to decide what to even do now-"
+    "Be Angry?"
+    extend " Kick and scream?"
+    "Stay calm?"
+    extend " Be upset?"
+    "Your overwhelmed by the whirlwind of emotions and thoughts running rampant through your mind."
+    "He seems to be gleeful at your turmoil." # he is smiling creepily here
+    "There's only one thing that comes to mind."
+
+    "You" "Let him go!"
+    "Pulling yourself forward, the ropes fighting to hold you to the chair."
+    "A desperate plea to whatever is in front of you."
+    "You feel...lost without the familiar man you've come to know."
+
+    cadmus "Let...{i}who{/i} go?" # he chuckles
+    cadmus "You see anyone else here, little mouse?"
+    cadmus "Come now...you haven't lost yourself already, have you?" # he pouts mocking concern
+
+    menu:
+        "I'm completely certain.":
+            pass
+        "I know what I'm asking.":
+            pass
+        "Don't toy with me.":
+            pass
+    
+    cadmus "You're so sure, hm?"
+    cadmus "What's his name?" # change the font here perhaps?
+
+    "Of course, you know his name."
+    extend " You've been with him through thick and thin at this point!"
+    "He's been there through every loop."
+    "Every bout of pain-"
+    "Every struggle-"
+    "Every escape-"
+    "...everything."
+    "{cps=10}..."
+    "You...know his name."
+    "{cps=10}..."
+    "{cps=10}..."
+    pause 2.0
+    "His...name."
+    pause 1.0
+
+    cadmus "Not so certain now~ are we?" # he sounds so horribly dripplingly amused
+    # caresses cheek here
+    cadmus "Oh there, there, mousey~"
+    cadmus "It's alright, {i}I'm{/i} here for you."
+
+    menu:
+        "I don't want YOU!":
+            cadmus "What a shame..."
+            cadmus "Unfortunately, I don't see many options here for you, darling."
+            cadmus "I'll be here for you in your time of need."
+
+        "I {i}doubt{/i} that.":
+            cadmus "Well..."
+            extend "I'm in this room, and whoever this \"he\" is, isn't."
+            cadmus "Clearly, I'm much better than him- since I haven't abandoned you in your time of need."
+    
+    "You don't bother responding, entirely too focused over the question."
+    "{i}His name.{/i}"
+    "How did you even forget it?"
+    "How could you even forget it?"
+    "It is floating somewhere in the back of your mind."
+    "It's drifting right on the tip of your tongue."
+    "You know it...it's right there."
+
+    cadmus "Come now little mouse, don't lose sight of the present."
+    cadmus "I can provide {i}anything{/i} your gorgeous little head desires."
+    cadmus "What more would you need..."
+    extend "When you have me~"
+
+    menu:
+        "Give him back then.":
+            "He seem to ponder your request"
+            extend "- if only for a moment, just to amuse himself."
+            cadmus "I haven't the faintest idea who you're talking about, darling."
+            cadmus "If {i}only{/i} there was some way to know...gosh, even a single thing about him!" # he sighs dramatically
+            cadmus "Like {b}a name{/b}."
+            "You" "You know who I'm referring to."
+            cadmus "Hm, can't say I do, little mouse."
+
+        "Let me leave.":
+            "Adjusting himself in his seat"
+            extend "- he appears to think about his response."
+            cadmus "No." # he is smiling sweetly here
+            cadmus "Can't have that."
+            cadmus "The world is far far too dangerous. The safest place for you..."
+            cadmus "is right here, with me."
+            "You" "You're lying."
+            cadmus "Wouldn't dream of it, little mouse."
+    
+    cadmus "Hm...clearly, you doubt me." # he huffs, sounding dejected but its hard to say if he's more upset or annoyed
+    "As if he couldn't state something {i}more{/i} obvious."
+    "His words aren't important, he's clearly trying to distract you."
+    "What if you're losing sight of things the longer this continues?"
+    "What else have you forgotten?"
+    "Maybe it's just his name that escaped you-"
+    "Escaped?!"
+    "Right-"
+    extend " he had a plan!"
+    "Is this...part of his plan?"
+    "You don't know anything for certain..."
+    "But he told you to believe in him."
+    "If whatever this is might be part of it"
+    extend "- perhaps there's something to it."
+    "To entertain the...thing...in front of you."
+
+    cadmus "...Are you done thinking to yourself?" # he is right up in your face here
+    "You're completely taken aback by his sudden closeness."
+    "Though- how he got there without you even noticing matters little."
+    "Especally in this \"reality.\""
+
+    cadmus "There's that little sparkle~" # he pulls back here
+    cadmus "It's {i}so{/i} unbeveliably easy to figure out when you space out, y'know?"
+    cadmus "Ah...it makes me so horribly lonely..."
+    cadmus "Keep your everything focused on me, alright little mouse?"
+
+    ## TODO: the interogation scene
+
+    if persistent.code = "slide":
+        "He gently takes your hand-"
+        extend " though you immediately try to pull away, his hold is firm."
+        "Carefully, his finger slides down your palm."
+        "His touch is..."
+        extend "warm."
+        "{i}He's here.{/i}"
+        "Though you can't help but feel relieved, now is not the time to let it show."
+        "The end of this is near..."
+        extend "you can feel it."
+
+    elif persistent.code = "doubletap":
+        "He carefully moves his hand to your palm-"
+        extend " trying to yank your hand away from him, though he refuses to let you go."
+        "The hand that carefully holds your wrist is warm."
+        "He taps his finger twice."
+        "{i}It's that code you made.{/i}"
+        "Focus...if you need to focus, it must almost be over, right?"
+        "As much as it's reassuring, the last thing you need is for that to be obvious."
+
+    "As you lock eyes with the man in front of you"
+    extend "...he looks {i}confused{/i}."
+    "He takes his hand away, seemingly struggling to contain his disbelief."
+
+    menu:
+        "Something wrong?":
+            pass
+        "Everything okay?":
+            pass
+    
+    cadmus "...that's impossible."
+    "The softness to his voice completely takes you off guard- like a lost child."
+
+    centered "{cps=10}What's my name?"
+
+    "The thought invades your mind unexpectedly-"
+    "The room around you almost seems to quiver..."
+    extend "as though it's moments from complete collapse."
+
+    centered "{cps=10}What's my name?"
+
+    cadmus "...no. NO!"
+    "He almost seems to flicker between states of being."
+    ## TODO: add typing of Cadmus' name here
+    $ mus = 'Cadmus'
+    "Watching him as the name finally returns to you feels completely surreal."
+    "Though, everything about this place is a complete impossibility."
+    # cadmus flickering stops here
+    "Finally...the man you've longed to see falls into place in front of you."
+
+    cadmus "Hurry! We have to go, quickly."
+    "He swiftly cuts the ropes off you, holding his hand out as he stands."
+
+    menu:
+        "Take his hand":
+            pass
+    
+    "You both make a mad rush to the door, running through the seemingly endless corridor towards the light."
+    "Daring, you take a glance behind you-"
+    "It's as if a black hole opened up, and you watch as the room you've been sequestered to for so long..."
+    "Collapses under itself."
+    "Entirely ceasing to exist."
+
+    cadmus "Hey, stay focused here!"
+    "He tightens his grip on your hand, pulling you closer as you begin climbing the stairs out."
+    # show outside cg here
+    pause (0.5)
+
+    "The breeze and sunlight hitting your face is the most refreshing feeling in the world."
+    "Though the rush causes you to lose your footing- Cadmus protects you as you both tumble into the grass."
+    "The prison you were trapped in crushing into nothingness behind you overwhelms your senses-"
+    ## TODO: black hole sound effect of somekind and a pause
+    "Then silence."
+    "You take some time to catch your breath."
+    "There's peace in that- and the gentle breeze, the rustling of the grass."
+    "You...escaped."
+    "Cadmus and you escaped."
+    ## show the final cg here
+    "You lift yourself up to look at him, his eyes shut as he struggles to catch his breath."
+
+    menu:
+        "We...made it.":
+            pass
+    
+    "He laughs, opening his eyes to look up at you."
+    "A soft blush tickles his cheeks as his gaze is full of nothing but love and admiration."
+
+    cadmus "Yeah...we did."
+    cadmus "I'm so glad! I-I can hardly believe it."
+    "You" "Me neither."
+    cadmus "...there's lots I'd like to do."
+    cadmus "Y'know, once we get properly away from here."
+    "You" "Like...what?"
+    cadmus "Like, take you out. On a date."
+    cadmus "If you want."
+
+    menu:
+        "I'd love that.":
+            # he laughs sweetly
+            cadmus "...I love you so much."
+            "You" "Me too."
+
+        "Maybe we should hang out first.":
+            "You" "We do barely know each other."
+            cadmus "Heh...ya you're right."
+            cadmus "We'll do whatever you want!"
+            cadmus "Starting..."
+            extend "right now."
+            "You" "Whatever I want?"
+            cadmus "Anything, just say the word."
+            "You" "How about, going home?"
+            cadmus "I like it! C'mon-"
+
+    cadmus "Let's get going."
+    "You both stand, and he takes your hand like it's the most natural thing in the world."
+    "And you both walk through the field- back home."

@@ -2,9 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/scripts/amnesia.rpy", line 294: end of line expected.
-    show cadmus smirking with dis at lean
-                                  ^
+File "game/scripts/true.rpy", line 217: Menu does not contain any choices.
+    menu:
+         ^
+
+File "game/scripts/true.rpy", line 474: Captions and say menuitems may not exist in the same menu.
+    "You both stand, and he takes your hand like it's the most natural thing in the world."
+                                                                                           ^
 
 Ren'Py Version: Ren'Py 8.4.1.25072401
-Sun Sep  7 10:53:23 2025
+Sat Sep 27 12:20:14 2025
