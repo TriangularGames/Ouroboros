@@ -1,59 +1,60 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "renpy/common/00start.rpy", line 216, in script call
-    call _load_reload_game from _call__load_reload_game_1
-  File "renpy/common/00keymap.rpy", line 548, in script
-    python hide:
-  File "renpy/common/00start.rpy", line 216, in script call
-    call _load_reload_game from _call__load_reload_game_1
-  File "renpy/common/00keymap.rpy", line 548, in script
-    python hide:
-  File "renpy/common/00keymap.rpy", line 548, in <module>
-    python hide:
-  File "renpy/common/00keymap.rpy", line 559, in _execute_python_hide
-    renpy.load(renpy.session["_reload_slot"])
-Exception: Couldn't find a place to stop rolling back. Perhaps the script changed in an incompatible way?
+  File "game/scripts/script.rpy", line 153, in script
+    cadmus "What a blessing, you're finally awake, beautiful."
+  File "game/scripts/script.rpy", line 8, in e
+    build_sentence(_last_say_what, "cadmus")
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "game/speak.rpy", line 55, in build_sentence
+    new_segment = AudioSegment.from_wav(config.gamedir+"/audio/beeps/"+name+"/{}.wav".format(char))
+                  ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: "C:\\Users\\catda\\OneDrive\\Desktop\\Folder of Folders\\Ren'Py Projects\\Cadmus-Game\\game/audio/beeps/cadmus/wh.wav"
 
 -- Full Traceback ------------------------------------------------------------
 
-Full traceback:
-  File "N:\Folder of Folders\Ren'py\renpy\bootstrap.py", line 359, in bootstrap
-    renpy.main.main()
-  File "N:\Folder of Folders\Ren'py\renpy\main.py", line 652, in main
-    run(restart)
-  File "N:\Folder of Folders\Ren'py\renpy\main.py", line 148, in run
-    renpy.execution.run_context(True)
-  File "N:\Folder of Folders\Ren'py\renpy\execution.py", line 958, in run_context
-    context.run()
-  File "renpy/common/00start.rpy", line 216, in script call
-    call _load_reload_game from _call__load_reload_game_1
-  File "renpy/common/00keymap.rpy", line 548, in script
-    python hide:
-  File "lib/python3.9/future/utils/__init__.py", line 444, in raise_
-  File "renpy/common/00start.rpy", line 216, in script call
-    call _load_reload_game from _call__load_reload_game_1
-  File "renpy/common/00keymap.rpy", line 548, in script
-    python hide:
-  File "N:\Folder of Folders\Ren'py\renpy\ast.py", line 821, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "N:\Folder of Folders\Ren'py\renpy\python.py", line 1178, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-  File "renpy/common/00keymap.rpy", line 548, in <module>
-    python hide:
-  File "renpy/common/00keymap.rpy", line 559, in _execute_python_hide
-    renpy.load(renpy.session["_reload_slot"])
-  File "N:\Folder of Folders\Ren'py\renpy\loadsave.py", line 826, in load
-    log.unfreeze(roots, label="_after_load")
-  File "N:\Folder of Folders\Ren'py\renpy\rollback.py", line 1135, in unfreeze
-    self.rollback(0, force=True, label=label, greedy=greedy, on_load=True)
-  File "N:\Folder of Folders\Ren'py\renpy\rollback.py", line 930, in rollback
-    self.load_failed()
-  File "N:\Folder of Folders\Ren'py\renpy\rollback.py", line 848, in load_failed
-    raise Exception("Couldn't find a place to stop rolling back. Perhaps the script changed in an incompatible way?")
-Exception: Couldn't find a place to stop rolling back. Perhaps the script changed in an incompatible way?
+Traceback (most recent call last):
+  File "game/scripts/script.rpy", line 153, in script
+    cadmus "What a blessing, you're finally awake, beautiful."
+  File "renpy/ast.py", line 2915, in execute
+    Say.execute(self)
+    ~~~~~~~~~~~^^^^^^
+  File "renpy/ast.py", line 991, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/exports/sayexports.py", line 129, in say
+    who(what, *args, **kwargs)
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/character.py", line 1543, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/character.py", line 1198, in do_display
+    display_say(who, what, self.do_show, **display_args)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/character.py", line 746, in display_say
+    pause_callback("show")
+    ~~~~~~~~~~~~~~^^^^^^^^
+  File "renpy/character.py", line 90, in __call__
+    c(*args, **kwargs)
+    ~^^^^^^^^^^^^^^^^^
+  File "game/scripts/script.rpy", line 8, in e
+    build_sentence(_last_say_what, "cadmus")
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "game/speak.rpy", line 55, in build_sentence
+    new_segment = AudioSegment.from_wav(config.gamedir+"/audio/beeps/"+name+"/{}.wav".format(char))
+                  ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pydub/audio_segment.py", line 808, in from_wav
+    return cls.from_file(file, 'wav', parameters=parameters)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pydub/audio_segment.py", line 651, in from_file
+    file, close_file = _fd_or_path_or_tempfile(file, 'rb', tempfile=False)
+                       ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pydub/utils.py", line 55, in _fd_or_path_or_tempfile
+    fd = open(fd, mode=mode)
+         ~~~~^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: "C:\\Users\\catda\\OneDrive\\Desktop\\Folder of Folders\\Ren'Py Projects\\Cadmus-Game\\game/audio/beeps/cadmus/wh.wav"
 
-Windows-10-10.0.19045 AMD64
-Ren'Py 8.3.2.24090902
-Ouroboros: Constricting Devotion 0.7
-Fri Nov 29 14:29:29 2024
+Windows-11-10.0.26100-SP0 AMD64
+Ren'Py 8.4.1.25072401
+Ouroboros: Constricting Devotion 1.1
+Wed Nov 12 15:54:18 2025

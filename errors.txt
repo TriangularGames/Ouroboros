@@ -2,6 +2,7 @@
 errors listed below, and try again.
 
 
+<<<<<<< Updated upstream
 File "game/scripts/true.rpy", line 217: Menu does not contain any choices.
     menu:
          ^
@@ -12,3 +13,10 @@ File "game/scripts/true.rpy", line 474: Captions and say menuitems may not exist
 
 Ren'Py Version: Ren'Py 8.4.1.25072401
 Sat Sep 27 12:20:14 2025
+=======
+File "game/scripts/script.rpy", line 2: Unexpected indentation at start of file.
+    renpy.music.register_channel(name='beeps', mixer='voice')
+
+Ren'Py Version: Ren'Py 8.4.1.25072401
+Wed Nov 12 15:53:25 2025
+>>>>>>> Stashed changes

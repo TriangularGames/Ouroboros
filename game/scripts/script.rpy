@@ -1,5 +1,17 @@
-﻿define mus = '???'
-define cadmus = Character("[mus]", color = "#cc0000")
+﻿init python:
+    #Generate seperate audio channel from voice for beeps.
+    renpy.music.register_channel(name='beeps', mixer='voice')
+
+    #Character callback that generates the sound.
+    def e(event, **kwargs):
+        if event == "show": #When the text is shown
+            build_sentence(_last_say_what, "cadmus")
+            renpy.sound.play("audio/output.wav", channel="beeps", loop=False)
+        elif event == "slow_done" or event == "end": #When the text is finished displaying or you open a menu.
+            renpy.sound.stop(channel="beeps")
+
+define mus = '???'
+define cadmus = Character("[mus]", color = "#cc0000", callback=e)
 
 # music files
 define audio.basement = "audio/basement-ambience.mp3"
