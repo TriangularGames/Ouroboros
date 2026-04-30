@@ -2,21 +2,9 @@
 errors listed below, and try again.
 
 
-<<<<<<< Updated upstream
-File "game/scripts/true.rpy", line 217: Menu does not contain any choices.
-    menu:
-         ^
-
-File "game/scripts/true.rpy", line 474: Captions and say menuitems may not exist in the same menu.
-    "You both stand, and he takes your hand like it's the most natural thing in the world."
-                                                                                           ^
+File "game/scripts/fearing.rpy", line 299: end of line expected.
+    show cadmus eyesS eyebrowsC with diss=
+                                         ^
 
 Ren'Py Version: Ren'Py 8.4.1.25072401
-Sat Sep 27 12:20:14 2025
-=======
-File "game/scripts/script.rpy", line 2: Unexpected indentation at start of file.
-    renpy.music.register_channel(name='beeps', mixer='voice')
-
-Ren'Py Version: Ren'Py 8.4.1.25072401
-Wed Nov 12 15:53:25 2025
->>>>>>> Stashed changes
+Thu Apr 30 18:29:18 2026
