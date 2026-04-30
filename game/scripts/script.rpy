@@ -1,17 +1,5 @@
-﻿init python:
-    #Generate seperate audio channel from voice for beeps.
-    renpy.music.register_channel(name='beeps', mixer='voice')
-
-    #Character callback that generates the sound.
-    def e(event, **kwargs):
-        if event == "show": #When the text is shown
-            build_sentence(_last_say_what, "cadmus")
-            renpy.sound.play("audio/output.wav", channel="beeps", loop=False)
-        elif event == "slow_done" or event == "end": #When the text is finished displaying or you open a menu.
-            renpy.sound.stop(channel="beeps")
-
-define mus = '???'
-define cadmus = Character("[mus]", color = "#cc0000", callback=e)
+﻿define mus = '???'
+define cadmus = Character("[mus]", color = "#cc0000")
 
 # music files
 define audio.basement = "audio/basement-ambience.mp3"
@@ -63,7 +51,7 @@ init python:
     config.layers = ['backdrop', 'background', 'master', 'transient', 'screens', 'overlay']
 
 # To prevent going back, uncomment when building
-define config.rollback_enabled = False
+# define config.rollback_enabled = False
 
 
 # The game starts here.
@@ -252,7 +240,8 @@ label start:
                 cadmus "I'm {i}heartbroken{/i}."
 
             elif persistent.lastRoute == "FB":
-                cadmus "You'll remember, but even if you don't I'll protect you, little mouse."
+                cadmus "You'll remember, but even if you don't."
+                cadmus "I'll protect you, little mouse."
 
             elif persistent.lastRoute == "CG":
                 cadmus "A heart never forgets, I {i}know{/i} you remember."
@@ -322,8 +311,8 @@ label start:
             $ caring += 1
 
         "{glitch=15.5}I feel like I know you.{/glitch}" if (persistent.onReplay and persistent.runNumber >= 3):
-            play music basement channel "music_CH1" volume 0.0
-            play music corrupted channel "music_CH2" volume music_vol
+            play music basement channel "music_CH1" volume 0.0 loop
+            play music corrupted channel "music_CH2" volume music_vol loop
 
             $ _history = False
             show cadmus questioning with dis
@@ -334,8 +323,8 @@ label start:
             cadmus "{cps=20}Isn't th{font=HelpMe.ttf}{size=50}at JUST    {/size}{/font}{nw}"
             $ _history = True
 
-            play music basement channel "music_CH1" volume music_vol
-            play music corrupted channel "music_CH2" volume 0.0
+            play music basement channel "music_CH1" volume music_vol loop
+            play music corrupted channel "music_CH2" volume 0.0 loop
 
             show cadmus -eyeBS -shadowTD -hand armsD smirkingSoft at default
             cadmus "I'm so glad, love!"
@@ -382,8 +371,8 @@ label start:
             $ caring += 1
 
         "{glitch=15.5}You're not going to use it again are you?{/glitch}" if (persistent.onReplay and persistent.runNumber >= 3):
-            play music basement channel "music_CH1" volume 0.0
-            play music corrupted channel "music_CH2" volume music_vol
+            play music basement channel "music_CH1" volume 0.0 loop
+            play music corrupted channel "music_CH2" volume music_vol loop
 
             $ _history = False
             show vignette
@@ -401,8 +390,8 @@ label start:
             cadmus "{cps=10}{sc=1.5}{font=HelpMe.ttf}{size=50}Wouldn't you like to find out...{/size}{/font}{/sc}{nw}"
             $ _history = True
 
-            play music basement channel "music_CH1" volume music_vol
-            play music corrupted channel "music_CH2" volume 0.0
+            play music basement channel "music_CH1" volume music_vol loop
+            play music corrupted channel "music_CH2" volume 0.0 loop
 
             show vignette zorder 4
             hide black
@@ -453,6 +442,7 @@ label start:
             $ _history = False
             cadmus "{sc=3}We will have playtime soon enough.{/sc}{nw}"
             $ _history = True
+            show cadmus pout eyebrowsN -angryMark with dis
             cadmus "Don't rush me darling~"
             show cadmus smirking with dis
             cadmus "But...I'll forgive you for it."
