@@ -1,21 +1,60 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While running game code:
-  File "game/scripts/script.rpy", line 153, in script
-    cadmus "What a blessing, you're finally awake, beautiful."
-  File "game/scripts/script.rpy", line 8, in e
-    build_sentence(_last_say_what, "cadmus")
-    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "game/speak.rpy", line 55, in build_sentence
-    new_segment = AudioSegment.from_wav(config.gamedir+"/audio/beeps/"+name+"/{}.wav".format(char))
-                  ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-FileNotFoundError: [Errno 2] No such file or directory: "C:\\Users\\catda\\OneDrive\\Desktop\\Folder of Folders\\Ren'Py Projects\\Cadmus-Game\\game/audio/beeps/cadmus/wh.wav"
+While processing text tag {wait=2} in "While processing text tag {wait=2} in 'He looks caught off guard by the question.{wait=2}'.:".:
+  File "game/scripts/caring.rpy", line 197, in script
+    "He looks caught off guard by the question.{wait=2}"
+  File "renpy/display/render.pyx", line 487, in renpy.display.render.render_screen
+  File "renpy/display/render.pyx", line 260, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 260, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 260, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 260, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 260, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 260, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 260, in renpy.display.render.render
+Exception: Unknown text tag 'wait=2'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "game/scripts/caring.rpy", line 197, in script
+    "He looks caught off guard by the question.{wait=2}"
+  File "game/scripts/caring.rpy", line 197, in script
+    "He looks caught off guard by the question.{wait=2}"
+  File "renpy/display/render.pyx", line 487, in renpy.display.render.render_screen
+  File "renpy/display/render.pyx", line 260, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 260, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 260, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 260, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 260, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 260, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 260, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 313, in renpy.display.render.render_for_size
+  File "renpy/display/render.pyx", line 260, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 313, in renpy.display.render.render_for_size
+  File "renpy/display/render.pyx", line 260, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 260, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 260, in renpy.display.render.render
+Exception: Unknown text tag 'wait=2'
 
 -- Full Traceback ------------------------------------------------------------
 
 Traceback (most recent call last):
-  File "game/scripts/script.rpy", line 153, in script
-    cadmus "What a blessing, you're finally awake, beautiful."
+  File "game/scripts/caring.rpy", line 197, in script
+    "He looks caught off guard by the question.{wait=2}"
   File "renpy/ast.py", line 2915, in execute
     Say.execute(self)
     ~~~~~~~~~~~^^^^^^
@@ -31,30 +70,209 @@ Traceback (most recent call last):
   File "renpy/character.py", line 1198, in do_display
     display_say(who, what, self.do_show, **display_args)
     ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/character.py", line 746, in display_say
-    pause_callback("show")
-    ~~~~~~~~~~~~~~^^^^^^^^
-  File "renpy/character.py", line 90, in __call__
-    c(*args, **kwargs)
-    ~^^^^^^^^^^^^^^^^^
-  File "game/scripts/script.rpy", line 8, in e
-    build_sentence(_last_say_what, "cadmus")
-    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "game/speak.rpy", line 55, in build_sentence
-    new_segment = AudioSegment.from_wav(config.gamedir+"/audio/beeps/"+name+"/{}.wav".format(char))
-                  ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "pydub/audio_segment.py", line 808, in from_wav
-    return cls.from_file(file, 'wav', parameters=parameters)
-           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "pydub/audio_segment.py", line 651, in from_file
-    file, close_file = _fd_or_path_or_tempfile(file, 'rb', tempfile=False)
-                       ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "pydub/utils.py", line 55, in _fd_or_path_or_tempfile
-    fd = open(fd, mode=mode)
-         ~~~~^^^^^^^^^^^^^^^
-FileNotFoundError: [Errno 2] No such file or directory: "C:\\Users\\catda\\OneDrive\\Desktop\\Folder of Folders\\Ren'Py Projects\\Cadmus-Game\\game/audio/beeps/cadmus/wh.wav"
+  File "renpy/character.py", line 888, in display_say
+    rv = renpy.ui.interact(mouse="say", type=type, roll_forward=roll_forward)
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/ui.py", line 304, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/core.py", line 2219, in interact
+    repeat, rv = self.interact_core(
+                 ~~~~~~~~~~~~~~~~~~^
+        preloads=preloads,
+        ^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )  # type: ignore
+    ^                
+  File "renpy/display/core.py", line 2890, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/core.py", line 1380, in draw_screen
+    surftree = renpy.display.render.render_screen(
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        root_widget,
+        ^^^^^^^^^^^^
+        renpy.config.screen_width,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+        renpy.config.screen_height,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "renpy/display/render.pyx", line 487, in renpy.display.render.render_screen
+  File "renpy/display/render.pyx", line 260, in renpy.display.render.render
+  File "renpy/display/layout.py", line 899, in render
+    surf = render(child, width, height, cst, cat)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 260, in renpy.display.render.render
+  File "renpy/display/layout.py", line 899, in render
+    surf = render(child, width, height, cst, cat)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 260, in renpy.display.render.render
+  File "renpy/display/layout.py", line 899, in render
+    surf = render(child, width, height, cst, cat)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 260, in renpy.display.render.render
+  File "renpy/display/screen.py", line 767, in render
+    child = renpy.display.render.render(self.child, w, h, st, at)
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 260, in renpy.display.render.render
+  File "renpy/display/layout.py", line 899, in render
+    surf = render(child, width, height, cst, cat)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 260, in renpy.display.render.render
+  File "renpy/display/layout.py", line 1442, in render
+    surf = render(child, width - cxmargin - cxpadding, height - cymargin - cypadding, st, at)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 260, in renpy.display.render.render
+  File "renpy/text/text.py", line 2730, in render
+    virtual_layout = Layout(self, width, height, renders, drawable_res=False, size_only=True)
+                     ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/text/text.py", line 799, in __init__
+    self.paragraphs = self.segment(text.tokens, style, renders, text)
+                      ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/text/text.py", line 1604, in segment
+    raise Exception("Unknown text tag %r" % text)
+Exception: Unknown text tag 'wait=2'
 
-Windows-11-10.0.26100-SP0 AMD64
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "renpy/bootstrap.py", line 376, in bootstrap
+    renpy.main.main()
+    ~~~~~~~~~~~~~~~^^
+  File "renpy/main.py", line 614, in main
+    run(restart)
+    ~~~^^^^^^^^^
+  File "renpy/main.py", line 137, in run
+    renpy.execution.run_context(True)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "renpy/execution.py", line 1022, in run_context
+    context.run()
+    ~~~~~~~~~~~^^
+  File "game/scripts/caring.rpy", line 197, in script
+    "He looks caught off guard by the question.{wait=2}"
+  File "game/scripts/caring.rpy", line 197, in script
+    "He looks caught off guard by the question.{wait=2}"
+  File "renpy/display/error.py", line 135, in report_exception
+    renpy.game.invoke_in_new_context(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        call_exception_screen,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        ignore_action=ignore_action,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "renpy/game.py", line 301, in invoke_in_new_context
+    return callable(*args, **kwargs)
+           ~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "renpy/display/error.py", line 44, in call_exception_screen
+    return renpy.ui.interact(mouse="screen", type="screen", suppress_overlay=True, suppress_underlay=True)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/ui.py", line 304, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/core.py", line 2219, in interact
+    repeat, rv = self.interact_core(
+                 ~~~~~~~~~~~~~~~~~~^
+        preloads=preloads,
+        ^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )  # type: ignore
+    ^                
+  File "renpy/display/core.py", line 2890, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/core.py", line 1380, in draw_screen
+    surftree = renpy.display.render.render_screen(
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        root_widget,
+        ^^^^^^^^^^^^
+        renpy.config.screen_width,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+        renpy.config.screen_height,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "renpy/display/render.pyx", line 487, in renpy.display.render.render_screen
+  File "renpy/display/render.pyx", line 260, in renpy.display.render.render
+  File "renpy/display/layout.py", line 899, in render
+    surf = render(child, width, height, cst, cat)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 260, in renpy.display.render.render
+  File "renpy/display/layout.py", line 899, in render
+    surf = render(child, width, height, cst, cat)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 260, in renpy.display.render.render
+  File "renpy/display/layout.py", line 899, in render
+    surf = render(child, width, height, cst, cat)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 260, in renpy.display.render.render
+  File "renpy/display/screen.py", line 767, in render
+    child = renpy.display.render.render(self.child, w, h, st, at)
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 260, in renpy.display.render.render
+  File "renpy/display/layout.py", line 899, in render
+    surf = render(child, width, height, cst, cat)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 260, in renpy.display.render.render
+  File "renpy/display/layout.py", line 1442, in render
+    surf = render(child, width - cxmargin - cxpadding, height - cymargin - cypadding, st, at)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 260, in renpy.display.render.render
+  File "renpy/display/layout.py", line 1953, in render
+    cwidth, cheight = sizeit("c", width, height, 0, 0)
+                      ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/layout.py", line 1950, in sizeit
+    rend = renpy.display.render.render_for_size(pos_d[pos], width, height, st, at)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 313, in renpy.display.render.render_for_size
+  File "renpy/display/render.pyx", line 260, in renpy.display.render.render
+  File "renpy/display/layout.py", line 1953, in render
+    cwidth, cheight = sizeit("c", width, height, 0, 0)
+                      ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/layout.py", line 1950, in sizeit
+    rend = renpy.display.render.render_for_size(pos_d[pos], width, height, st, at)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 313, in renpy.display.render.render_for_size
+  File "renpy/display/render.pyx", line 260, in renpy.display.render.render
+  File "renpy/display/viewport.py", line 283, in render
+    surf = renpy.display.render.render(self.child, child_width, child_height, st, at)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 260, in renpy.display.render.render
+  File "renpy/display/layout.py", line 1162, in render
+    surf = render(d, width - x, rh, cst, cat)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 260, in renpy.display.render.render
+  File "renpy/text/text.py", line 2730, in render
+    virtual_layout = Layout(self, width, height, renders, drawable_res=False, size_only=True)
+                     ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/text/text.py", line 799, in __init__
+    self.paragraphs = self.segment(text.tokens, style, renders, text)
+                      ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/text/text.py", line 1604, in segment
+    raise Exception("Unknown text tag %r" % text)
+Exception: Unknown text tag 'wait=2'
+
+Windows-10-10.0.19045-SP0 AMD64
 Ren'Py 8.4.1.25072401
 Ouroboros: Constricting Devotion 1.1
-Wed Nov 12 15:54:18 2025
+Thu Apr 30 17:29:47 2026
