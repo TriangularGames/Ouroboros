@@ -759,7 +759,7 @@ label AmnesiaBadEnding:
     pause (0.5)
 
     ## TODO: add sound of him falling to the floor
-    cadmus "...we'll never be free from {b}it{/b}...will we..."
+    cadmus "...we'll never be free from {b}it{/b}...will we?"
 
     ## fade out, title "Amnesia: Bad Ending?"
     if persistent.onReplay == False:
