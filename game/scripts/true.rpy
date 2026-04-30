@@ -282,7 +282,7 @@ label trueRoute:
     pause 1.0
 
     cadmus "Not so certain now~ are we?" # he sounds so horribly dripplingly amused
-    # caresses cheek here
+    # TODO: caresses cheek here
     cadmus "Oh there, there, mousey~"
     cadmus "It's alright, {i}I'm{/i} here for you."
 
