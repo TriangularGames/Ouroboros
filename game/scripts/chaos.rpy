@@ -1444,6 +1444,7 @@ label ChaosConvergedEnding:
     "You" "You have a sister? Is she older?"
 
     cadmus "Younger sister, we used to be very tight knit when we were younger..."
+    ## he looks away here
     cadmus "...time does interesting things to people."
     cadmus "Even more so when they're told things that aren't true."
 
