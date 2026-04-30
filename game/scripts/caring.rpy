@@ -110,7 +110,7 @@ label caring:
         "Perhaps he wouldn't mind some questions."
 
     menu:
-        "Am I your first?":
+        "Am I your first partner?":
             $ pickedQuestionFirst = True
             show cadmus inLove with dis
             cadmus "I've only ever had eyes for you dear."
@@ -201,29 +201,39 @@ label caring:
 
             menu:
                 "You seem uncertain":
+                    show cadmus disappointed with dis
                     cadmus "You're imagining things dear."
                     cadmus "Don't worry about unnecessary things."
+                    show cadmus smirkingSoft with dis
+                    show cadmus eyebrowsC
                     cadmus "Just focus on me, yea?"
 
                     "The quickness in which he avoids a direct answer unnerves you."
                     "At the same time...he has yet to do anything to harm you."
+                    show cadmus eyebrowsN with dis
                     "Maybe you could let this go for now."
 
                 "Are we both trapped here?":
-                    ## TODO: check expressions are good
-                    show cadmus neutral with dis
+                    show cadmus neutral eyebrowsN with dis
                     "Cadmus' gaze holds firm, whatever emotional turmoil the initial question put him in, is now gone."
                     show cadmus smirking with dis
                     cadmus "Such nonsense, I trapped you with me, how can we both be trapped?"
 
+                    "His immediate want to deflect your question makes you feel...bad."
+                    "Though you just asked to try and get information out of him."
+                    "His initial seemingly genuine shock at your question only makes you worried."
+                    "...worried for the guy who kidnapped you no less."
+
                     "You" "You seemed worried that I asked where we are."
                     "You" "Is it wrong of me to ask?"
 
-                    show cadmus smirkingsoft with dis
+                    show cadmus smirkingSoft with dis
+                    show cadmus eyebrowsTU 
                     "His gaze softens slightly."
 
                     cadmus "No. It's not."
-                    cadmus "I promise...I'll protect you."
+                    show cadmus frown with dis
+                    cadmus "I promise...I will protect you."
 
                     "He's resolute with his words, and doesn't say anything else."
                     "What exactly is he even protecting you from?"
@@ -280,21 +290,28 @@ label caring:
     "You can vaguely make out Cadmus' presence on the other side of the room, but you can't see him."
     "The feeling of his presence fades back into the darkness just as quickly as it was felt."
     "Trying to comprehend all this...it hurts your head."
+    stop sound
     # screen shake and blur
     camera at continuousShake
+    play music basement channel "music_CH1" volume 0.0 loop
+    play music corrupted channel "music_CH2" volume music_vol loop
     "That pounding sensation returns."
     "He hasn't tried to hurt you- the ropes aren't even tight."
     "So why does your head hurt so much?"
-    "It feels like something eating away at you."
-
+    "It feels like something is eating away at you."
+    
     cadmus "Hey, darling...hey, over here."
+    play music basement channel "music_CH1" volume music_vol loop
+    play music corrupted channel "music_CH2" volume 0.0 loop
     camera at cameraReset
+
     show cadmus concern at default with dis
-    "He suddenly comes into view across from you, pulling your focus from the pain."
+    show cadmus at lean
+    "He suddenly comes into view right in front of you, pulling your focus from the pain."
     show cadmus sweating with dis
 
     cadmus "There we are."
-    show cadmus smileopenNU with dis
+    show cadmus smileopenNU at sit
     cadmus "It's all okay little mouse, I'm right here."
 
     "He eyes you carefully, that weird sensation disappearing again."
@@ -308,7 +325,7 @@ label caring:
     cadmus "Told you I wouldn't be long, right?"
 
     show cadmus normalSmile with dis
-    "He quickly wipes his forehead, eyes focusing back on yours, smiling slightly."
+    "He quickly wipes his forehead, eyes focusing back on you, smiling slightly."
     "...does he know something you don't?"
     "How did he even know something was wrong?"
     "It's so hard to even see in here, you didn't even know where he was."
@@ -392,6 +409,7 @@ label caring:
                     jump CareGoodBranchA
 
                 "No":
+                    ## His hand is over MCs face during this section
                     "You feel his fingers grip the side of your face."
 
                     "You" "I would appreciate an answer."
@@ -401,11 +419,13 @@ label caring:
 
                     "There's a hesitation thick in the air."
 
+                    show cadmus concern with dis
                     cadmus "I felt it too."
                     "No extra quips."
                     "You feel that he isn't lying, you're not sure why."
 
                     "You" "I believe you."
+                    ## He removes his hand here
                     show cadmus normalSmile
                     hide black with dis
                     "He pulls his hand away, a small smile on his face."
@@ -576,7 +596,7 @@ label CareGoodBranchA:
                     cadmus "I don't want to overwhelm you."
                 else:
                     show cadmus smirk with dis
-                    cadmus "I must cause a flutter {i}they{/i} didn't then hm?"
+                    cadmus "I must cause a flutter {i}they{/i} didn't then, hm?"
                     show cadmus smileopenNU eyebrowsN with dis
                     cadmus "A wonderful leg up I have~"
                     show cadmus concern with dis
@@ -1066,57 +1086,73 @@ label CareBadBranchB:
     jump CareBadBranchBJump
 
 label CareBadEnd:
-    show cadmus at default with dis
+    show cadmus regularE at default with dis
     "You stare longingly at him as he finally returns to the chair."
     
     "You" "I missed you!"
     
+    show cadmus eyebrowsTU frown with dis
     "You're so excited as he returns to you, he seems to tense when you speak."
 
-    show cadmus confusedLD with dis
+    show cadmus concern with dis
     cadmus "Yes...I missed you as well."
 
+    show cadmus eyesSld with dis
     "There's a long silence as you watch him, his beautiful sharp features accentuated as he glances off to the side."
     show cadmus regularE with dis
+    show cadmus pout eyesSld
     "You can't help but love looking at him."
     "He's so beautiful."
     "The being of your affections."
 
-    ## TODO: add expression work to new convo
     "Your eyes are drawn to the snake tattoo on his arm."
+    show cadmus eyesS with dis
     "The way it flows from his hand to his neck."
 
+    show cadmus eyebrowsC smirk with dis
     cadmus "Curious about it?"
+    show cadmus eyebrowsN with dis
     cadmus "I got it on a bit of a whim."
 
     "You" "Really? Why?"
 
+    show cadmus pout with dis
     cadmus "I kept having this dream-"
     cadmus "Walking to a marble building, like a colosseum of sorts."
+    show cadmus eyesSld with dis
     cadmus "There was a beautiful courtyard and you could see the clouds just above the walls..."
     cadmus "Walking up to this platform this large snake would come from the ground."
     cadmus "Stark white, dark eyes- if I had reason to I probably would've been afraid."
+    show cadmus eyebrowsTU frown with dis
     cadmus "But it would tell me things..."
+    show cadmus eyesS with dis
     cadmus "Things that became true when I'd be awake."
 
     "You" "It told you the future?"
 
+    show cadmus at cadFidget
     cadmus "I guess so."
     cadmus "I thought about it so much I decided to get a tattoo of a snake."
+    show cadmus eyebrowsN eyesSld with dis
     cadmus "...it felt like I had too."
+    show cadmus eyesS with dis
 
     menu:
         "It suits you.":
+            show cadmus eyebrowsR with dis
             "You" "It makes you all the more beautiful."
 
+            show cadmus eyebrowsTU blush eyesSld pout with dis
             "He glances away, seeming nervous- perhaps bashful, you aren't sure."
         
         "It was meant to be.":
             "You" "Like you and that snake are connected."
 
+            show cadmus eyesSld pout with dis
             cadmus "...perhaps."
 
     show cadmus concern with dis
+    show cadmus -blush
     cadmus "Look...dear, I have to...go find something."
     show cadmus regularE with dis
     cadmus "Yes, yes, there is something I thought of."
@@ -1168,7 +1204,7 @@ label CareBadEnd:
     scene black with fade
     pause (0.5)
 
-    cadmus "By the time I get back they'll be asleep again..."
+    cadmus "By the time I get back, they'll be asleep again..."
     cadmus "...another round will begin."
 
     ## fade out, title "Care: Bad Ending?"
@@ -1186,28 +1222,35 @@ label CareBadEnd:
 
 
 label CareBadEndSpecial:
+    stop music channel "music_CH1" fadeout 1.0
+    stop music channel "music_CH2"
     "You want to try and say something, but every word is caught in your throat."
     show cadmus shadowTD frown lidsS with dis
     "His eyes stare daggers into you."
     "It tickles the back of your head in a way that just..."
     play sound heartBeat
-    "Fills you with pure fear."
+    "{cps=13}Fills you with pure fear.{/cps}"
     "The silence stretches for longer than it should."
     show cadmus armsR at lean
     "His hand comes up to your face."
     "Nails digging into your cheeks."
 
+    show cadmus smilecreepyTeeth eyesCRA with dis
     cadmus "Wanna say that again?"
     
     "You can't even begin to form the words lingering in your mind."
     "Like something is holding your lips shut."
     "Or gripping your throat."
 
+    play music basement channel "music_CH1" volume 0.0 loop
+    play music corrupted channel "music_CH2" volume music_vol loop
+    show cadmus at jumpscare
     cadmus "Little mouse..."
     cadmus "{cps=10}Say. It. Again.{/cps}"
 
     "His hand glides from your cheek to your throat."
     "Only then does the sensation hit you."
+    play sound moveInRope
     "The ropes holding you dig into every part of your body."
 
     cadmus "{font=HelpMe.ttf}{size=40}SPEAK!{/size}{/font}"
@@ -1220,8 +1263,8 @@ label CareBadEndSpecial:
     show black zorder 5 at closeEyes:
         yoffset -100
     "The world around you blurs, as you shut your eyes."
-    stop music channel "music_CH1" fadeout 1.0
-    stop music channel "music_CH2"
+    stop music channel "music_CH1" 
+    stop music channel "music_CH2" fadeout 1.0
     "Soon...you don't feel anything at all."
     "Free from whatever oppressive feeling overtook you."
 
