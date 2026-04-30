@@ -66,7 +66,7 @@ label fearing:
     show cadmus inLove with dis
     cadmus "I missed you~"
 
-    "His fingers excitedly drum his thighs as he speaks." # FIXME: either change this line or add the SFX
+    "His fingers excitedly drum his thighs as he speaks."
 
     cadmus "Not that there's anyone else here...it's just you. and. me."
     show cadmus smirkingSoft with dis
@@ -114,7 +114,7 @@ label fearing:
             "{cps=10}..."
             "{cps=10}..."
             "{cps=10}..."
-            show cadmus smileteeth with dis
+            show cadmus normalSmile with dis
             cadmus "I'm so happy..."
             "He checks the rope binding you, before sitting down again."
             show cadmus at sit
@@ -125,6 +125,7 @@ label fearing:
     "His hand reaches for your face."
     "Even though you try to pull back from him, it's entirely in vain."
     "His index finger captures your chin- thumb gently rubbing your bottom lip."
+    show cadmus smileteeth with dis
     cadmus "Your lips are dry...I'll fix this darling."
 
     play sound footSteps fadeout 1.0
@@ -133,9 +134,9 @@ label fearing:
     "Footsteps echoing throughout the space- not as much as you expected it would."
     "The room must be much smaller than it appears..."
     "The minimal light is doing wonders to cause you panic over the sheer scale of the darkness surrounding you."
+    stop sound
 
-    ## FIXME: check the pause here is sufficient
-    pause (2)
+    pause (4)
 
     "There's an itching at the back of your neck...you can't shake it."
     "This feeling of unease enveloping you."
@@ -182,7 +183,7 @@ label fearing:
     cadmus "Your drink of water, my beloved!"
     "He holds the cup out towards you."
     cadmus "Ah- of course, you can't actually drink it yourself."
-    cadmus "Let me help you~"
+    cadmus "Allow me to help you~"
 
     show cadmus at lean
     "He brings the cup to your lips."
@@ -204,7 +205,7 @@ label fearing:
 
     show cadmus smileteeth with dis
     cadmus "Good little mouse~"
-    cadmus "Much better, right?"
+    cadmus "Much better, hm?"
 
     "He pulls the cup away from your lips."
     "You follow the cup- desperately wanting more."
@@ -234,7 +235,7 @@ label FearBadChoice1:
     show cadmus concern with dis
     cadmus "Am I really oh so frightening? I couldn't hurt a fly~"
 
-    menu:
+    menu checkhere:
         "You aren't scary":
             cadmus "I'm not?"
             show cadmus smirk eyebrowsN with dis
@@ -243,7 +244,6 @@ label FearBadChoice1:
             "He leans back into his seat, eyes still trained on you."
             show cadmus lidsR with dis
             cadmus "I'd be worried if you were, we are partners after all."
-            show cadmus smileclosedND with dis
             cadmus "Communication is {i}very{/i} important darling."
 
             "You can't tell if he added that last part in as a joke, given you both haven't spoken very much since you...arrived?"
@@ -271,9 +271,9 @@ label FearBadChoice1:
                 jump FearBranchACont
     
     show cadmus concern with dis
-    cadmus "Well, there must be something I can do to quell any possible concerns you might have..."
-    play sound drummingFingers
-    "He hums and has as he seemingly ponders."
+    cadmus "Well, there must be something I can do to quell any concerns you have..."
+    play sound drummingFingers volume 0.5
+    "He hums and hahs as he seemingly ponders."
     show cadmus armsHighSH at lean
     "Just as you go to speak, he presses a finger to your lips."
     show cadmus smirk with dis
@@ -283,11 +283,12 @@ label FearBadChoice1:
     "You almost wanna ask if he's keeping you safe from {i}him{/i}, but given how sharp he is about things..."
     "It's best you don't tempt the devil."
     show cadmus regularE -armsHighSH at sit
-    play sound drummingFingers
+    play sound drummingFingers volume 0.5
     "He pulls his hand away, returning to his thoughts- you presume."
     "It's hard to figure out what might be the best thing to do in this situation."
     "You could try and strike up a conversation- but given the silence it's best not to try."
     "If anything, trying to talk to him might upset him."
+    show cadmus pout eyesSld with dis
     extend "..or make him way too happy you care."
     "You could free your hand if you wanted-"
     extend " though you don't know what he might do."
@@ -295,6 +296,7 @@ label FearBadChoice1:
     "It's hard to see his legs- given he's wearing black pants."
     "You can roughly guess where his pockets might be..."
     "What side did he pull the knife from again?"
+    show cadmus eyesS neutral with dis
     "Though, even if you get out of the ropes and get the knife..."
     "{i}Then what?{/i}"
     "Sure you can barely see the door off to the right side of the room."
@@ -305,8 +307,10 @@ label FearBadChoice1:
     show cadmus questioning with dis
     cadmus "What do you prefer, rain or shine?"
 
+    pause(1)
     "You" "...what?"
 
+    show cadmus eyebrowsN lidsR with dis
     cadmus "Which do you prefer?"
 
     "You can't even begin to comprehend what brought this question on."
@@ -316,8 +320,7 @@ label FearBadChoice1:
         "Rain":
             $ rain = True
             "You" "It's relaxing, getting to stay indoors and just...listen to the rain."
-            ## FIXME: might need to edit this expression here
-            show cadmus normalSmile with dis
+            show cadmus smirk eyebrowsTU with dis
             "He smiles with kind affection."
         
         "Shine":
@@ -337,11 +340,12 @@ label FearBadChoice1:
         "You" "To each their own."
 
     show cadmus regularE with dis
+    show cadmus eyesSld
     "He nods, and goes back to staring off."
     "You're not entirely sure how this relates to wanting to quell your concerns..."
     "It was probably just some weird side tangent on his part."
 
-    show cadmus eyebrowsR with dis
+    show cadmus eyebrowsR eyesS with dis
     cadmus "Hmm...ah!"
     hide cadmus with dis
     "Cadmus suddenly stands, startling you."
@@ -390,12 +394,13 @@ label FearGoodBranchHalf:
     "{cps=15}Miss...him."
     "Miss him?"
     "There's a weird thought."
-    ## FIXME: add footstep sfx
+    play sound footSteps fadeout 1.0
     "Suddenly the sound of footsteps- he's coming back."
     "It's almost reassuring."
     "Are you...worrying about him?"
     "That's complete nonsense."
     "You {i}really{/i} need to get out of here."
+    stop sound fadeout 1.0
 
     show cadmus smileopenNU at default with dis
     cadmus "There you are~"
@@ -518,7 +523,7 @@ label FearGoodBranchHalf:
     scene black with fade
 
     cadmus "Back so soon, love?"
-    cadmus "I wonder how long you'll be resting for this time..."
+    cadmus "I wonder how long you'll be sleeping this time..."
 
     ##add a fade out, title "Fear: Good Ending?"
     if persistent.onReplay == False:
@@ -575,7 +580,7 @@ label FearBadBranchA:
     jump FearBadChoice1
 
 label FearBranchACont:
-    cadmus "Of course, that's what we're going to do."
+    cadmus "I'm certain I can fix your concerns."
 
     play sound drummingFingers
     "He drums his fingers against the chair, lost in his own thoughts."
@@ -734,8 +739,8 @@ label FearBadConverged:
     pause (0.5)
 
     camera at cameraReset
-    cadmus "I just...want to protect you..."
-    cadmus "Believe in me...please..."
+    cadmus "...I'm so sorry...I just want to protect you."
+    cadmus "Please believe in me...I'm begging you..."
 
     ## fade out, title "Fear: Bad Ending?"
     if persistent.onReplay == False:
