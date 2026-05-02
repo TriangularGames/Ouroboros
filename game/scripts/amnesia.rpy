@@ -336,14 +336,13 @@ label AmnesiaGoodBranch:
     "You can't help but be confused at this."
     show cadmus eyesS eyebrowsN -sweating with dis
     "Given all his piercings and the tattoo, you find it hard to believe."
-    ## TODO: add chuckle effect
-    show cadmus smirk with dis
+    show cadmus smileopenNU at cadChuckle
     "He chuckles at your confusion."
 
     cadmus "They almost had to knock me out just to get through the sessions."
-    show cadmus eyebrowsTU with dis
+    show cadmus eyebrowsTU smirk eyesSld with dis
     cadmus "Even when I got my piercings, I nearly fainted."
-    show cadmus eyebrowsC with dis
+    show cadmus eyebrowsC eyesS with dis
     cadmus "Is that so hard to believe?"
 
     "You" "It just..."
@@ -510,7 +509,7 @@ label AmnesiaBadBranch:
     "It's clear enough he's just asking it, not expecting much of an answer."
     "It's not like you really have much to give anyway."
     "Plus you can't even really avoid anything."
-    "You quite literally can't move."
+    "You quite literally {i}can't{/i} move."
 
     cadmus "There is much time for you to consider your actions, my love."
     show cadmus smileteeth -lidsS with dis
@@ -547,7 +546,8 @@ label AmnesiaBadBranch:
             show cadmus smirking with dis
             "He cocks his head curiously, lingering close to you."
             cadmus "How could I be?"
-            cadmus "You always told me you {i}adored{/i} my smile, darling."
+            show cadmus smilecreepyTeeth with dis
+            cadmus "You always told me you {i}adored{/i} my smile, darling.{nw}"
             show cadmus concern with dis
             "He pouts, clearly a bit upset. Doing what you can only assume to be puppy eyes at you."
             cadmus "I'm a good boy, I promise~"
@@ -557,8 +557,8 @@ label AmnesiaBadBranch:
             "With a grin he proceeds to lean back away from you, giving you back your precious breathing room."
             "Much needed breathing room."
 
-    ## TODO: add expression work here for new convo
-
+    show cadmus questioning with dis
+    show cadmus smirk lidsR
     cadmus "Do you like my piercings?"
 
     "You" "...huh?"
@@ -567,16 +567,21 @@ label AmnesiaBadBranch:
     "You're not entirely sure what brought it on."
     "Maybe to try and be more friendly?"
 
+    show cadmus eyebrowsN with dis
     cadmus "My piercings."
+    show cadmus frown lidsS with dis
     cadmus "Do you like them?"
 
     menu:
         "Yes.":
+            show cadmus smirkingSoft with dis
             "You" "They look cool."
-
+            
+            show cadmus smileopenNU at cadChuckle
             "He chuckles, smiling brightly."
 
             cadmus "I agree, that's why I got them."
+            show cadmus pout eyesSld eyebrowsTU with dis
             cadmus "Well...one of the reasons."
 
             "You" "What's another reason?"
@@ -584,37 +589,44 @@ label AmnesiaBadBranch:
         "No.":
             "You" "Not much of a fan personally."
 
+            show cadmus pout lidsR with dis
             "He stares blankly, seemingly struggling to catch up with what you said."
 
             cadmus "Oh."
 
+            show cadmus neutral with dis
             "The pause that carries his exclamation is thick in the air."
             "You decide to try and break it kindly."
 
             "You" "Do you like them?"
 
+            show cadmus smileopenNU with dis
             cadmus "Yes, otherwise I wouldn't have gotten them."
+            show cadmus questioning with dis
+            show cadmus eyesSld
             cadmus "Well...that and another reason."
 
             "You" "Which would be...?"
 
-    ## TODO: add lean in here
-    "The chair creaks a bit as he leans forward, his breath tickling your face."
+    show cadmus eyesS at lean
+    "The chair creaks a bit as he leans forward, his breath tickling you."
 
+    show cadmus concern with dis
     cadmus "I have a bit of an empty face."
 
     "You" "...uh huh."
     "You" "What does that have to do with it?"
 
+    show cadmus smirk eyesSld with dis
     cadmus "I thought I'd look better with piercings so...I got them."
+    show cadmus smileopenNU eyesS with dis
     cadmus "I think they suit me."
 
+    show cadmus smirkingSoft with dis
     "You aren't entirely sure what answer or response to give him."
     "He's seemingly content with your lack of response."
     "And...extremely amused."
     "Which worries you."
-
-    ## end of new section
 
     hide cadmus with dis
     "Cadmus stands from his seat, walking just out of your view."
@@ -687,8 +699,8 @@ label AmnesiaBadBranch:
     jump AmnesiaBadEnding
 
 label AmnesiaBadEnding:
-    play music basement channel "music_CH1" volume 0.0
-    play music corrupted channel "music_CH2" volume music_vol
+    play music basement channel "music_CH1" volume 0.0 loop
+    play music corrupted channel "music_CH2" volume music_vol loop
     show cadmus armsHK with dis
     "Cadmus suddenly pulls out the knife."
 
@@ -698,14 +710,14 @@ label AmnesiaBadEnding:
 
     show cadmus armsD with dis
     play sound ropeFalls
-    "The knife slashes through the ropes"
+    "The knife slashes through the ropes{nw=0.2}"
     play sound knifeDrop
     extend ", he tosses the knife to the floor."
 
     show cadmus eyesCRA eyeBS with dis
     cadmus "I have to break it...that's the only way..."
     "He's muttering like he's lost his mind."
-    show cadmus smirk shadowTU at lean
+    show cadmus smileteeth shadowTU at lean
     cadmus "The cycle has to break...it has to break. It's going to break."
 
     "You don't want to stay around to find out what in the world he's mumbling about."
@@ -713,23 +725,27 @@ label AmnesiaBadEnding:
     camera:
         subpixel True
         ease_expo 3.00 xpos 1920 ypos 300 zoom 1.5
+    play sound running
     "Standing and running for the door."
 
+    show black with fade
+
     ## Rewritten part starts here
-    ## TODO: add footsteps running here
     "You hear his foosteps behind you as your scramble, desperately trying to get away."
     "The door is within reach-"
-    ## TODO: add door open noise
+    stop sound
+    play sound doorOpen
     "Taking the handle, the door swings open with ease..."
     "It...was never locked?"
     "You rush through into the darkened hallway- finally, freedom!"
     "You're getting the hell out of here!"
     "..."
     "...and yet..."
+    stop music channel "music_CH1" 
+    stop music channel "music_CH2" fadeout 1.0
     "{b}Your feet touch nothing.{/b}"
-
-    ## TODO: add wind rushing noise for the fall
     "You try to turn back, grasp onto the door...{b}anything!{/b}"
+    play sound windRushing
     "But it's already much too late."
     "You can see Cadmus standing there."
     "Watching you fall."
@@ -752,13 +768,10 @@ label AmnesiaBadEnding:
     #"He holds you firmly as he bites harder, your legs barely keeping you standing."
     #"All sensations fade away."
 
-    stop music channel "music_CH1" 
-    stop music channel "music_CH2" fadeout 1.0
-
     scene black with fade
     pause (0.5)
 
-    ## TODO: add sound of him falling to the floor
+    play sound bodyFall
     cadmus "...we'll never be free from {b}it{/b}...will we?"
 
     ## fade out, title "Amnesia: Bad Ending?"
