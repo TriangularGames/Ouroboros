@@ -363,6 +363,10 @@ screen main_menu():
         xpos -30
         ypos -200
 
+    ## BUTTON FOR LAYERED IMAGE TESTING
+    ## FIXME: PLEASE HIDE THIS WHEN BUILDING
+    textbutton "Image Tools" action ShowMenu("image_tools")
+
     vbox:
         add "gui/gameLogo.webp":
             xpos 620
