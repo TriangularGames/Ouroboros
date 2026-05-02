@@ -457,7 +457,8 @@ label ChaosGoodBranchB:
 
             "Implying you've been here before in some way? That can't be true..."
 
-    show cadmus smirkingSoft eyesS at cadFidget
+    show cadmus smirkingSoft at cadFidget
+    show cadmus eyesSld
     "He doesn't seem in any rush to respond, fidgeting in his seat."
 
     "You" "Hellooo? Earth to Cadmus?"
@@ -618,6 +619,7 @@ label ChaosGoodBranchB:
     "But how is that even possible?"
 
     show cadmus normalSmile with dis
+    show cadmus eyebrowsTU
     cadmus "...there it is."
     camera:
         subpixel True
@@ -643,12 +645,13 @@ label ChaosGoodBranchB:
     "You" "So how much is real? Fake? Is there a truth?"
     "You" "Have you just been playing me with the whole 'being of my affections' bit?"
 
-    ## FIXME: make him look offended/upset here
+    show cadmus disgust eyesS with dis
     cadmus "...yikes...a {i}bit{/i}."
+    show cadmus pout with dis
     cadmus "I wasn't lying-"
-    show cadmus armsHair with dis
+    show cadmus armsHair eyesSld with dis
     cadmus "Ah, it's not important."
-    show cadmus eyesS with dis
+    show cadmus armsD hair eyesS with dis
     cadmus "I'm going to ignore the fact you think I've been joking."
     jump ChaosGoodConverged
 
@@ -662,8 +665,9 @@ label ChaosGoodConverged:
     "You" "{cps=10}{b}We?{/b}"
     "You" "Are you implying...som-"
 
-    show cadmus frown armsHighSH at lean
+    show cadmus disgust armsHighSH at lean
     cadmus "SHH!"
+    show cadmus frown with dis
     "Cadmus immediately closes the distance between you, holding his finger to your lips, he looks worried...and scared."
     cadmus "Don't. We're just having a normal conversation."
 
@@ -686,13 +690,15 @@ label ChaosGoodConverged:
     "But not in a real place? That's pushing the boundaries of your understanding."
 
     show cadmus at cadFidget
+    show cadmus eyesSld
     cadmus "Trust me, I barely understand it myself."
-    "He is carefully watching the look on your face as he speaks."
+    show cadmus smileclosedND eyesS with dis
+    "He is carefully watching the look on your face as he continues."
     cadmus "I'm just barely able to keep my wits each time...I think it comes with the territory."
 
     "You" "Being in here however long we have or...?"
 
-    show cadmus eyesSld with dis
+    show cadmus pout eyesSld with dis
     "Cadmus looks upset, not meeting your eyes anymore."
     "Clearly he's reluctant to give you information, though it's hard to get why."
     "Without talking about the bigger picture...dancing around topics like this, how are you supposed to get all this?"
@@ -703,8 +709,7 @@ label ChaosGoodConverged:
     show cadmus normalSmile with dis
     cadmus "I don't know what other things you might've been through...but I'll get us out of here."
     show cadmus at cadFidget
-    "He fidgets in his seat, trying his best to smile."
-    show cadmus smileopenNU with dis
+    show cadmus smileopenNU eyebrowsTU blush
     cadmus "You mean so much to me, I have to do my best."
 
     menu:
@@ -736,14 +741,14 @@ label ChaosGoodConverged:
             show cadmus smileteeth
             "He smiles brightly, a faint blush on his cheeks."
 
+            show cadmus smirk with dis
             cadmus "Aren't you just the sweetest..."
-            show cadmus smileclosedND with dis
+            show cadmus smileclosedND eyesS with dis
             cadmus "Your appreciation is more than enough. I'll keep going knowing I have your support."
 
             "You" "Even if I don't remember giving it to you?"
 
             cadmus "Even if you don't..."
-            show cadmus eyesS with dis
             "He gently pats your knee, smiling softly."
             show cadmus smileopenNU with dis
             cadmus "It'll be one of the greatest gifts you've given me. I'll never forget it."
@@ -1403,11 +1408,14 @@ label ChaosBadConverged:
     jump ChaosConvergedEnding
 
 label ChaosConvergedEnding:
-    ## TODO: expression work for new convo
+    show cadmus concern with dis
+    show cadmus eyesSld
     cadmus "Can I ask you something?"
 
     "You" "I don't see why not."
 
+    show cadmus questioning with dis
+    show cadmus lidsR eyesS
     cadmus "You close with your family?"
 
     menu:
@@ -1416,6 +1424,7 @@ label ChaosConvergedEnding:
 
             "You" "I don't see them very often, but it's not like I hate them."
 
+            show cadmus eyebrowsTU frown with dis
             cadmus "...I see."
             "Though he seems to smile, it doesn't entirely reach his eyes."
             "You can help but wonder why he's making such a face."
@@ -1424,6 +1433,8 @@ label ChaosConvergedEnding:
             $ persistent.family = "close"
             "You" "I'd say so yeah. I love them."
 
+            show cadmus smirkingSoft with dis
+            show cadmus eyesSld
             cadmus "...that's really nice."
             "He almost sounds regretful, jealous maybe?"
             "Though he smiles warmly, Cadmus seems conflicted."
@@ -1432,23 +1443,33 @@ label ChaosConvergedEnding:
             $ persistent.family = "distant"
             "You" "I stopped bothering to see them after a while. I'm on my own now."
 
+            show cadmus concern with dis
+            show cadmus smileclosedND
             "Cadmus nods."
             "He regards you with a half smile, almost as though he can relate to your plight."
 
+    show cadmus eyesS with dis
     "You" "What about you? Are you close to them?"
 
+    show cadmus lidsS eyesSld pout with dis
     cadmus "Maybe at some point I was. I haven't seen or heard from any of them in a long time."
+    show cadmus armsHair with dis
     "He sighs, his hand combing through his hair."
+    show cadmus eyesS with dis
     cadmus "I last saw my sister a few years ago."
 
+    show cadmus armsD hair lidsR eyebrowsN with dis
     "You" "You have a sister? Is she older?"
 
+    show cadmus smileopenNU with dis
     cadmus "Younger sister, we used to be very tight knit when we were younger..."
     ## he looks away here
+    show cadmus eyesSld frown with dis
     cadmus "...time does interesting things to people."
+    show cadmus pout eyebrowsTD with dis
     cadmus "Even more so when they're told things that aren't true."
 
-    "Cadmus glances off, perhaps remembering something, perhaps not."
+    "Cadmus seems distracted, perhaps remembering something, perhaps not."
     "You can't help but be a little curious..."
     "Though it seems like the topic of family troubles him."
 
@@ -1458,28 +1479,35 @@ label ChaosConvergedEnding:
 
             "You" "Did...something happen?"
 
+            show cadmus concern with dis
             "He seems to hesitate, his breath catching in his throat."
 
+            show cadmus smirkingSoft with dis
             cadmus "A friend of mine did terrible things, and I took the blame for him."
 
             "You" "What sort of things?"
 
+            show cadmus questioning with dis
             cadmus "Y'know for some people that curiosity about fire never goes away?"
 
             "You" "...yeah?"
 
+            show cadmus smirkingSoft with dis
             cadmus "That was him."
 
             "You" "What did he do?"
 
+            show cadmus lidsC pout eyebrowsTD with dis
             cadmus "He 'accidentally' burned down our school."
 
-            "Cadmus avoids your gaze entirely."
+            ##"Cadmus avoids your gaze entirely."
 
             "You" "Why would you even take the blame?!"
 
+            show cadmus lidsR eyebrowsN with dis
             "He sighs, seemingly uninterested in responding, but he obliges you."
 
+            show cadmus eyesSld eyebrowsTU with dis
             cadmus "I owed him."
 
             "You can't help but feel confused at this."
@@ -1488,16 +1516,21 @@ label ChaosConvergedEnding:
 
             "You" "What would make defending that worth while?!"
 
+            show cadmus smileopenNU eyesS with dis
             cadmus "Doesn't...matter much now, does it?"
             cadmus "Taking that marked me as a certifiably untrustworthy, crazy person to most people."
+            show cadmus frown with dis
             cadmus "Being in high school- you don't think much about the greater ramifications for yourself."
             cadmus "He didn't have the means to survive getting caught. I did."
 
             "You" "...sure."
             "You" "Are you two even still friends?"
 
+            show cadmus smileopenNU eyesSld eyebrowsN at cadChuckle
             "He laughs- dejectedly."
+            show cadmus pout with dis
             cadmus "He abandoned me the second I took the blame."
+            show cadmus eyesS with dis
             cadmus "...I was never very good at picking people."
 
             "Cadmus looks at you- finally- searching your gaze for something."
@@ -1509,7 +1542,9 @@ label ChaosConvergedEnding:
             "You both feel entirely too close to him and entirely too far away."
             "{i}What do you even know about him?{/i}"
 
+            show cadmus eyebrowsC smileopenNU with dis
             cadmus "Do you think I'm stupid for that?"
+            show cadmus concern with dis
             cadmus "...do you also want nothing to do with me?"
 
             menu:
@@ -1518,53 +1553,67 @@ label ChaosConvergedEnding:
                     "You" "You're the one that has to live with it, not me."
                     "You" "It's not like {i}you{/i} did those things."
 
+                    show cadmus smileopenNU with dis
                     cadmus "...you're very kind."
 
                     "You" "Your family wasn't?"
 
+                    show cadmus eyebrowsTD eyesSld at cadChuckle
                     "He laughs at that- bitter and tainted with negativity."
                 
                 "Yes, you're stupid":
-                    ## FIXME: have him shut his eyes here
+                    show cadmus lidsC frown with dis
                     "You" "Completely stupid for it."
                     "You" "You ruined yourself for a guy who didn't even give a shit about you?!"
 
                     "He sighs- you almost wonder if he's even taking you seriously until he opens his eyes."
 
+                    show cadmus lidsR smileopenNU with dis
                     cadmus "Yeah...real stupid."
 
+                    show cadmus smileclosedND with dis
                     "You" "Even with that, it's not like you actually did those things."
                     "You" "So why would I abandon you just 'cause of something you didn't do?"
 
+                    show cadmus smirkingSoft with dis
                     cadmus "Not like you could abandon me anyway."
 
+                    show cadmus at cadChuckle
                     "He chuckles softly."
 
+            show cadmus questioning with dis
+            show cadmus lidsR smileopenNU
             cadmus "I am surprised you're just going to take me at my word."
             cadmus "I tell you I didn't do something and you'll just believe me?"
 
             "You" "Whenever I get the hell away from you, I can verify it."
 
+            show cadmus lidsC eyebrowsN at cadChuckle
             "He laughs, nearly falling off his own chair with how amused he is."
 
+            show cadmus lidsR at lean
             cadmus "Your spunk never ceases to amaze me, darling."
+            show cadmus smirkingSoft with dis
             cadmus "If you get me out of here too- you can also turn me in."
+            show cadmus smirking with dis
             cadmus "So don't run without me, 'kay~"
 
         "Don't":
             "It's probably better to leave it alone."
             "You" "I'm sorry."
 
+            show cadmus concern with dis
             cadmus "For what, darling? I'm the one that brought it up."
 
+            show cadmus smirk armsR at lean
             "He smiles gently, caressing your cheek."
 
             cadmus "If anyone should be sorry it's me."
-            ## FIXME: have him sit back in his chair here
+            show cadmus armsD -hand at sit
             extend " I don't want you to be troubled."          
 
-    play music basement channel "music_CH1" volume 0.0
-    play music corrupted channel "music_CH2" volume music_vol
+    play music basement channel "music_CH1" volume 0.0 loop
+    play music corrupted channel "music_CH2" volume music_vol loop
     show cadmus at fallOff
     play sound silencepoint5
     queue sound bodyFall
@@ -1580,6 +1629,7 @@ label ChaosConvergedEnding:
     "You call for him, but he's still struggling, mumbling to himself."
 
     show cadmus at comeUp
+    ## TODO: add chair squeak
     "He pulls himself into the chair again"
     show cadmus armsHK bloodyarmsHK with dis
     play sound pullOutKnife
@@ -1596,6 +1646,7 @@ label ChaosConvergedEnding:
     play sound ropeFalls
     "He approaches you, cutting you free from the ropes."
 
+    show cadmus smilecreepyTeeth with dis
     cadmus "{cps=10}{font=HelpMe.ttf}Time. Is. Up. Little. Mouse.{/font}"
 
     "He sounds...different."
